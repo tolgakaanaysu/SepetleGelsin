@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  SepetleGelsin
-//
-//  Created by Tolga Kağan Aysu on 9.11.2021.
-//
 
 import SwiftUI
 

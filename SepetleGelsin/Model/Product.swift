@@ -1,6 +1,6 @@
 import Foundation
 
-struct Product: Codable {
+struct Product: Decodable,Identifiable {
     
     let id: Int
     let title: String
@@ -10,8 +10,6 @@ struct Product: Codable {
     let imageUrl: String
     let rating: Rating
 
-  
-   
 }
 
 private enum CodingKeys: String, CodingKey {
@@ -24,7 +22,6 @@ private enum CodingKeys: String, CodingKey {
     case rating = "rating"
 }
 
-
 enum Category: String, Codable {
     case electronics = "electronics"
     case jewelery = "jewelery"
@@ -36,5 +33,11 @@ struct Rating: Codable {
     let rate: Double
     let count: Int
 }
+
+
+
+
+
+
 
 

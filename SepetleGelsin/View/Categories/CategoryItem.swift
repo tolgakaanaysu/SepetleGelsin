@@ -1,17 +1,19 @@
 import SwiftUI
 import Kingfisher
 
-struct CatogoryItem: View {
-    var product: Product
-
+struct CategoryItem: View {
+    var item: Product
+    
+    
     var body: some View {
         VStack(alignment: .leading) {
-            KFImage(URL(string: product.imageUrl))
+            KFImage(URL(string: item.imageUrl))
                 .renderingMode(.original)
                 .resizable()
                 .frame(width: 155, height: 155)
                 .cornerRadius(5)
-            Text(product.title)
+            
+            Text(item.title)
                 .foregroundColor(.primary)
                 .font(.caption)
         }
@@ -21,6 +23,6 @@ struct CatogoryItem: View {
 
 struct CatogoryItem_Previews: PreviewProvider {
     static var previews: some View {
-        CatogoryItem(product: ModelData().productList[1])
+        CategoryItem(item: ProductListViewModel().productList[1])
     }
 }
