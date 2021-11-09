@@ -7,18 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465AA837C98F15BBACAB3F09 /* Pods_SepetleGelsin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7B354099676E43E26FC1F6 /* Pods_SepetleGelsin.framework */; };
 		786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */; };
 		786E8FDB273AD28A00094115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FDA273AD28A00094115 /* ContentView.swift */; };
 		786E8FDD273AD28C00094115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786E8FDC273AD28C00094115 /* Assets.xcassets */; };
 		786E8FE0273AD28C00094115 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786E8FDF273AD28C00094115 /* Preview Assets.xcassets */; };
+		786E8FEA273AD64C00094115 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FE9273AD64C00094115 /* Product.swift */; };
+		786E8FEC273AD99C00094115 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FEB273AD99C00094115 /* WebService.swift */; };
+		786E8FEE273ADDB100094115 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FED273ADDB100094115 /* ModelData.swift */; };
+		786E8FF1273ADFEE00094115 /* CatogoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FF0273ADFEE00094115 /* CatogoryHome.swift */; };
+		786E8FF4273AE00500094115 /* CatogoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FF3273AE00500094115 /* CatogoryRow.swift */; };
+		786E8FF7273AE02700094115 /* CatogoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FF6273AE02700094115 /* CatogoryItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C7B354099676E43E26FC1F6 /* Pods_SepetleGelsin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SepetleGelsin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E14FA9CD717A07B73F0998C /* Pods-SepetleGelsin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SepetleGelsin.release.xcconfig"; path = "Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin.release.xcconfig"; sourceTree = "<group>"; };
+		27D9F44873A79BB6421EDF42 /* Pods-SepetleGelsin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SepetleGelsin.debug.xcconfig"; path = "Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin.debug.xcconfig"; sourceTree = "<group>"; };
 		786E8FD5273AD28A00094115 /* SepetleGelsin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepetleGelsin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetleGelsinApp.swift; sourceTree = "<group>"; };
 		786E8FDA273AD28A00094115 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		786E8FDC273AD28C00094115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		786E8FDF273AD28C00094115 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		786E8FE9273AD64C00094115 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		786E8FEB273AD99C00094115 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		786E8FED273ADDB100094115 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		786E8FF0273ADFEE00094115 /* CatogoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogoryHome.swift; sourceTree = "<group>"; };
+		786E8FF3273AE00500094115 /* CatogoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogoryRow.swift; sourceTree = "<group>"; };
+		786E8FF6273AE02700094115 /* CatogoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogoryItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +42,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465AA837C98F15BBACAB3F09 /* Pods_SepetleGelsin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		024EC9524D3EAA747A6F2645 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C7B354099676E43E26FC1F6 /* Pods_SepetleGelsin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74E087B17E0B2F15D7E576A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27D9F44873A79BB6421EDF42 /* Pods-SepetleGelsin.debug.xcconfig */,
+				1E14FA9CD717A07B73F0998C /* Pods-SepetleGelsin.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		786E8FCC273AD28A00094115 = {
 			isa = PBXGroup;
 			children = (
 				786E8FD7273AD28A00094115 /* SepetleGelsin */,
 				786E8FD6273AD28A00094115 /* Products */,
+				74E087B17E0B2F15D7E576A1 /* Pods */,
+				024EC9524D3EAA747A6F2645 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,7 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */,
-				786E8FDA273AD28A00094115 /* ContentView.swift */,
+				786E8FE7273AD5EF00094115 /* Service */,
+				786E8FE6273AD5E200094115 /* Model */,
+				786E8FE8273AD60400094115 /* View */,
 				786E8FDC273AD28C00094115 /* Assets.xcassets */,
 				786E8FDE273AD28C00094115 /* Preview Content */,
 			);
@@ -67,6 +106,42 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		786E8FE6273AD5E200094115 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				786E8FE9273AD64C00094115 /* Product.swift */,
+				786E8FED273ADDB100094115 /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		786E8FE7273AD5EF00094115 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				786E8FEB273AD99C00094115 /* WebService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		786E8FE8273AD60400094115 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				786E8FDA273AD28A00094115 /* ContentView.swift */,
+				786E8FEF273ADFBB00094115 /* Catagories */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		786E8FEF273ADFBB00094115 /* Catagories */ = {
+			isa = PBXGroup;
+			children = (
+				786E8FF0273ADFEE00094115 /* CatogoryHome.swift */,
+				786E8FF3273AE00500094115 /* CatogoryRow.swift */,
+				786E8FF6273AE02700094115 /* CatogoryItem.swift */,
+			);
+			path = Catagories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 786E8FE3273AD28C00094115 /* Build configuration list for PBXNativeTarget "SepetleGelsin" */;
 			buildPhases = (
+				5E738EDF18D66BBC946D3AF5 /* [CP] Check Pods Manifest.lock */,
 				786E8FD1273AD28A00094115 /* Sources */,
 				786E8FD2273AD28A00094115 /* Frameworks */,
 				786E8FD3273AD28A00094115 /* Resources */,
+				E718C15C2A7FE7089189DD1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +209,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E738EDF18D66BBC946D3AF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SepetleGelsin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E718C15C2A7FE7089189DD1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		786E8FD1273AD28A00094115 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				786E8FDB273AD28A00094115 /* ContentView.swift in Sources */,
+				786E8FEC273AD99C00094115 /* WebService.swift in Sources */,
+				786E8FF1273ADFEE00094115 /* CatogoryHome.swift in Sources */,
+				786E8FF4273AE00500094115 /* CatogoryRow.swift in Sources */,
+				786E8FF7273AE02700094115 /* CatogoryItem.swift in Sources */,
+				786E8FEE273ADDB100094115 /* ModelData.swift in Sources */,
 				786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */,
+				786E8FEA273AD64C00094115 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +388,7 @@
 		};
 		786E8FE4273AD28C00094115 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27D9F44873A79BB6421EDF42 /* Pods-SepetleGelsin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +418,7 @@
 		};
 		786E8FE5273AD28C00094115 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E14FA9CD717A07B73F0998C /* Pods-SepetleGelsin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
