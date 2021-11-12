@@ -2,9 +2,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var item = ProductListViewModel()
+    
+   
+   
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView{
+            
+            
+            List {
+                
+                ForEach(item.productList) { i in
+                    
+                        
+                        
+                    Text("Liste içi")
+                    Text(i.title)
+                            .padding()
+                            
+                      
+                    
+                }
+                
+               
+                
+            }
+        }
+        
+        
     }
 }
 

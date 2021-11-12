@@ -2,8 +2,7 @@ import SwiftUI
 import Kingfisher
 
 struct CategoryItem: View {
-    var item: Product
-    
+    var item:  Product
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,11 +17,5 @@ struct CategoryItem: View {
                 .font(.caption)
         }
         .padding(.trailing, 15)
-    }
-}
-
-struct CatogoryItem_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoryItem(item: ProductListViewModel().productList[1])
     }
 }

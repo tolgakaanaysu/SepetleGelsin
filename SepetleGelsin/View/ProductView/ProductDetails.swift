@@ -12,6 +12,6 @@ struct ProductDetails: View {
 
 struct ProductDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetails()
+        ProductDetails(item: ProductListViewModel().productList[1])
     }
 }

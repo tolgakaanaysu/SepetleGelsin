@@ -1,17 +1,15 @@
-//
-//  SepetleGelsinApp.swift
-//  SepetleGelsin
-//
-//  Created by Tolga Kağan Aysu on 9.11.2021.
-//
-
 import SwiftUI
 
 @main
 struct SepetleGelsinApp: App {
+    @StateObject private var stateObject = ProductListViewModel()
     var body: some Scene {
         WindowGroup {
-            CategoryItem()
+            CategoryHome(item: stateObject)
+                .environmentObject(stateObject)
+                
+    
+               
         }
     }
 }

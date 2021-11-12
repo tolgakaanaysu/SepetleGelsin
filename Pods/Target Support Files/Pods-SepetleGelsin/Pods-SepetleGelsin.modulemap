@@ -1,0 +1,6 @@
+framework module Pods_SepetleGelsin {
+  umbrella header "Pods-SepetleGelsin-umbrella.h"
+
+  export *
+  module * { export * }
+}
