@@ -2,15 +2,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var item = ProductListViewModel()
+    @ObservedObject var item = ProductViewModel()
     
-   
-   
-    
-    var body: some View {
+   var body: some View {
         
         NavigationView{
-            
             
             List {
                 

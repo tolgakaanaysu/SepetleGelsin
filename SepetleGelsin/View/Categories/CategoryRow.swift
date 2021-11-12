@@ -5,7 +5,8 @@ struct CategoryRow: View {
     var catogoryName: String
     var item: [Product]
     
-    var body: some View {
+    
+var body: some View {
         VStack(alignment: .leading) {
             Text(catogoryName)
                 .font(.title)
@@ -15,9 +16,9 @@ struct CategoryRow: View {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(item) { product in
                         NavigationLink {
-                            ProductDetails(item: product)
+//                            ProductDetails(item: <#T##ProductViewModel#>, product: product)
                         } label: {
-                            CategoryItem(item: product)
+                            CategoryItem(product: product)
                         }
                     }
                 }

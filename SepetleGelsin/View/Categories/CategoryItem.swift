@@ -2,17 +2,17 @@ import SwiftUI
 import Kingfisher
 
 struct CategoryItem: View {
-    var item:  Product
+    var product:  Product
     
     var body: some View {
         VStack(alignment: .leading) {
-            KFImage(URL(string: item.imageUrl))
+            KFImage(URL(string: product.imageUrl))
                 .renderingMode(.original)
                 .resizable()
                 .frame(width: 155, height: 155)
                 .cornerRadius(5)
             
-            Text(item.title)
+            Text(product.title)
                 .foregroundColor(.primary)
                 .font(.caption)
         }

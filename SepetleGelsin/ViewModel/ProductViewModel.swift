@@ -1,14 +1,22 @@
 import Foundation
 
 
-class ProductListViewModel: ObservableObject {
+class ProductViewModel: ObservableObject {
     
     @Published var productList = [Product]()
   
     let webService = WebService()
+    
+    var categories: [String: [Product]] {
+            Dictionary(
+                grouping: productList,
+                by: { $0.category.rawValue }
+            )
+        }
         
-    func getData() {
+    init() {
         let url = URL(string: "https://fakestoreapi.com/products")
+       
         webService.getData(url: url!, completion: { result in
             switch result {
             case .failure(let error):
@@ -17,22 +25,10 @@ class ProductListViewModel: ObservableObject {
                 if let item = item {
                     DispatchQueue.main.async {
                         self.productList = item
-
-                    }
-                        
                     }
                 }
-            })
-        }
-    
-    var categories: [String: [Product]] {
-            Dictionary(
-                grouping: productList,
-                by: { $0.category.rawValue }
-            )
-        }
-    
-    
-    
+            }
+        })
+    }
 }
 

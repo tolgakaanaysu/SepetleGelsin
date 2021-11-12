@@ -3,18 +3,18 @@ import Kingfisher
 
 struct CategoryHome: View {
     
-    @ObservedObject var item: ProductListViewModel
+    @ObservedObject var item: ProductViewModel
 
     var body: some View {
         
         NavigationView {
             List {
-                Button(action: {
-                    print(item.productList[1].imageUrl)
-                }){
-                    Image(systemName: "star.fill")
-                        
-                }
+//                Button(action: {
+//                    print(item.productList[1].imageUrl)
+//                }){
+//                    Image(systemName: "star.fill")
+//                        
+//                }
 //                KFImage(URL(string: item.productList[1].imageUrl)!)
 //                    .resizable()
 //                    .scaledToFill()
@@ -32,15 +32,13 @@ struct CategoryHome: View {
             .listStyle(.inset)
             .navigationTitle("Home Page")
         }
-        .onAppear(){
-            ProductListViewModel().getData()
-        }
+    
     }
 }
 
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryHome(item: ProductListViewModel())
+        CategoryHome(item: ProductViewModel())
             
     }
 }

@@ -10,6 +10,7 @@ struct Product: Decodable,Identifiable {
     var category: Category
     let imageUrl: String
     let rating: Rating
+    var isFavorite: Bool = false
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
