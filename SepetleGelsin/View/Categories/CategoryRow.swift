@@ -16,7 +16,7 @@ var body: some View {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(item) { product in
                         NavigationLink {
-//                            ProductDetails(item: <#T##ProductViewModel#>, product: product)
+                            ProductDetails(item: <#T##ProductViewModel#>, productItem: <#T##Product#>)
                         } label: {
                             CategoryItem(product: product)
                         }

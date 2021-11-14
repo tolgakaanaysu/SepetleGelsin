@@ -1,6 +1,5 @@
 import Foundation
 
-
 struct WebService {
   
     func getData(url: URL, completion: @escaping (Result<[Product]?,DownloaderError>) -> Void) {
@@ -19,28 +18,11 @@ struct WebService {
            guard let items = try? JSONDecoder().decode([Product].self, from: data) else {
                return completion(.failure(.dataParseError))
            }
+               
                completion(.success(items))
-           
            }.resume()
-           
-       }
-    
+    }
 }
-    
-//    func getData(urlString: String  ) async throws -> [Product]  {
-//
-//
-        
-//        let url = URL(string: urlString)
-//        let (data, _) = try await URLSession.shared.data(from: url!)
-//
-//        let product = try? JSONDecoder().decode([Product].self, from: data)
-//
-//        return product ?? []
-       
-    
-    
-
 
 enum DownloaderError: Error {
     case badUrl

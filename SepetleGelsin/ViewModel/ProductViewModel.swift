@@ -2,10 +2,7 @@ import Foundation
 
 
 class ProductViewModel: ObservableObject {
-    
     @Published var productList = [Product]()
-  
-    let webService = WebService()
     
     var categories: [String: [Product]] {
             Dictionary(
@@ -14,9 +11,10 @@ class ProductViewModel: ObservableObject {
             )
         }
         
-    init() {
+    func getData() {
+        let webService = WebService()
         let url = URL(string: "https://fakestoreapi.com/products")
-       
+  
         webService.getData(url: url!, completion: { result in
             switch result {
             case .failure(let error):
@@ -26,9 +24,11 @@ class ProductViewModel: ObservableObject {
                     DispatchQueue.main.async {
                         self.productList = item
                     }
+                   
                 }
             }
         })
+      
     }
 }
 

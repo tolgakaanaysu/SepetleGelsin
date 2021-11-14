@@ -1,38 +1,37 @@
-
 import SwiftUI
 
-struct ContentView: View {
-    @ObservedObject var item = ProductViewModel()
-    
-   var body: some View {
-        
-        NavigationView{
-            
-            List {
-                
-                ForEach(item.productList) { i in
-                    
-                        
-                        
-                    Text("Liste içi")
-                    Text(i.title)
-                            .padding()
-                            
-                      
-                    
-                }
-                
-               
-                
-            }
-        }
-        
-        
-    }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+
+struct ContentView: View {
+    @State var items: [String] = ["Apples", "Oranges", "Bananas", "Pears", "Mangos", "Grapefruit","Appless", "Orangess", "Bananass", "Pearss", "Mangoss", "Grapefruitt"]
+    
+    
+
+    @State private var newItemText : String = ""
+    var body: some View {
+       NavigationView {
+            List{
+                 ForEach(items, id: \.self) { i in
+                     Text(i)
+                 }
+                
+                
+                TextEditor(text: $newItemText)
+                    .padding(.bottom)
+//                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.2)
+                    
+//                    .ignoresSafeArea(.keyboard, edges: .all)
+            }
+            .padding(.bottom)
+            .ignoresSafeArea(.keyboard, edges: .bottom)
+ 
+       
+            
+            
+              
+          
+        }
+        .frame(maxHeight: UIScreen.main.bounds.maxY )
+        .padding(.top)
     }
 }

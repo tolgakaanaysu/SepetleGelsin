@@ -6,7 +6,6 @@ target 'SepetleGelsin' do
   use_frameworks!
 
   # Pods for SepetleGelsin
-pod 'Kingfisher', '~> 7.0'ww
-pod 'SwiftyJSON', '~> 4.0'
+pod 'Kingfisher', '~> 7.0'
 
 end
