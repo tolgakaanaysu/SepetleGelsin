@@ -10,7 +10,8 @@
 		465AA837C98F15BBACAB3F09 /* Pods_SepetleGelsin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7B354099676E43E26FC1F6 /* Pods_SepetleGelsin.framework */; };
 		78210FDA27471CFA00CBCB88 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78210FD927471CFA00CBCB88 /* FavoritesList.swift */; };
 		78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78210FDB274720F500CBCB88 /* FavoriteListRow.swift */; };
-		785DE50F274A8B9D0008A69C /* Favorite_Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785DE50E274A8B9D0008A69C /* Favorite_Struct.swift */; };
+		785DE50F274A8B9D0008A69C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785DE50E274A8B9D0008A69C /* Extensions.swift */; };
+		785DE511274A9E820008A69C /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785DE510274A9E820008A69C /* MenuList.swift */; };
 		786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */; };
 		786E8FDB273AD28A00094115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FDA273AD28A00094115 /* ContentView.swift */; };
 		786E8FDD273AD28C00094115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786E8FDC273AD28C00094115 /* Assets.xcassets */; };
@@ -32,7 +33,8 @@
 		27D9F44873A79BB6421EDF42 /* Pods-SepetleGelsin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SepetleGelsin.debug.xcconfig"; path = "Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin.debug.xcconfig"; sourceTree = "<group>"; };
 		78210FD927471CFA00CBCB88 /* FavoritesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		78210FDB274720F500CBCB88 /* FavoriteListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListRow.swift; sourceTree = "<group>"; };
-		785DE50E274A8B9D0008A69C /* Favorite_Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite_Struct.swift; sourceTree = "<group>"; };
+		785DE50E274A8B9D0008A69C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		785DE510274A9E820008A69C /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		786E8FD5273AD28A00094115 /* SepetleGelsin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepetleGelsin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetleGelsinApp.swift; sourceTree = "<group>"; };
 		786E8FDA273AD28A00094115 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		785DE50D274A8B710008A69C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				785DE50E274A8B9D0008A69C /* Favorite_Struct.swift */,
+				785DE50E274A8B9D0008A69C /* Extensions.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				786E8FDA273AD28A00094115 /* ContentView.swift */,
+				785DE510274A9E820008A69C /* MenuList.swift */,
 				786E8FEF273ADFBB00094115 /* Category */,
 				7894FBC6273AF3CB0050C8CB /* ProductDetails */,
 				786CF1D62745D63C00279DE3 /* FavoritesListView */,
@@ -306,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				786E8FDB273AD28A00094115 /* ContentView.swift in Sources */,
-				785DE50F274A8B9D0008A69C /* Favorite_Struct.swift in Sources */,
+				785DE50F274A8B9D0008A69C /* Extensions.swift in Sources */,
 				787486CA273AF93C00C5C1C1 /* CategoryHome.swift in Sources */,
 				7894FBC8273AF4030050C8CB /* ProductDetails.swift in Sources */,
 				786E8FEC273AD99C00094115 /* WebService.swift in Sources */,
@@ -318,6 +321,7 @@
 				786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */,
 				78B88EE927400CDE00F29145 /* FavoriteButton.swift in Sources */,
 				786E8FEA273AD64C00094115 /* ProductModel.swift in Sources */,
+				785DE511274A9E820008A69C /* MenuList.swift in Sources */,
 				78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

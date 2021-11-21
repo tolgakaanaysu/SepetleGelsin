@@ -5,22 +5,28 @@ struct ContentView: View {
 
     enum Tab {
         case homePage
-        case FavoriteList
+        case favoriteList
+        case menuList
     }
     
     var body: some View {
         TabView(selection: $selection) {
             CategoryHome()
                 .tabItem {
-                    Label("HomePage", systemImage: "star")
+                    Label("HomePage", systemImage: "house")
                 }
                 .tag(Tab.homePage)
             
             FavoritesList()
                 .tabItem {
-                    Label("List", systemImage: "list.bullet")
+                    Label("Favorites", systemImage: "star.fill")
                 }
-                .tag(Tab.FavoriteList)
+                .tag(Tab.favoriteList)
+            MenuList()
+                .tabItem{
+                    Label("Menu", systemImage: "list.bullet")
+                }
+                .tag(Tab.menuList)
             
         }
         
