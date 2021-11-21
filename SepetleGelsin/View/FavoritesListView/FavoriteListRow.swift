@@ -12,7 +12,6 @@ struct FavoriteListRow: View {
             Text(favoriteProducts.title)
             Spacer()
             
-            FavoriteButton(productDetailsItem: favoriteProducts)
         }
     }
 }

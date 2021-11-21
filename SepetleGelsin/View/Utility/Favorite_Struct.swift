@@ -1,14 +1,10 @@
 import Foundation
 import SwiftUI
 
-protocol Favorite {
-    
-}
-
-extension Favorite {
-    func isFavorite(productDetailsItem: ProductModel,viewModel: ProductViewModel ) -> Bool {
+extension FavoriteButton {
+    func isFavorite() -> Bool {
         for element in viewModel.favoriteList {
-            if element.id == productDetailsItem.id {
+            if element.id == self.productDetailsItem.id {
                 return true
             }
         }
@@ -16,16 +12,15 @@ extension Favorite {
     }
 }
 
-extension Favorite {
-    func addFavorite(productDetailsItem: ProductModel, viewModel: ProductViewModel) {
-        viewModel.favoriteList.append(productDetailsItem)
-
+extension FavoriteButton {
+    func addFavorite(){
+        self.viewModel.favoriteList.append(self.productDetailsItem)
     }
 }
 
-extension Favorite {
-    func removeFavorite(productDetailsItem: ProductModel, viewModel: ProductViewModel) {
-        viewModel.favoriteList.remove(object: productDetailsItem)
+extension FavoriteButton {
+    func removeFavorite() {
+        self.viewModel.favoriteList.remove(object: self.productDetailsItem)
     }
 }
 

@@ -14,7 +14,7 @@ struct ProductModel: Decodable,Identifiable,Equatable {
     let category: Category
     let imageUrl: String
     let rating: Rating
-    var isFavorite: Bool = false
+   
     
     enum Category: String, Codable, CaseIterable {
         case electronics = "electronics"

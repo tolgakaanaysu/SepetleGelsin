@@ -1,21 +1,33 @@
 import SwiftUI
 import Combine
-struct FavoriteButton: View, Favorite {
-  
+struct FavoriteButton: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var productDetailsItem: ProductModel
     
-  
+    func isFavoritee() -> Bool {
+        for element in viewModel.favoriteList {
+            if element.id == productDetailsItem.id {
+                return true
+            }
+        }
+        return false
+    }
     
+    
+  
     var body: some View {
         Button(action: {
-            if isFavorite(productDetailsItem: productDetailsItem, viewModel: viewModel){
-                addFavorite(productDetailsItem: productDetailsItem, viewModel: viewModel)
+            if !isFavoritee(){
+                print(productDetailsItem.id)
+                addFavorite()
             }
-            removeFavorite(productDetailsItem: productDetailsItem, viewModel: viewModel)
+            else {
+                removeFavorite()
+            }
+            
         }){
             Image(systemName: "star.fill")
-                .foregroundColor( isFavorite(productDetailsItem: productDetailsItem, viewModel: viewModel) ? Color.yellow: Color.gray)
+                .foregroundColor( isFavoritee() ? Color.yellow: Color.gray)
         }
     }
 }
