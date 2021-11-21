@@ -1,21 +1,29 @@
 import Foundation
 
-
 class ProductViewModel: ObservableObject {
-    @Published var productList = [Product]()
+    @Published var productList = [ProductModel]()
     
-    var categories: [String: [Product]] {
+    var categories: [String: [ProductModel]] {
             Dictionary(
                 grouping: productList,
                 by: { $0.category.rawValue }
             )
         }
-        
-    func getData() {
+    
+    @Published var favoriteList = [ProductModel]()
+    
+    
+}
+
+
+extension ProductViewModel {
+    
+    func downloadDataFromUrl() {
         let webService = WebService()
-        let url = URL(string: "https://fakestoreapi.com/products")
+        let urlString = "https://fakestoreapi.com/products"
+        let url = URL(string: urlString)
   
-        webService.getData(url: url!, completion: { result in
+        webService.getDataFromUrl(url: url!, completion: { result in
             switch result {
             case .failure(let error):
                 print(error)
@@ -29,6 +37,23 @@ class ProductViewModel: ObservableObject {
             }
         })
       
+    }
+}
+
+
+extension ProductViewModel {
+   
+    func convertCategoryName(name: String) -> String {
+        
+        switch name {
+   
+        case "1" :
+            return  "b"
+        case "2" :
+            return  "a"
+        default:
+            return  "c"
+        }
     }
 }
 

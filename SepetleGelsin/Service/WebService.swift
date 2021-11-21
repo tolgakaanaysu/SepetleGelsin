@@ -2,7 +2,7 @@ import Foundation
 
 struct WebService {
   
-    func getData(url: URL, completion: @escaping (Result<[Product]?,DownloaderError>) -> Void) {
+    func getDataFromUrl(url: URL, completion: @escaping (Result<[ProductModel]?,DownloaderError>) -> Void) {
            
            URLSession.shared.dataTask(with: url) { data, response, error in
                
@@ -15,7 +15,7 @@ struct WebService {
                return completion(.failure(.noData))
            }
                
-           guard let items = try? JSONDecoder().decode([Product].self, from: data) else {
+           guard let items = try? JSONDecoder().decode([ProductModel].self, from: data) else {
                return completion(.failure(.dataParseError))
            }
                

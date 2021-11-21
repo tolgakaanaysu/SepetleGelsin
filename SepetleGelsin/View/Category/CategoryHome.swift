@@ -1,23 +1,16 @@
 import SwiftUI
 import Kingfisher
-
+import Combine
 struct CategoryHome: View {
     
-    @ObservedObject var item: ProductViewModel
+    @EnvironmentObject var productObject: ProductViewModel
 
      
-    
     var body: some View {
         
         NavigationView {
             List {
-                Button(action: {
-                    print(item.productList[1].imageUrl)
-                    
-                }){
-                    Image(systemName: "star.fill")
-                        
-                }
+               
                 
                 KFImage(URL(string: "https://www.cumhuriyet.com.tr/Archive/2021/7/31/1856842/kapak_145858.jpeg"))
                     .resizable()
@@ -37,11 +30,9 @@ struct CategoryHome: View {
 //                    Text("Wait")
 //                }
 
-                
-                
-                ForEach(item.categories.keys.sorted(), id:\.self ) { key in
+                ForEach(productObject.categories.keys.sorted(), id:\.self ) { key in
                     
-                    CategoryRow(catogoryName: key, item: item.categories[key]!)
+                    CategoryRow(catogoryName: key, productArray: productObject.categories[key]!)
                 }
             }
             .listRowInsets(EdgeInsets())
@@ -59,7 +50,9 @@ struct CategoryHome: View {
 
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryHome(item: ProductViewModel())
+        
+        CategoryHome()
+            .environmentObject(ProductViewModel())
             
     }
 }

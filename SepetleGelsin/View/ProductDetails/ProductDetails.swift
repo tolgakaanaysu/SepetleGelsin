@@ -3,59 +3,50 @@ import Kingfisher
 
 struct ProductDetails: View {
     
-    @ObservedObject var item: ProductViewModel
- 
-    var productItem: Product
+    var productDetailsItem: ProductModel
     
-    var productItemIndex: Int {
-        item.productList.firstIndex(where: { $0.id == productItem.id })!
-    }
-
+    
     var body: some View {
+        
         ScrollView {
+            Text(productDetailsItem.title)
+                .font(.title)
             
-            ProductImage(imageUrl: productItem.imageUrl)
-//                .offset(y: -UIScreen.main.bounds.height * 0.15)
-                .padding(.top, 100)
+            ProductImage(imageUrl: productDetailsItem.imageUrl)
 
             VStack(alignment: .leading) {
-                HStack {
-                    Text(productItem.title)
-                        .padding(.bottom)
-                        .font(.title)
-                        .foregroundColor(.primary)
-//Favorite Button
-//                    FavoriteButton(isSet: $item.productList[productIndex].isFavorite)
-                        }
-                
-//                FavoriteButton(isSet: $item.productList[productItemIndex].isFavorite)
-
-                HStack {
-                    Text("\(productItem.price)")
-                    Spacer()
-                    Text("product")
-                }
-                
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-
-                Divider()
-
                
-                Text(productItem.description)
+                    HStack {
+                        Text(String(format:"%.2f",productDetailsItem.price) + "$")
+                        Spacer()
+                     
+                        Text(String(format: "%.1f", productDetailsItem.rating.rate))
+                             
+                    }
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    Divider()
+                    Text(productDetailsItem.description)
+               
             }
-            .padding()
-            
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle(productItem.title)
-        .navigationBarTitleDisplayMode(.inline)
+        .padding()
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing ) {
+                
+                
+                FavoriteButton(productDetailsItem: productDetailsItem)
+
+            }
+        }
         
     }
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
-    static let item = ProductViewModel()
+    
     static var previews: some View {
-        ProductDetails(item: item, productItem: AB[0])
+        ProductDetails(productDetailsItem: AB[1])
     }
 }

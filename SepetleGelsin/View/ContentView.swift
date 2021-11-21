@@ -1,37 +1,36 @@
 import SwiftUI
 
-
-
 struct ContentView: View {
-    @State var items: [String] = ["Apples", "Oranges", "Bananas", "Pears", "Mangos", "Grapefruit","Appless", "Orangess", "Bananass", "Pearss", "Mangoss", "Grapefruitt"]
-    
-    
+    @State private var selection: Tab = .homePage
 
-    @State private var newItemText : String = ""
+    enum Tab {
+        case homePage
+        case FavoriteList
+    }
+    
     var body: some View {
-       NavigationView {
-            List{
-                 ForEach(items, id: \.self) { i in
-                     Text(i)
-                 }
-                
-                
-                TextEditor(text: $newItemText)
-                    .padding(.bottom)
-//                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.2)
-                    
-//                    .ignoresSafeArea(.keyboard, edges: .all)
-            }
-            .padding(.bottom)
-            .ignoresSafeArea(.keyboard, edges: .bottom)
- 
-       
+        TabView(selection: $selection) {
+            CategoryHome()
+                .tabItem {
+                    Label("HomePage", systemImage: "star")
+                }
+                .tag(Tab.homePage)
             
+            FavoritesList()
+                .tabItem {
+                    Label("List", systemImage: "list.bullet")
+                }
+                .tag(Tab.FavoriteList)
             
-              
-          
         }
-        .frame(maxHeight: UIScreen.main.bounds.maxY )
-        .padding(.top)
+        
+            
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(ProductViewModel())
     }
 }

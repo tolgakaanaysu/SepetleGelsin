@@ -2,21 +2,15 @@ import SwiftUI
 
 @main
 struct SepetleGelsinApp: App {
-    @StateObject private var stateObject = ProductViewModel()
+    @StateObject var stateObject = ProductViewModel()
     var body: some Scene {
         WindowGroup {
-           
-            CategoryHome(item: stateObject)
+           ContentView()
+                .environmentObject(stateObject)
                 .onAppear {
-                    stateObject.getData()
+                    stateObject.downloadDataFromUrl()
                 }
             
-           
-                
-                
-                
-    
-               
         }
         
     }
