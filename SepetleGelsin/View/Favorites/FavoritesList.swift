@@ -18,7 +18,14 @@ struct FavoritesList: View {
                     }
                 }
             }
-            .navigationTitle("Favorite")
+            .listStyle(.inset)
+            .toolbar {
+                ToolbarItem {
+                    RemoveButton()
+                }
+            }
+           
+
         }
     }
 }
