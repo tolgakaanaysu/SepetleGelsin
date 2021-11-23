@@ -2,6 +2,7 @@ import Foundation
 
 class ProductViewModel: ObservableObject {
     @Published var productList = [ProductModel]()
+    @Published var favoriteList = [ProductModel]()
     
     var categories: [String: [ProductModel]] {
             Dictionary(
@@ -9,12 +10,7 @@ class ProductViewModel: ObservableObject {
                 by: { $0.category.rawValue }
             )
         }
-    
-    @Published var favoriteList = [ProductModel]()
-    
-    
 }
-
 
 extension ProductViewModel {
     
@@ -37,23 +33,6 @@ extension ProductViewModel {
             }
         })
       
-    }
-}
-
-
-extension ProductViewModel {
-   
-    func convertCategoryName(name: String) -> String {
-        
-        switch name {
-   
-        case "1" :
-            return  "b"
-        case "2" :
-            return  "a"
-        default:
-            return  "c"
-        }
     }
 }
 
