@@ -10,26 +10,13 @@ struct CategoryHome: View {
         
         NavigationView {
             List {
-               
-                
                 KFImage(URL(string: "https://www.cumhuriyet.com.tr/Archive/2021/7/31/1856842/kapak_145858.jpeg"))
                     .resizable()
                     .scaledToFill()
                     .frame(height: UIScreen.main.bounds.height * 0.25)
                     .clipped()
                     .listRowInsets(EdgeInsets())
-
-//                AsyncImage(url: URL(string: item.productList[1].imageUrl)) { image in
-//                     image
-//                        .resizable()
-//                        .scaledToFill()
-//                        .frame(height: UIScreen.main.bounds.height * 0.25)
-//                        .clipped()
-//                        .listRowInsets(EdgeInsets())
-//                } placeholder: {
-//                    Text("Wait")
-//                }
-
+                    
                 ForEach(productObject.categories.keys.sorted(), id:\.self ) { key in
                     
                     CategoryRow(catogoryName: key, productArray: productObject.categories[key]!)
@@ -37,13 +24,9 @@ struct CategoryHome: View {
             }
             .listRowInsets(EdgeInsets())
             .listStyle(.inset)
-            .navigationTitle("Home Page")
+            .navigationBarTitle("Home Page")
+            
         }
-       
-       
-        
-       
-    
     }
         
 }
