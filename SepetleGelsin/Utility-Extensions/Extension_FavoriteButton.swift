@@ -1,6 +1,7 @@
-import SwiftUI
+import Foundation
 
 extension FavoriteButton {
+    //Check product is favorite
     func isFavorite() -> Bool {
         for element in viewModel.favoriteList {
             if element.id == self.productDetailsItem.id {
@@ -12,14 +13,14 @@ extension FavoriteButton {
 }
 
 extension FavoriteButton {
-    //Add marked product
+    //Add  product
     func addFavorite(){
         self.viewModel.favoriteList.append(self.productDetailsItem)
     }
 }
 
 extension FavoriteButton {
-    //Remove marked product
+    //Remove product
     func removeFavorite() {
         self.viewModel.favoriteList.remove(object: self.productDetailsItem)
     }
