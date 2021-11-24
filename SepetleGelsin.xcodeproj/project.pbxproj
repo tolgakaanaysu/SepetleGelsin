@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		465AA837C98F15BBACAB3F09 /* Pods_SepetleGelsin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7B354099676E43E26FC1F6 /* Pods_SepetleGelsin.framework */; };
-		78210FDA27471CFA00CBCB88 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78210FD927471CFA00CBCB88 /* FavoritesList.swift */; };
 		78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78210FDB274720F500CBCB88 /* FavoriteListRow.swift */; };
-		785DE50F274A8B9D0008A69C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785DE50E274A8B9D0008A69C /* Extensions.swift */; };
 		785DE511274A9E820008A69C /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785DE510274A9E820008A69C /* MenuList.swift */; };
 		786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */; };
 		786E8FDB273AD28A00094115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FDA273AD28A00094115 /* ContentView.swift */; };
@@ -21,6 +19,11 @@
 		786E8FEE273ADDB100094115 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FED273ADDB100094115 /* ProductViewModel.swift */; };
 		786E8FF4273AE00500094115 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FF3273AE00500094115 /* CategoryRow.swift */; };
 		786E8FF7273AE02700094115 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FF6273AE02700094115 /* CategoryItem.swift */; };
+		78717042274EC59C00F93D3E /* Extension_FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871703F274EC59C00F93D3E /* Extension_FavoriteButton.swift */; };
+		78717043274EC59C00F93D3E /* Extension_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78717040274EC59C00F93D3E /* Extension_Array.swift */; };
+		78717044274EC59C00F93D3E /* Extension_RemoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78717041274EC59C00F93D3E /* Extension_RemoveButton.swift */; };
+		78717046274EC5BD00F93D3E /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78717045274EC5BD00F93D3E /* FavoritesList.swift */; };
+		78717048274EC60900F93D3E /* RemoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78717047274EC60900F93D3E /* RemoveButton.swift */; };
 		787486CA273AF93C00C5C1C1 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787486C9273AF93C00C5C1C1 /* CategoryHome.swift */; };
 		7894FBC8273AF4030050C8CB /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894FBC7273AF4030050C8CB /* ProductDetails.swift */; };
 		78B88EE727400C5F00F29145 /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B88EE627400C5F00F29145 /* ProductImage.swift */; };
@@ -31,9 +34,7 @@
 		0C7B354099676E43E26FC1F6 /* Pods_SepetleGelsin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SepetleGelsin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E14FA9CD717A07B73F0998C /* Pods-SepetleGelsin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SepetleGelsin.release.xcconfig"; path = "Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin.release.xcconfig"; sourceTree = "<group>"; };
 		27D9F44873A79BB6421EDF42 /* Pods-SepetleGelsin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SepetleGelsin.debug.xcconfig"; path = "Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin.debug.xcconfig"; sourceTree = "<group>"; };
-		78210FD927471CFA00CBCB88 /* FavoritesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		78210FDB274720F500CBCB88 /* FavoriteListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListRow.swift; sourceTree = "<group>"; };
-		785DE50E274A8B9D0008A69C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		785DE510274A9E820008A69C /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		786E8FD5273AD28A00094115 /* SepetleGelsin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepetleGelsin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetleGelsinApp.swift; sourceTree = "<group>"; };
@@ -45,6 +46,11 @@
 		786E8FED273ADDB100094115 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		786E8FF3273AE00500094115 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		786E8FF6273AE02700094115 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		7871703F274EC59C00F93D3E /* Extension_FavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension_FavoriteButton.swift; path = "SepetleGelsin/View/Utility-Extensions/Extension_FavoriteButton.swift"; sourceTree = SOURCE_ROOT; };
+		78717040274EC59C00F93D3E /* Extension_Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension_Array.swift; path = "SepetleGelsin/View/Utility-Extensions/Extension_Array.swift"; sourceTree = SOURCE_ROOT; };
+		78717041274EC59C00F93D3E /* Extension_RemoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension_RemoveButton.swift; path = "SepetleGelsin/View/Utility-Extensions/Extension_RemoveButton.swift"; sourceTree = SOURCE_ROOT; };
+		78717045274EC5BD00F93D3E /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesList.swift; path = SepetleGelsin/View/FavoritesListView/FavoritesList.swift; sourceTree = SOURCE_ROOT; };
+		78717047274EC60900F93D3E /* RemoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoveButton.swift; path = SepetleGelsin/View/Favorites/RemoveButton.swift; sourceTree = SOURCE_ROOT; };
 		787486C9273AF93C00C5C1C1 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
 		7894FBC7273AF4030050C8CB /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		78B88EE627400C5F00F29145 /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
@@ -80,18 +86,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		785DE50D274A8B710008A69C /* Utility */ = {
+		785DE50D274A8B710008A69C /* Utility-Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				785DE50E274A8B9D0008A69C /* Extensions.swift */,
+				78717040274EC59C00F93D3E /* Extension_Array.swift */,
+				7871703F274EC59C00F93D3E /* Extension_FavoriteButton.swift */,
+				78717041274EC59C00F93D3E /* Extension_RemoveButton.swift */,
 			);
-			path = Utility;
+			path = "Utility-Extensions";
 			sourceTree = "<group>";
 		};
 		786CF1D62745D63C00279DE3 /* FavoritesListView */ = {
 			isa = PBXGroup;
 			children = (
-				78210FD927471CFA00CBCB88 /* FavoritesList.swift */,
+				78717045274EC5BD00F93D3E /* FavoritesList.swift */,
+				78717047274EC60900F93D3E /* RemoveButton.swift */,
 				78210FDB274720F500CBCB88 /* FavoriteListRow.swift */,
 			);
 			path = FavoritesListView;
@@ -161,7 +170,7 @@
 				786E8FEF273ADFBB00094115 /* Category */,
 				7894FBC6273AF3CB0050C8CB /* ProductDetails */,
 				786CF1D62745D63C00279DE3 /* FavoritesListView */,
-				785DE50D274A8B710008A69C /* Utility */,
+				785DE50D274A8B710008A69C /* Utility-Extensions */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,20 +318,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				786E8FDB273AD28A00094115 /* ContentView.swift in Sources */,
-				785DE50F274A8B9D0008A69C /* Extensions.swift in Sources */,
+				78717042274EC59C00F93D3E /* Extension_FavoriteButton.swift in Sources */,
+				78717044274EC59C00F93D3E /* Extension_RemoveButton.swift in Sources */,
 				787486CA273AF93C00C5C1C1 /* CategoryHome.swift in Sources */,
 				7894FBC8273AF4030050C8CB /* ProductDetails.swift in Sources */,
 				786E8FEC273AD99C00094115 /* WebService.swift in Sources */,
 				786E8FF4273AE00500094115 /* CategoryRow.swift in Sources */,
-				78210FDA27471CFA00CBCB88 /* FavoritesList.swift in Sources */,
+				78717043274EC59C00F93D3E /* Extension_Array.swift in Sources */,
 				786E8FF7273AE02700094115 /* CategoryItem.swift in Sources */,
 				786E8FEE273ADDB100094115 /* ProductViewModel.swift in Sources */,
 				78B88EE727400C5F00F29145 /* ProductImage.swift in Sources */,
+				78717046274EC5BD00F93D3E /* FavoritesList.swift in Sources */,
 				786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */,
 				78B88EE927400CDE00F29145 /* FavoriteButton.swift in Sources */,
 				786E8FEA273AD64C00094115 /* ProductModel.swift in Sources */,
 				785DE511274A9E820008A69C /* MenuList.swift in Sources */,
 				78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */,
+				78717048274EC60900F93D3E /* RemoveButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
