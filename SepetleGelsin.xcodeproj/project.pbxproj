@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		465AA837C98F15BBACAB3F09 /* Pods_SepetleGelsin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7B354099676E43E26FC1F6 /* Pods_SepetleGelsin.framework */; };
 		78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78210FDB274720F500CBCB88 /* FavoriteListRow.swift */; };
 		785DE511274A9E820008A69C /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785DE510274A9E820008A69C /* MenuList.swift */; };
 		786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */; };
@@ -31,9 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C7B354099676E43E26FC1F6 /* Pods_SepetleGelsin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SepetleGelsin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E14FA9CD717A07B73F0998C /* Pods-SepetleGelsin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SepetleGelsin.release.xcconfig"; path = "Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin.release.xcconfig"; sourceTree = "<group>"; };
-		27D9F44873A79BB6421EDF42 /* Pods-SepetleGelsin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SepetleGelsin.debug.xcconfig"; path = "Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin.debug.xcconfig"; sourceTree = "<group>"; };
 		78210FDB274720F500CBCB88 /* FavoriteListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListRow.swift; sourceTree = "<group>"; };
 		785DE510274A9E820008A69C /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		786E8FD5273AD28A00094115 /* SepetleGelsin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepetleGelsin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,30 +59,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465AA837C98F15BBACAB3F09 /* Pods_SepetleGelsin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		024EC9524D3EAA747A6F2645 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0C7B354099676E43E26FC1F6 /* Pods_SepetleGelsin.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		74E087B17E0B2F15D7E576A1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				27D9F44873A79BB6421EDF42 /* Pods-SepetleGelsin.debug.xcconfig */,
-				1E14FA9CD717A07B73F0998C /* Pods-SepetleGelsin.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		785DE50D274A8B710008A69C /* Utility-Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +91,6 @@
 				786E8FD7273AD28A00094115 /* SepetleGelsin */,
 				786E8FDC273AD28C00094115 /* Assets.xcassets */,
 				786E8FD6273AD28A00094115 /* Products */,
-				74E087B17E0B2F15D7E576A1 /* Pods */,
-				024EC9524D3EAA747A6F2645 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,11 +188,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 786E8FE3273AD28C00094115 /* Build configuration list for PBXNativeTarget "SepetleGelsin" */;
 			buildPhases = (
-				5E738EDF18D66BBC946D3AF5 /* [CP] Check Pods Manifest.lock */,
 				786E8FD1273AD28A00094115 /* Sources */,
 				786E8FD2273AD28A00094115 /* Frameworks */,
 				786E8FD3273AD28A00094115 /* Resources */,
-				E718C15C2A7FE7089189DD1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,48 +245,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5E738EDF18D66BBC946D3AF5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SepetleGelsin-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E718C15C2A7FE7089189DD1B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SepetleGelsin/Pods-SepetleGelsin-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		786E8FD1273AD28A00094115 /* Sources */ = {
@@ -461,7 +393,6 @@
 		};
 		786E8FE4273AD28C00094115 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27D9F44873A79BB6421EDF42 /* Pods-SepetleGelsin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -492,7 +423,6 @@
 		};
 		786E8FE5273AD28C00094115 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E14FA9CD717A07B73F0998C /* Pods-SepetleGelsin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

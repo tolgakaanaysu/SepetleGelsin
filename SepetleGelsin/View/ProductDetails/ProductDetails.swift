@@ -1,5 +1,4 @@
 import SwiftUI
-import Kingfisher
 
 struct ProductDetails: View {
     

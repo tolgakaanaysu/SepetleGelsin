@@ -16,6 +16,7 @@ struct ContentView: View {
                     Label("HomePage", systemImage: "house")
                 }
                 .tag(Tab.homePage)
+                
             
             FavoritesList()
                 .tabItem {

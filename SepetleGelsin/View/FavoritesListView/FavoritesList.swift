@@ -24,8 +24,8 @@ struct FavoritesList: View {
                     RemoveButton()
                 }
             }
-           
-
+            .listStyle(.inset)
+            
         }
     }
 }

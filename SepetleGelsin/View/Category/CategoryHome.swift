@@ -1,5 +1,4 @@
 import SwiftUI
-import Kingfisher
 import Combine
 struct CategoryHome: View {
     
@@ -9,22 +8,24 @@ struct CategoryHome: View {
     var body: some View {
         
         NavigationView {
+            
             List {
-                KFImage(URL(string: "https://www.cumhuriyet.com.tr/Archive/2021/7/31/1856842/kapak_145858.jpeg"))
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: UIScreen.main.bounds.height * 0.25)
-                    .clipped()
-                    .listRowInsets(EdgeInsets())
+                AsyncImage(url: URL(string: "https://micoedward.com/wp-content/uploads/2018/04/Love-your-product.png")) { image in
+                    image.resizable()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: UIScreen.main.bounds.width, height: 200,alignment: .center)
+                .listRowInsets(EdgeInsets())
+                    
                     
                 ForEach(productObject.categories.keys.sorted(), id:\.self ) { key in
                     
                     CategoryRow(catogoryName: key, productArray: productObject.categories[key]!)
                 }
             }
-            .listRowInsets(EdgeInsets())
             .listStyle(.inset)
-            .navigationBarTitle("Home Page")
+           
             
         }
     }

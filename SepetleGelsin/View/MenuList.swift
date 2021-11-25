@@ -1,9 +1,3 @@
-//
-//  MenuList.swift
-//  SepetleGelsin
-//
-//  Created by Tolga Kağan Aysu on 21.11.2021.
-//
 
 import SwiftUI
 

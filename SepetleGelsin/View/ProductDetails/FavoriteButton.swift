@@ -3,9 +3,6 @@ import Combine
 struct FavoriteButton: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var productDetailsItem: ProductModel
-    
-
-    
   
     var body: some View {
         Button(action: {
@@ -14,21 +11,22 @@ struct FavoriteButton: View {
             }
             else {
                 removeFavorite()
-           
+              
             }
             
         }){
-            Image(systemName: "star.fill")
-                .foregroundColor( isFavorite() ? Color.yellow: Color.gray)
+            Image(systemName: "heart.fill")
+                .foregroundColor( isFavorite() ? Color.red: Color.gray)
         }
     }
 }
-//
-//struct FavoriteButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FavoriteButton(productDetailsItem: A)
-//    }
-//}
+
+struct FavoriteButton_Previews: PreviewProvider {
+    static var previews: some View {
+        FavoriteButton(productDetailsItem: A)
+            .environmentObject(ProductViewModel())
+    }
+}
  
 
 

@@ -1,18 +1,24 @@
 import SwiftUI
-import Kingfisher
 
 struct CategoryItem: View {
     var product:  ProductModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            KFImage(URL(string: product.imageUrl))
+            
+            AsyncImage(url: URL(string: product.imageUrl)!) { image in
+                image
                 .renderingMode(.original)
                 .resizable()
-                .frame(width: 150, height: 150)
-
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .shadow(color: .blue, radius: 5)
+               
+                
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 120, height: 120)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .shadow(color: .blue, radius: 5)
+                
 
             Text(product.title)
                 .frame(width: 110, height: 20, alignment: .leading)

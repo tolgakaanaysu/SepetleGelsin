@@ -1,14 +1,20 @@
 import SwiftUI
-import Kingfisher
 struct ProductImage: View {
     var imageUrl: String
     
     var body: some View {
-        KFImage(URL(string: imageUrl)!)
+        AsyncImage(url: URL(string: imageUrl)!) { image in
+            image
+            .renderingMode(.original)
             .resizable()
+           
+            
+        } placeholder: {
+            ProgressView()
+        }
+          
             .frame(width: 200, height: 200, alignment: .center)
             .aspectRatio(contentMode: .fit)
-           
             .shadow(radius: 10)
 
     }
