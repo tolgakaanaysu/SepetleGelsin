@@ -14,6 +14,7 @@ struct CategoryRow: View {
                     .bold()
                     .shadow(color: .black, radius: 0.2)
                     .padding(.top, 5)
+                   
                     
             }
 
@@ -26,10 +27,9 @@ struct CategoryRow: View {
                             CategoryItem(product: item)
                         }
                     }
-                }
-            }
-            
-        }
+                } //:HStack
+            } //:ScroolView
+        }//:VStack
         
     }
 }

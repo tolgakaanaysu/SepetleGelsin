@@ -25,6 +25,7 @@ struct CategoryHome: View {
             }
             .listStyle(.inset)
            
+           
             
         }
     }

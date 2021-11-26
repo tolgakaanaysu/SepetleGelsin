@@ -11,6 +11,7 @@ struct CategoryItem: View {
             .frame(width: 120 , height: 120)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .shadow(color: .blue, radius: 5)
+            .padding(.leading, 5)
        
                 
 

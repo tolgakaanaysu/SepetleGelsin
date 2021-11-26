@@ -109,11 +109,11 @@
 		786E8FD7273AD28A00094115 /* SepetleGelsin */ = {
 			isa = PBXGroup;
 			children = (
-				787388AA27515808006B6D28 /* Resource */,
 				7871704F274EE61900F93D3E /* Info.plist */,
 				786E8FDE273AD28C00094115 /* Preview Content */,
 				786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */,
 				786E8FE7273AD5EF00094115 /* Service */,
+				787388AA27515808006B6D28 /* Resource */,
 				786E8FE6273AD5E200094115 /* Model */,
 				787486CB273B0CB200C5C1C1 /* ViewModel */,
 				786E8FE8273AD60400094115 /* View */,

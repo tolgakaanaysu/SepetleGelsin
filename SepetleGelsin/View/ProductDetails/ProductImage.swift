@@ -5,10 +5,16 @@ struct ProductImage: View {
     var body: some View {
        
           image
-            .frame(width: 200, height: 200, alignment: .center)
-            .aspectRatio(contentMode: .fit)
-            .shadow(radius: 10)
-
+            
+            .resizable()
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .padding()
+            .frame(width: UIScreen.main.bounds.width * 0.5, height: UIScreen.main.bounds.width * 0.5)
+            
+            .shadow(color: .blue, radius: 5)
+            .padding()
+        
+        
     }
 }
 struct ProductImage_Previews: PreviewProvider {
