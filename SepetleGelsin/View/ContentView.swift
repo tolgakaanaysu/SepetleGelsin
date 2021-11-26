@@ -5,6 +5,7 @@ struct ContentView: View {
 
     enum Tab {
         case homePage
+        case searchView
         case favoriteList
         case menuList
     }
@@ -17,7 +18,12 @@ struct ContentView: View {
                     Label("HomePage", systemImage: "house")
                 }
                 .tag(Tab.homePage)
-                
+            
+            SearchView()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass.circle.fill")
+                }
+                .tag(Tab.searchView)
             
             FavoritesList()
                 .tabItem {
