@@ -12,6 +12,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selection) {
             CategoryHome()
+           
                 .tabItem {
                     Label("HomePage", systemImage: "house")
                 }
@@ -23,6 +24,7 @@ struct ContentView: View {
                     Label("Favorites", systemImage: "star.fill")
                 }
                 .tag(Tab.favoriteList)
+            
             MenuList()
                 .tabItem{
                     Label("Menu", systemImage: "list.bullet")

@@ -25,7 +25,7 @@ struct CategoryItem: View {
                 .foregroundColor(.primary)
                 .font(.caption)
         }
-        .padding(.trailing, 15)
+       
         .padding(.top, 10)
     }
 }

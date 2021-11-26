@@ -17,6 +17,8 @@ struct FavoriteButton: View {
         }){
             Image(systemName: "heart.fill")
                 .foregroundColor( isFavorite() ? Color.red: Color.gray)
+                
+                
         }
     }
 }

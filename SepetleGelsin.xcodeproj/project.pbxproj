@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7820B644275058CC00087E0D /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820B643275058CC00087E0D /* CategoryList.swift */; };
 		78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78210FDB274720F500CBCB88 /* FavoriteListRow.swift */; };
 		785DE511274A9E820008A69C /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785DE510274A9E820008A69C /* MenuList.swift */; };
 		786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7820B643275058CC00087E0D /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		78210FDB274720F500CBCB88 /* FavoriteListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListRow.swift; sourceTree = "<group>"; };
 		785DE510274A9E820008A69C /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		786E8FD5273AD28A00094115 /* SepetleGelsin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepetleGelsin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,8 +113,8 @@
 				786E8FE7273AD5EF00094115 /* Service */,
 				786E8FE6273AD5E200094115 /* Model */,
 				787486CB273B0CB200C5C1C1 /* ViewModel */,
-				786E8FE8273AD60400094115 /* View */,
 				785DE50D274A8B710008A69C /* Utility-Extensions */,
+				786E8FE8273AD60400094115 /* View */,
 			);
 			path = SepetleGelsin;
 			sourceTree = "<group>";
@@ -159,6 +161,7 @@
 				787486C9273AF93C00C5C1C1 /* CategoryHome.swift */,
 				786E8FF3273AE00500094115 /* CategoryRow.swift */,
 				786E8FF6273AE02700094115 /* CategoryItem.swift */,
+				7820B643275058CC00087E0D /* CategoryList.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				78B88EE927400CDE00F29145 /* FavoriteButton.swift in Sources */,
 				786E8FEA273AD64C00094115 /* ProductModel.swift in Sources */,
 				785DE511274A9E820008A69C /* MenuList.swift in Sources */,
+				7820B644275058CC00087E0D /* CategoryList.swift in Sources */,
 				78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */,
 				78717048274EC60900F93D3E /* RemoveButton.swift in Sources */,
 				7871704D274EC73300F93D3E /* Extension_Array.swift in Sources */,

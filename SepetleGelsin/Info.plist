@@ -3,6 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>UILaunchScreen</key>
-	<dict/>
+	<dict>
+		<key>UIColorName</key>
+		<string>launch-screen-color</string>
+	</dict>
 </dict>
 </plist>
