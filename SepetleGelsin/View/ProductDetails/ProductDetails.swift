@@ -11,7 +11,7 @@ struct ProductDetails: View {
             Text(productDetailsItem.title)
                 .font(.title)
             
-            ProductImage(imageUrl: productDetailsItem.imageUrl)
+            ProductImage(image: productDetailsItem.image)
 
             VStack(alignment: .leading) {
                
@@ -44,8 +44,8 @@ struct ProductDetails: View {
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
-    
+    static let product = ProductViewModel()
     static var previews: some View {
-        ProductDetails(productDetailsItem: AB[1])
+        ProductDetails(productDetailsItem: product.productList[1])
     }
 }

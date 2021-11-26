@@ -22,7 +22,7 @@ extension FavoriteButton {
 extension FavoriteButton {
     //Remove product
     func removeFavorite() {
-        self.viewModel.favoriteList.remove(object: self.productDetailsItem)
+//        self.viewModel.favoriteList.remove(object: self.productDetailsItem)
     }
 }
 

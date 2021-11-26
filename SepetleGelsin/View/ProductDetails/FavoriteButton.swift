@@ -25,7 +25,7 @@ struct FavoriteButton: View {
 
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteButton(productDetailsItem: A)
+        FavoriteButton(productDetailsItem: ProductViewModel().productList[1])
             .environmentObject(ProductViewModel())
     }
 }

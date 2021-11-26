@@ -10,13 +10,12 @@ struct CategoryHome: View {
         NavigationView {
             
             List {
-                AsyncImage(url: URL(string: "https://micoedward.com/wp-content/uploads/2018/04/Love-your-product.png")) { image in
-                    image.resizable()
-                } placeholder: {
-                    ProgressView()
-                }
-                .frame(width: UIScreen.main.bounds.width, height: 200,alignment: .center)
-                .listRowInsets(EdgeInsets())
+                productObject.productList[2].image
+                    .resizable()
+                    .frame(width: UIScreen.main.bounds.width  ,height: 200)
+                    .scaledToFill()
+                    
+                    .listRowInsets(EdgeInsets())
                     
                     
                 ForEach(productObject.categories.keys.sorted(), id:\.self ) { key in

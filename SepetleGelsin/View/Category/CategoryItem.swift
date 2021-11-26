@@ -5,19 +5,13 @@ struct CategoryItem: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            
-            AsyncImage(url: URL(string: product.imageUrl)!) { image in
-                image
-                .renderingMode(.original)
-                .resizable()
-               
-                
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(width: 120, height: 120)
+            product.image
+            .renderingMode(.original)
+            .resizable()
+            .frame(width: 120 , height: 120)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .shadow(color: .blue, radius: 5)
+       
                 
 
             Text(product.title)
@@ -33,7 +27,7 @@ struct CategoryItem: View {
 
 struct CategoryItem_Preview: PreviewProvider {
     static var previews: some View {
-        CategoryItem(product: AB[1])
+        CategoryItem(product: ProductViewModel().productList[1])
     }
 }
 

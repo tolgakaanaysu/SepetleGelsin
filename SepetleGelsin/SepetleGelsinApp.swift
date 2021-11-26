@@ -7,9 +7,7 @@ struct SepetleGelsinApp: App {
         WindowGroup {
            ContentView()
                 .environmentObject(stateObject)
-                .onAppear {
-                    stateObject.downloadDataFromUrl()
-                }
+                
             
         }
         
