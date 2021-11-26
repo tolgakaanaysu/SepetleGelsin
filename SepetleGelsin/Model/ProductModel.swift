@@ -16,10 +16,10 @@ struct ProductModel: Decodable,Identifiable {
     }
 
     enum Category: String, Codable, CaseIterable {
-        case electronics = "electronics"
-        case jewelery = "jewelery"
-        case menSClothing = "men's clothing"
-        case womenSClothing = "women's clothing"
+        case bakım = "Kişisel Bakım"
+        case drink = "İçecek"
+        case food = "Yiyecek"
+        case clean = "Temizlik"
     }
 
     struct Rating: Codable {
