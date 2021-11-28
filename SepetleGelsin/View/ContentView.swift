@@ -1,4 +1,5 @@
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
     @State private var selection: Tab = .homePage
@@ -27,7 +28,7 @@ struct ContentView: View {
             
             FavoritesList()
                 .tabItem {
-                    Label("Favorites", systemImage: "star.fill")
+                    Label("Favorites", systemImage: "heart")
                 }
                 .tag(Tab.favoriteList)
             
@@ -36,6 +37,10 @@ struct ContentView: View {
                     Label("Menu", systemImage: "list.bullet")
                 }
                 .tag(Tab.menuList)
+            LoginScreen()
+                .tabItem {
+                    Label("Login", systemImage: "mustache.fill")
+                }
             
         }
         
