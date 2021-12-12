@@ -5,7 +5,7 @@ struct RemoveButton: View {
     
     var body: some View {
         Button (action: {
-            removeAllFavorites()
+            self.viewModel.favoriteList.removeAll()
         }){
             Image(systemName: "trash")
         }

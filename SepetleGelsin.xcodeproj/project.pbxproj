@@ -20,9 +20,7 @@
 		786E8FF7273AE02700094115 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FF6273AE02700094115 /* CategoryItem.swift */; };
 		78717046274EC5BD00F93D3E /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78717045274EC5BD00F93D3E /* FavoritesList.swift */; };
 		78717048274EC60900F93D3E /* RemoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78717047274EC60900F93D3E /* RemoveButton.swift */; };
-		7871704C274EC73300F93D3E /* Extension_RemoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78717049274EC73300F93D3E /* Extension_RemoveButton.swift */; };
 		7871704D274EC73300F93D3E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871704A274EC73300F93D3E /* Array.swift */; };
-		7871704E274EC73300F93D3E /* FavoriteButtonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871704B274EC73300F93D3E /* FavoriteButtonFunctions.swift */; };
 		787388A72751458D006B6D28 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787388A62751458D006B6D28 /* DataService.swift */; };
 		787388AC27515B54006B6D28 /* productData.json in Resources */ = {isa = PBXBuildFile; fileRef = 787388AB27515B54006B6D28 /* productData.json */; };
 		787388AF27517B48006B6D28 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787388AE27517B47006B6D28 /* SearchView.swift */; };
@@ -50,9 +48,7 @@
 		786E8FF6273AE02700094115 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		78717045274EC5BD00F93D3E /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesList.swift; path = SepetleGelsin/View/FavoritesListView/FavoritesList.swift; sourceTree = SOURCE_ROOT; };
 		78717047274EC60900F93D3E /* RemoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoveButton.swift; path = SepetleGelsin/View/Favorites/RemoveButton.swift; sourceTree = SOURCE_ROOT; };
-		78717049274EC73300F93D3E /* Extension_RemoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension_RemoveButton.swift; sourceTree = "<group>"; };
 		7871704A274EC73300F93D3E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		7871704B274EC73300F93D3E /* FavoriteButtonFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteButtonFunctions.swift; sourceTree = "<group>"; };
 		7871704F274EE61900F93D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		787388A62751458D006B6D28 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		787388AB27515B54006B6D28 /* productData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = productData.json; sourceTree = "<group>"; };
@@ -81,8 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				7871704A274EC73300F93D3E /* Array.swift */,
-				7871704B274EC73300F93D3E /* FavoriteButtonFunctions.swift */,
-				78717049274EC73300F93D3E /* Extension_RemoveButton.swift */,
 				78BAE9CD2765E167005F4D07 /* BackgroundColor.swift */,
 			);
 			path = Utility;
@@ -301,11 +295,9 @@
 			files = (
 				787388AF27517B48006B6D28 /* SearchView.swift in Sources */,
 				786E8FDB273AD28A00094115 /* ContentView.swift in Sources */,
-				7871704C274EC73300F93D3E /* Extension_RemoveButton.swift in Sources */,
 				787486CA273AF93C00C5C1C1 /* CategoryHome.swift in Sources */,
 				7894FBC8273AF4030050C8CB /* ProductDetails.swift in Sources */,
 				786E8FF4273AE00500094115 /* CategoryRow.swift in Sources */,
-				7871704E274EC73300F93D3E /* FavoriteButtonFunctions.swift in Sources */,
 				786E8FF7273AE02700094115 /* CategoryItem.swift in Sources */,
 				786E8FEE273ADDB100094115 /* ProductViewModel.swift in Sources */,
 				78B88EE727400C5F00F29145 /* ProductImage.swift in Sources */,

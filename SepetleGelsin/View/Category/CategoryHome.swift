@@ -23,13 +23,19 @@ struct CategoryHome: View {
                     
                     CategoryRow(catogoryName: key, productArray: productObject.categories[key]!)
                 }
-                .listRowBackground(Color.myColor)
+                
             }
             .listStyle(.inset)
             
             
             
         }
+        
+        
+
+    
+        
+        
     }
         
 }

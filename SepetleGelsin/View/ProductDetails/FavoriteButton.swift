@@ -4,13 +4,22 @@ struct FavoriteButton: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var productDetailsItem: ProductModel
   
+    func isFavorite() -> Bool {
+        for element in viewModel.favoriteList {
+            if element.id == self.productDetailsItem.id {
+                return true
+            }
+        }
+        return false
+    }
+    
     var body: some View {
         Button(action: {
             if !isFavorite(){
-                addFavorite()
+                viewModel.favoriteList.append(self.productDetailsItem)
             }
             else {
-                removeFavorite()
+//                viewModel.favoriteList.removeProduct(self.productDetailsItem)
               
             }
             
