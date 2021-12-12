@@ -16,7 +16,7 @@ struct CategoryItem: View {
                 
 
             Text(product.title)
-                .frame(width: 110, height: 20, alignment: .leading)
+                .frame(width: 110, height: 20, alignment: .center)
                 .foregroundColor(.primary)
                 .font(.caption)
         }

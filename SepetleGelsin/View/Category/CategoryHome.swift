@@ -10,22 +10,24 @@ struct CategoryHome: View {
         NavigationView {
             
             List {
-                productObject.productList[2].image
+                productObject.productList[5].image
                     .resizable()
                     .frame(width: UIScreen.main.bounds.width  ,height: 200)
                     .scaledToFill()
-                    
                     .listRowInsets(EdgeInsets())
+                    
+                
                     
                     
                 ForEach(productObject.categories.keys.sorted(), id:\.self ) { key in
                     
                     CategoryRow(catogoryName: key, productArray: productObject.categories[key]!)
                 }
+                .listRowBackground(Color.myColor)
             }
             .listStyle(.inset)
-           
-           
+            
+            
             
         }
     }
