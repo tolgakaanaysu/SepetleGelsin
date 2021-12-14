@@ -1,41 +1,31 @@
 import SwiftUI
-import Combine
+
 struct CategoryHome: View {
     
-    @EnvironmentObject var productObject: ProductViewModel
+    @EnvironmentObject private var viewModel : ProductViewModel
 
-     
     var body: some View {
         
         NavigationView {
-            
+           
             List {
-                productObject.productList[5].image
+                viewModel.productList[5].image
                     .resizable()
-                    .frame(width: UIScreen.main.bounds.width  ,height: 200)
+                    .frame(width: getScreen().width  ,height: getScreen().height * 0.2, alignment: .center)
                     .scaledToFill()
                     .listRowInsets(EdgeInsets())
                     
-                
+        
+                ForEach(viewModel.categories.keys.sorted(), id:\.self ) { key in
                     
-                    
-                ForEach(productObject.categories.keys.sorted(), id:\.self ) { key in
-                    
-                    CategoryRow(catogoryName: key, productArray: productObject.categories[key]!)
+                    CategoryRow(catogoryName: key, productArray: viewModel.categories[key]!)
+            
                 }
-                
-            }
+            
+            }//:List
             .listStyle(.inset)
+        }//:NavigationView
             
-            
-            
-        }
-        
-        
-
-    
-        
-        
     }
         
 }

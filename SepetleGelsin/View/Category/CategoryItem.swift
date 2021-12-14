@@ -8,7 +8,7 @@ struct CategoryItem: View {
             product.image
             .renderingMode(.original)
             .resizable()
-            .frame(width: 120 , height: 120)
+            .frame(width: getScreen().width * 0.3 , height: getScreen().width * 0.3)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .shadow(color: .blue, radius: 5)
             .padding(.leading, 5)
@@ -18,7 +18,7 @@ struct CategoryItem: View {
             Text(product.title)
                 .frame(width: 110, height: 20, alignment: .center)
                 .foregroundColor(.primary)
-                .font(.caption)
+                .font(.headline)
         }
        
         .padding(.top, 10)
