@@ -24,8 +24,11 @@ struct CategoryHome: View {
             
             }//:List
             .listStyle(.inset)
-        }//:NavigationView
+            .navigationTitle("Home Page")
+            .navigationBarTitleDisplayMode(.inline)
             
+        }//:NavigationView
+        
     }
         
 }
