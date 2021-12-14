@@ -10,6 +10,7 @@
 		7820B644275058CC00087E0D /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820B643275058CC00087E0D /* CategoryList.swift */; };
 		78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78210FDB274720F500CBCB88 /* FavoriteListRow.swift */; };
 		7830E2F3276770B800B02328 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7830E2F2276770B800B02328 /* Search.swift */; };
+		78446CAE27690B8B00FA6927 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78446CAD27690B8A00FA6927 /* GoogleService-Info.plist */; };
 		785DE511274A9E820008A69C /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785DE510274A9E820008A69C /* MenuList.swift */; };
 		786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */; };
 		786E8FDB273AD28A00094115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FDA273AD28A00094115 /* ContentView.swift */; };
@@ -39,6 +40,7 @@
 		7820B643275058CC00087E0D /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		78210FDB274720F500CBCB88 /* FavoriteListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListRow.swift; sourceTree = "<group>"; };
 		7830E2F2276770B800B02328 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		78446CAD27690B8A00FA6927 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		785DE510274A9E820008A69C /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		786E8FD5273AD28A00094115 /* SepetleGelsin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepetleGelsin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetleGelsinApp.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		786E8FD7273AD28A00094115 /* SepetleGelsin */ = {
 			isa = PBXGroup;
 			children = (
+				78446CAD27690B8A00FA6927 /* GoogleService-Info.plist */,
 				7871704F274EE61900F93D3E /* Info.plist */,
 				786E8FDE273AD28C00094115 /* Preview Content */,
 				786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */,
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				787388AC27515B54006B6D28 /* data.json in Resources */,
+				78446CAE27690B8B00FA6927 /* GoogleService-Info.plist in Resources */,
 				786E8FE0273AD28C00094115 /* Preview Assets.xcassets in Resources */,
 				786E8FDD273AD28C00094115 /* Assets.xcassets in Resources */,
 			);
