@@ -7,7 +7,7 @@ struct CategoryRow: View {
     var body: some View {
         VStack(alignment: .leading) {
             NavigationLink{
-                CategoryList(productArray: productArray)
+                CategoryList(catogoryName: catogoryName, productArray: productArray)
             } label: {
                 Text(catogoryName)
                     .font(.title)
