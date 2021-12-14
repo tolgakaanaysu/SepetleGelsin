@@ -2,7 +2,7 @@ import Foundation
 
 class ProductViewModel: ObservableObject {
     
-    @Published var productList: [ProductModel] = DataService().loadData("productData.json")
+    @Published var productList: [ProductModel] = DataService().loadData("data.json")
     @Published var favoriteList =  [ProductModel]()
 
     var categories: [String: [ProductModel]] {
