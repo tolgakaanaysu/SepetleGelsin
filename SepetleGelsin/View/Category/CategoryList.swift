@@ -6,9 +6,9 @@ struct CategoryList: View {
     
     
     var layout = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
+            GridItem(.flexible()),
+            GridItem(.flexible()),
+            GridItem(.flexible())       
     ]
     
     var body: some View {

@@ -8,7 +8,7 @@ struct CategoryItem: View {
             product.image
             .renderingMode(.original)
             .resizable()
-            .frame(width: getScreen().width * 0.3 , height: getScreen().width * 0.3)
+            .frame(width: getScreen().width * 0.25 , height: getScreen().width * 0.25)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .shadow(color: .blue, radius: 5)
             .padding(.leading, 5)
