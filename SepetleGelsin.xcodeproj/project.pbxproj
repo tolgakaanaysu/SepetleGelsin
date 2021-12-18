@@ -32,8 +32,16 @@
 		78B88EE727400C5F00F29145 /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B88EE627400C5F00F29145 /* ProductImage.swift */; };
 		78B88EE927400CDE00F29145 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B88EE827400CDE00F29145 /* FavoriteButton.swift */; };
 		78BAE9CE2765E167005F4D07 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BAE9CD2765E167005F4D07 /* BackgroundColor.swift */; };
+		821EBA9F276E02B700855071 /* InputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBA9E276E02B700855071 /* InputTextFieldView.swift */; };
+		821EBAA3276E09F100855071 /* PreviewLayoutComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBAA2276E09F100855071 /* PreviewLayoutComponentModifier.swift */; };
+		821EBAA5276E0B5500855071 /* InputPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBAA4276E0B5500855071 /* InputPasswordView.swift */; };
+		821EBAAB276E13DF00855071 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBAAA276E13DF00855071 /* ButtonView.swift */; };
+		821EBAAD276E155900855071 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBAAC276E155900855071 /* LoginView.swift */; };
+		821EBAB1276E25BC00855071 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBAB0276E25BC00855071 /* RegisterView.swift */; };
+		821EBAB4276E275D00855071 /* CloseModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBAB3276E275D00855071 /* CloseModifier.swift */; };
+		821EBAB8276E2A3D00855071 /* LogoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBAB7276E2A3D00855071 /* LogoutView.swift */; };
+		821EBABB276E2FDC00855071 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBABA276E2FDC00855071 /* ForgotPasswordView.swift */; };
 		82A308492753BF2800644E34 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 82A308482753BF2800644E34 /* FirebaseAuth */; };
-		82F72F1A2753CDB800B8F609 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F72F192753CDB800B8F609 /* LoginScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +72,15 @@
 		78B88EE627400C5F00F29145 /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
 		78B88EE827400CDE00F29145 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		78BAE9CD2765E167005F4D07 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
-		82F72F192753CDB800B8F609 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		821EBA9E276E02B700855071 /* InputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldView.swift; sourceTree = "<group>"; };
+		821EBAA2276E09F100855071 /* PreviewLayoutComponentModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLayoutComponentModifier.swift; sourceTree = "<group>"; };
+		821EBAA4276E0B5500855071 /* InputPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasswordView.swift; sourceTree = "<group>"; };
+		821EBAAA276E13DF00855071 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		821EBAAC276E155900855071 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		821EBAB0276E25BC00855071 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		821EBAB3276E275D00855071 /* CloseModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseModifier.swift; sourceTree = "<group>"; };
+		821EBAB7276E2A3D00855071 /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
+		821EBABA276E2FDC00855071 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +135,7 @@
 		786E8FD7273AD28A00094115 /* SepetleGelsin */ = {
 			isa = PBXGroup;
 			children = (
+				821EBAB2276E272D00855071 /* Modifier */,
 				78446CAD27690B8A00FA6927 /* GoogleService-Info.plist */,
 				7871704F274EE61900F93D3E /* Info.plist */,
 				786E8FDE273AD28C00094115 /* Preview Content */,
@@ -161,7 +178,13 @@
 			children = (
 				786E8FDA273AD28A00094115 /* ContentView.swift */,
 				785DE510274A9E820008A69C /* MenuList.swift */,
-				82A3084A2753C6C100644E34 /* Login */,
+				821EBA9E276E02B700855071 /* InputTextFieldView.swift */,
+				821EBAA4276E0B5500855071 /* InputPasswordView.swift */,
+				821EBAAA276E13DF00855071 /* ButtonView.swift */,
+				821EBAB9276E2FC800855071 /* ForgotPassword */,
+				821EBAB6276E2A1200855071 /* Logout */,
+				821EBAAF276E25A100855071 /* Register */,
+				821EBAAE276E258200855071 /* Login */,
 				786E8FEF273ADFBB00094115 /* Category */,
 				787388AD27517B16006B6D28 /* Search */,
 				786CF1D62745D63C00279DE3 /* FavoritesListView */,
@@ -217,12 +240,45 @@
 			path = ProductDetails;
 			sourceTree = "<group>";
 		};
-		82A3084A2753C6C100644E34 /* Login */ = {
+		821EBAAE276E258200855071 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				82F72F192753CDB800B8F609 /* LoginScreen.swift */,
+				821EBAAC276E155900855071 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		821EBAAF276E25A100855071 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				821EBAB0276E25BC00855071 /* RegisterView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		821EBAB2276E272D00855071 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				821EBAA2276E09F100855071 /* PreviewLayoutComponentModifier.swift */,
+				821EBAB3276E275D00855071 /* CloseModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		821EBAB6276E2A1200855071 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				821EBAB7276E2A3D00855071 /* LogoutView.swift */,
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
+		821EBAB9276E2FC800855071 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				821EBABA276E2FDC00855071 /* ForgotPasswordView.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,22 +364,30 @@
 				787486CA273AF93C00C5C1C1 /* CategoryHome.swift in Sources */,
 				7894FBC8273AF4030050C8CB /* ProductDetails.swift in Sources */,
 				786E8FF4273AE00500094115 /* CategoryRow.swift in Sources */,
+				821EBAA5276E0B5500855071 /* InputPasswordView.swift in Sources */,
 				786E8FF7273AE02700094115 /* CategoryItem.swift in Sources */,
 				7830E2F3276770B800B02328 /* Search.swift in Sources */,
 				786E8FEE273ADDB100094115 /* ProductViewModel.swift in Sources */,
+				821EBAB1276E25BC00855071 /* RegisterView.swift in Sources */,
 				78B88EE727400C5F00F29145 /* ProductImage.swift in Sources */,
-				82F72F1A2753CDB800B8F609 /* LoginScreen.swift in Sources */,
+				821EBAAD276E155900855071 /* LoginView.swift in Sources */,
+				821EBAA3276E09F100855071 /* PreviewLayoutComponentModifier.swift in Sources */,
 				786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */,
+				821EBA9F276E02B700855071 /* InputTextFieldView.swift in Sources */,
+				821EBAB4276E275D00855071 /* CloseModifier.swift in Sources */,
 				78B88EE927400CDE00F29145 /* FavoriteButton.swift in Sources */,
 				786E8FEA273AD64C00094115 /* ProductModel.swift in Sources */,
 				78BAE9CE2765E167005F4D07 /* BackgroundColor.swift in Sources */,
+				821EBAB8276E2A3D00855071 /* LogoutView.swift in Sources */,
 				785DE511274A9E820008A69C /* MenuList.swift in Sources */,
 				788D80A8276858740020C0A1 /* getScreen.swift in Sources */,
 				7820B644275058CC00087E0D /* CategoryList.swift in Sources */,
 				78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */,
 				78717048274EC60900F93D3E /* RemoveButton.swift in Sources */,
+				821EBAAB276E13DF00855071 /* ButtonView.swift in Sources */,
 				7871704D274EC73300F93D3E /* Array.swift in Sources */,
 				787388A72751458D006B6D28 /* DataService.swift in Sources */,
+				821EBABB276E2FDC00855071 /* ForgotPasswordView.swift in Sources */,
 				788D80AA2768BEA70020C0A1 /* FavoritesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -37,7 +37,7 @@ struct ContentView: View {
                     Label("Menu", systemImage: "list.bullet")
                 }
                 .tag(Tab.menuList)
-            LoginScreen()
+            LoginView()
                 .tabItem {
                     Label("Login", systemImage: "mustache.fill")
                 }
