@@ -95,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		782E708C276F077F008E281B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				785DE510274A9E820008A69C /* MenuList.swift */,
+				821EBAB7276E2A3D00855071 /* LogoutView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		785DE50D274A8B710008A69C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,13 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				786E8FDA273AD28A00094115 /* ContentView.swift */,
-				785DE510274A9E820008A69C /* MenuList.swift */,
-				821EBA9E276E02B700855071 /* InputTextFieldView.swift */,
-				821EBAA4276E0B5500855071 /* InputPasswordView.swift */,
-				821EBAAA276E13DF00855071 /* ButtonView.swift */,
-				821EBAB9276E2FC800855071 /* ForgotPassword */,
-				821EBAB6276E2A1200855071 /* Logout */,
-				821EBAAF276E25A100855071 /* Register */,
+				782E708C276F077F008E281B /* Menu */,
 				821EBAAE276E258200855071 /* Login */,
 				786E8FEF273ADFBB00094115 /* Category */,
 				787388AD27517B16006B6D28 /* Search */,
@@ -244,16 +247,13 @@
 			isa = PBXGroup;
 			children = (
 				821EBAAC276E155900855071 /* LoginView.swift */,
+				821EBA9E276E02B700855071 /* InputTextFieldView.swift */,
+				821EBAA4276E0B5500855071 /* InputPasswordView.swift */,
+				821EBAB0276E25BC00855071 /* RegisterView.swift */,
+				821EBAAA276E13DF00855071 /* ButtonView.swift */,
+				821EBABA276E2FDC00855071 /* ForgotPasswordView.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		821EBAAF276E25A100855071 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				821EBAB0276E25BC00855071 /* RegisterView.swift */,
-			);
-			path = Register;
 			sourceTree = "<group>";
 		};
 		821EBAB2276E272D00855071 /* Modifier */ = {
@@ -263,22 +263,6 @@
 				821EBAB3276E275D00855071 /* CloseModifier.swift */,
 			);
 			path = Modifier;
-			sourceTree = "<group>";
-		};
-		821EBAB6276E2A1200855071 /* Logout */ = {
-			isa = PBXGroup;
-			children = (
-				821EBAB7276E2A3D00855071 /* LogoutView.swift */,
-			);
-			path = Logout;
-			sourceTree = "<group>";
-		};
-		821EBAB9276E2FC800855071 /* ForgotPassword */ = {
-			isa = PBXGroup;
-			children = (
-				821EBABA276E2FDC00855071 /* ForgotPasswordView.swift */,
-			);
-			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
