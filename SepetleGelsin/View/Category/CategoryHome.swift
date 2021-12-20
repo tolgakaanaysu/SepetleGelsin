@@ -9,7 +9,7 @@ struct CategoryHome: View {
         NavigationView {
            
             List {
-                viewModel.productList[5].image
+                Image(systemName: "logo.jpeg")
                     .resizable()
                     .frame(width: getScreen().width  ,height: getScreen().height * 0.2, alignment: .center)
                     .scaledToFill()

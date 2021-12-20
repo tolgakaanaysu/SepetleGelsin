@@ -37,13 +37,13 @@
   },
   {
     "id": 4,
-    "title": "Zeytin",
-    "price": 15.99,
-    "description": "Aysu Zeytinleri",
-    "category": "Yiyecek",
-    "image": "zeytin",
+    "title": "Deterjan",
+    "price": 65.99,
+    "description": "Omo",
+    "category": "Temizlik",
+    "image": "deterjan",
     "rating": {
-      "rate": 2.1,
+      "rate": 4.1,
       "count": 430
     }
   },
@@ -80,6 +80,18 @@
     "image": "selpak",
     "rating": {
       "rate": 3.9,
+      "count": 70
+    }
+  },
+  {
+    "id": 8,
+    "title": "Şampuan",
+    "price": 30,
+    "description": "Clear Şampuan",
+    "category": "Kişisel Bakım",
+    "image": "şampuan",
+    "rating": {
+      "rate": 5.9,
       "count": 70
     }
   }
