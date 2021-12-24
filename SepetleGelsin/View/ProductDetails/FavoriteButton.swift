@@ -19,7 +19,10 @@ struct FavoriteButton: View {
                 viewModel.favoriteList.append(self.productDetailsItem)
             }
             else {
-//                viewModel.favoriteList.removeProduct(self.productDetailsItem)
+                    
+                if let index = viewModel.favoriteList.firstIndex(where: {$0.id == productDetailsItem.id }) {
+                    viewModel.favoriteList.remove(at: index)
+                }
               
             }
             
