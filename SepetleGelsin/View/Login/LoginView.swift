@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @State private var showRegistration = false
+    @State private var showForgotPassword = false
     var body: some View {
         VStack(spacing: 16) {
             VStack(spacing: 16) {
@@ -19,10 +20,13 @@ struct LoginView: View {
             }
             HStack{
                 Spacer()
-                Button(action: { }, label: {
+                Button(action: {
+                    showForgotPassword.toggle()
+                }, label: {
                 Text("Şifrenizi mi unuttunuz?")
                 })
                     .font(.system(size: 16, weight: .bold))
+                    .sheet(isPresented: $showForgotPassword, content: {ForgotPasswordView()})
             }
             VStack(spacing: 16) {
                 ButtonView(title: "Giriş Yap"){
@@ -34,6 +38,7 @@ struct LoginView: View {
                            border: .blue){
                     showRegistration.toggle()
                 }
+                           .sheet(isPresented: $showRegistration, content: {RegisterView()})
             }
             
         }
