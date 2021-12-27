@@ -21,7 +21,6 @@
 		786E8FF4273AE00500094115 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FF3273AE00500094115 /* CategoryRow.swift */; };
 		786E8FF7273AE02700094115 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FF6273AE02700094115 /* CategoryItem.swift */; };
 		78717048274EC60900F93D3E /* RemoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78717047274EC60900F93D3E /* RemoveButton.swift */; };
-		7871704D274EC73300F93D3E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871704A274EC73300F93D3E /* Array.swift */; };
 		787388A72751458D006B6D28 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787388A62751458D006B6D28 /* DataService.swift */; };
 		787388AC27515B54006B6D28 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 787388AB27515B54006B6D28 /* data.json */; };
 		787388AF27517B48006B6D28 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787388AE27517B47006B6D28 /* SearchView.swift */; };
@@ -68,7 +67,6 @@
 		786E8FF3273AE00500094115 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		786E8FF6273AE02700094115 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		78717047274EC60900F93D3E /* RemoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoveButton.swift; path = SepetleGelsin/View/Favorites/RemoveButton.swift; sourceTree = SOURCE_ROOT; };
-		7871704A274EC73300F93D3E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		7871704F274EE61900F93D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		787388A62751458D006B6D28 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		787388AB27515B54006B6D28 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 		785DE50D274A8B710008A69C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				7871704A274EC73300F93D3E /* Array.swift */,
 				78BAE9CD2765E167005F4D07 /* BackgroundColor.swift */,
 				788D80A7276858740020C0A1 /* getScreen.swift */,
 			);
@@ -398,7 +395,6 @@
 				78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */,
 				78717048274EC60900F93D3E /* RemoveButton.swift in Sources */,
 				821EBAAB276E13DF00855071 /* ButtonView.swift in Sources */,
-				7871704D274EC73300F93D3E /* Array.swift in Sources */,
 				787388A72751458D006B6D28 /* DataService.swift in Sources */,
 				821EBABB276E2FDC00855071 /* ForgotPasswordView.swift in Sources */,
 				788D80AA2768BEA70020C0A1 /* FavoritesList.swift in Sources */,
