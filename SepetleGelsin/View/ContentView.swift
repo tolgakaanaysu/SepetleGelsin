@@ -9,6 +9,7 @@ struct ContentView: View {
         case searchView
         case favoriteList
         case menuList
+        case loginView
     }
     
     var body: some View {
@@ -16,32 +17,31 @@ struct ContentView: View {
             CategoryHome()
            
                 .tabItem {
-                    Label("HomePage", systemImage: "house")
+                    Label("Anasayfa", systemImage: "house")
                 }
                 .tag(Tab.homePage)
             
-            SearchView()
+           /* SearchView()
                 .tabItem {
-                    Label("Search", systemImage: "magnifyingglass.circle.fill")
+                    Label("Ara", systemImage: "magnifyingglass")
                 }
                 .tag(Tab.searchView)
             
             FavoritesList()
                 .tabItem {
-                    Label("Favorites", systemImage: "heart")
+                    Label("Favorilerim", systemImage: "heart")
                 }
                 .tag(Tab.favoriteList)
-            
             MenuList()
                 .tabItem{
-                    Label("Menu", systemImage: "list.bullet")
+                    Label("Menü", systemImage: "list.bullet")
                 }
-                .tag(Tab.menuList)
+                .tag(Tab.menuList) */
             LoginView()
                 .tabItem {
-                    Label("Login", systemImage: "mustache.fill")
+                    Label("Hesap", systemImage: "person.crop.circle")
                 }
-            
+                .tag(Tab.loginView)
         }
         
             
