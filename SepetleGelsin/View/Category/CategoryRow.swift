@@ -19,7 +19,7 @@ struct CategoryRow: View {
             }
 
             ScrollView(.horizontal , showsIndicators: false) {
-                HStack(alignment: .top, spacing: 10) {
+                HStack(alignment: .top, spacing: 30) {
                     ForEach(productArray) { item in
                         NavigationLink {
                             ProductDetails(productDetailsItem: item)
