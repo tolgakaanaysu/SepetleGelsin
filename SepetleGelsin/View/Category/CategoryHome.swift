@@ -24,7 +24,7 @@ struct CategoryHome: View {
             
             }//:List
             .listStyle(.inset)
-            .navigationTitle("Home Page")
+            .navigationTitle("Anasayfa")
             .navigationBarTitleDisplayMode(.inline)
             
         }//:NavigationView
