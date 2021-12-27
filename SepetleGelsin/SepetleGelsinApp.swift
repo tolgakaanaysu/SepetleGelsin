@@ -12,18 +12,19 @@ struct SepetleGelsinApp: App {
         FirebaseApp.configure()
     }
     var body: some Scene {
-        WindowGroup {/*
+        WindowGroup {
            ContentView()
-                .environmentObject(stateObject)*/
-            NavigationView{
-                switch sessionservice.state {
-                case .loggedIn:
-                    LogoutView()
-                        .environmentObject(sessionservice)
-                case .loggedOut:
-                    LoginView()
-                }
-            }
+                .environmentObject(stateObject)
+            
+//            NavigationView{
+//                switch sessionservice.state {
+//                case .loggedIn:
+//                    LogoutView()
+//                        .environmentObject(sessionservice)
+//                case .loggedOut:
+//                    LoginView()
+//                }
+//            }
                 
             
         }

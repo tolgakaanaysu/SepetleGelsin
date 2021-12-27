@@ -7,29 +7,18 @@ struct SearchView: View {
     var body: some View {
         NavigationView {
           
-    
-          
             List(filtredProduct) { element in
-                    
                     Text(element.title)
-                    
-                  
-                }
-               
-                .listStyle(.inset)
-                .navigationTitle("Search")
-                .searchable( text: $searchText)
-                
             
             }
+            .padding(.top)
+            .listStyle(.inset)
+            .navigationTitle("Arama")
+            .searchable(text: $searchText)
+            .navigationBarTitleDisplayMode(.inline)
             
-            
-            
-            
-            
+            }            
     }
-        
-    
 }
 
 struct SearchView_Previews: PreviewProvider {

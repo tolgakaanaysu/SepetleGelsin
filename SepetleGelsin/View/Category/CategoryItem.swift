@@ -12,12 +12,16 @@ struct CategoryItem: View {
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .shadow(color: .blue, radius: 5)
             .padding(.leading, 5)
+            
        
-                
+            Text(String(format: "%.2f ₺", product.price))
+                .frame(width: 110, height: 20, alignment: .center)
+                .foregroundColor(.primary)
+                .font(.headline)
 
             Text(product.title)
                 .frame(width: 110, height: 20, alignment: .center)
-                .foregroundColor(.primary)
+                .foregroundColor(.secondary)
                 .font(.headline)
         }
        
@@ -28,7 +32,7 @@ struct CategoryItem: View {
 
 struct CategoryItem_Preview: PreviewProvider {
     static var previews: some View {
-        CategoryItem(product: ProductViewModel().productList[1])
+        CategoryItem(product: ProductViewModel().productList[3])
+    
     }
 }
-

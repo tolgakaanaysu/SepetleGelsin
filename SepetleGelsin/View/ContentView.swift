@@ -21,7 +21,7 @@ struct ContentView: View {
                 }
                 .tag(Tab.homePage)
             
-           /* SearchView()
+           SearchView()
                 .tabItem {
                     Label("Ara", systemImage: "magnifyingglass")
                 }
@@ -32,11 +32,13 @@ struct ContentView: View {
                     Label("Favorilerim", systemImage: "heart")
                 }
                 .tag(Tab.favoriteList)
-            MenuList()
-                .tabItem{
-                    Label("Menü", systemImage: "list.bullet")
-                }
-                .tag(Tab.menuList) */
+            
+//            MenuList()
+//                .tabItem{
+//                    Label("Menü", systemImage: "list.bullet")
+//                }
+//                .tag(Tab.menuList)
+            
             LoginView()
                 .tabItem {
                     Label("Hesap", systemImage: "person.crop.circle")

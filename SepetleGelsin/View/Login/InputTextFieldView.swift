@@ -39,7 +39,7 @@ struct InputTextFieldView: View {
 struct InputTextFieldView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            InputTextFieldView(text: <#T##Binding<String>#>, placeholder: <#T##String#>, keyboardType: <#T##UIKeyboardType#>, sfSymbol: <#T##String?#>)
+     
         
         InputTextFieldView(text: .constant(""), placeholder: "E-mail", keyboardType: .emailAddress, sfSymbol: "envelope")
                 .preview(with: "Email Input")
