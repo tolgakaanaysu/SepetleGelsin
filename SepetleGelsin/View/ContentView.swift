@@ -45,9 +45,9 @@ struct ContentView: View {
                 }
                 .tag(Tab.loginView)
         }
-        
-            
+        .accentColor(Color.ourApplicationColor)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

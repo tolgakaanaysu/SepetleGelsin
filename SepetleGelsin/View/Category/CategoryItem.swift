@@ -11,7 +11,7 @@ struct CategoryItem: View {
             .resizable()
             .frame(width: getScreen().width * 0.25 , height: getScreen().width * 0.25)
             .clipShape(RoundedRectangle(cornerRadius: 15))
-            .shadow(color: .blue , radius: 5)
+            .shadow(color: .ourApplicationColor , radius: 5)
             .padding(.leading, 5)
             
             
