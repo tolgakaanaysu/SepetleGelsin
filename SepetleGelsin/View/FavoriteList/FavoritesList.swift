@@ -19,14 +19,13 @@ struct FavoritesList: View {
                 }
             }
             .listStyle(.inset)
+            .navigationTitle("Favoriler")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
                     RemoveButton()
                 }
             }
-            .listStyle(.inset)
-            .navigationTitle("Favorites")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
