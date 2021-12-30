@@ -24,6 +24,7 @@ struct ForgotPasswordView: View {
             .padding(.horizontal, 15)
             .navigationTitle("Şifremi Unuttum")
             .applyClose()
+            .foregroundColor(Color.green)
         }
     }
 }

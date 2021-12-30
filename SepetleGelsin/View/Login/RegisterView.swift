@@ -42,6 +42,7 @@ struct RegisterView: View {
             .padding(.horizontal, 15)
             .navigationTitle("Kayıt Ol")
             .applyClose()
+            .foregroundColor(Color.green)
         }
     }
 }
