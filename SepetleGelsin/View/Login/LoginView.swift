@@ -10,13 +10,16 @@ import SwiftUI
 struct LoginView: View {
     @State private var showRegistration = false
     @State private var showForgotPassword = false
+    
+    @StateObject private var vm = LoginViewModelImp(service: LoginServiceImpl())
+    
     var body: some View {
         VStack(spacing: 16) {
             VStack(spacing: 16) {
                 
-                InputTextFieldView(text: .constant(""), placeholder: "E-mail", keyboardType: .emailAddress, sfSymbol: "envelope")
+                InputTextFieldView(text: $vm.credentials.email, placeholder: "E-mail", keyboardType: .emailAddress, sfSymbol: "envelope")
                 
-                InputPasswordView(password: .constant(""), placeholder: "Şifre", sfSymbol: "lock")
+                InputPasswordView(password: $vm.credentials.password, placeholder: "Şifre", sfSymbol: "lock")
             }
             HStack{
                 Spacer()
@@ -31,7 +34,7 @@ struct LoginView: View {
             }
             VStack(spacing: 16) {
                 ButtonView(title: "Giriş Yap"){
-                    
+                    vm.login()
                 }
                 ButtonView(title: "Kayıt Ol",
                            background: .clear,
