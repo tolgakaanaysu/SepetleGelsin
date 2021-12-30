@@ -30,7 +30,7 @@ struct InputPasswordView: View {
                             .foregroundColor(Color.gray.opacity(0.5))
                     }
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .stroke(Color.gray.opacity(0.25))
+                        .stroke(Color.green.opacity(0.75))
                 }
             )
     }
