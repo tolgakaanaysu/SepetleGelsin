@@ -7,8 +7,13 @@ struct SearchView: View {
     var body: some View {
         NavigationView {
           
-            List(filtredProduct) { element in
-                    Text(element.title)
+            List {
+                ForEach(filtredProduct){ element in
+                    NavigationLink(element.title) {
+                        ProductDetails(productDetailsItem: element)
+                    }
+                }
+                    
             
             }
             .padding(.top)

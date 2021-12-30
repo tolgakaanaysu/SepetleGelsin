@@ -11,7 +11,9 @@ struct CategoryHome: View {
             List {
                 Image("logo.jpeg")
                     .resizable()
-                    .frame(width: getScreen().width  ,height: getScreen().height * 0.2, alignment: .center)
+                    .frame(width: getScreen().width,
+                           height: getScreen().height * 0.25,
+                           alignment: .center)
                     .scaledToFill()
                     .listRowInsets(EdgeInsets())
                     

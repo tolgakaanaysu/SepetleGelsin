@@ -6,18 +6,19 @@ struct CategoryRow: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            //Clicked category name
             NavigationLink{
                 CategoryList(catogoryName: catogoryName, productArray: productArray)
             } label: {
                 Text(catogoryName)
                     .font(.title)
                     .bold()
-                    .shadow(color: .black, radius: 0.2)
+                    .shadow(color: .black, radius: 0.2)                   
                     .padding(.top, 5)
                    
                     
             }
-
+            //Clicked products
             ScrollView(.horizontal , showsIndicators: false) {
                 HStack(alignment: .top, spacing: 30) {
                     ForEach(productArray) { item in
@@ -30,6 +31,7 @@ struct CategoryRow: View {
                 } //:HStack
             } //:ScroolView
         }//:VStack
+        
         
     }
 }

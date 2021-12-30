@@ -5,6 +5,8 @@ class ProductViewModel: ObservableObject {
     @Published var productList: [ProductModel] = DataService().loadData("data.json")
     @Published var favoriteList =  [ProductModel]()
 
+    
+    //Categorize Products
     var categories: [String: [ProductModel]] {
             Dictionary(
                 grouping: productList,
