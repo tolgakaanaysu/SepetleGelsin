@@ -4,6 +4,7 @@ struct FavoriteButton: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var productDetailsItem: ProductModel
   
+    //Check if product is favorite...
     func isFavorite() -> Bool {
         for element in viewModel.favoriteList {
             if element.id == self.productDetailsItem.id {
