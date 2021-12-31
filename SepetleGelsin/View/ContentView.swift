@@ -1,5 +1,4 @@
 import SwiftUI
-import Firebase
 
 struct ContentView: View {
     @State private var selection: Tab = .homePage
@@ -7,6 +6,7 @@ struct ContentView: View {
     enum Tab {
         case homePage
         case searchView
+        case cartPage
         case favoriteList
         case menuList
         case loginView
@@ -27,11 +27,22 @@ struct ContentView: View {
                 }
                 .tag(Tab.searchView)
             
+            ShoppingCart()
+                .tabItem {
+                    Label("Sepet", systemImage: "cart")
+                }
+                .tag(Tab.cartPage)
+            
             FavoritesList()
                 .tabItem {
                     Label("Favorilerim", systemImage: "heart")
                 }
                 .tag(Tab.favoriteList)
+            
+            
+            
+            
+            
             
 //            MenuList()
 //                .tabItem{
@@ -45,6 +56,7 @@ struct ContentView: View {
                 }
                 .tag(Tab.loginView)
         }
+
         .accentColor(Color.ourApplicationColor)
     }
     
