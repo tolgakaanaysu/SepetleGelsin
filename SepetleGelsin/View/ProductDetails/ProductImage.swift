@@ -8,10 +8,11 @@ struct ProductImage: View {
             
             .resizable()
             .clipShape(RoundedRectangle(cornerRadius: 15))
-            .padding()
-            .frame(width: UIScreen.main.bounds.width * 0.5, height: UIScreen.main.bounds.width * 0.5)
             
-            .shadow(color: .blue, radius: 5)
+            .frame(width: UIScreen.main.bounds.width * 0.5,
+                   height: UIScreen.main.bounds.width * 0.5)
+            
+            .shadow(color: .ourApplicationColor , radius: 5)
             .padding()
         
         
