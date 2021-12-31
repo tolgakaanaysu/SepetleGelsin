@@ -3,14 +3,13 @@ import Firebase
 
 
 @main
-
 struct SepetleGelsinApp: App {
     @StateObject var stateObject = ProductViewModel()
-    @StateObject var sessionservice = SessionServiceImpl()
+//    @StateObject var sessionservice = SessionServiceImpl()
     
-    init () {
-        FirebaseApp.configure()
-    }
+//    init () {
+//        FirebaseApp.configure()
+//    }
     var body: some Scene {
         WindowGroup {
            ContentView()
