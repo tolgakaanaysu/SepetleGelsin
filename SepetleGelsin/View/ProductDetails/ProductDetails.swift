@@ -33,7 +33,7 @@ struct ProductDetails: View {
                 
             
             Spacer()
-            AddToCartButton(productID: productDetailsItem.id)
+            AddToCartButton(product: productDetailsItem)
                 
                 
         }
