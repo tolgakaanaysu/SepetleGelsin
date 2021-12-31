@@ -1,20 +1,36 @@
 import SwiftUI
 
 struct ShoppingCart: View {
+    @EnvironmentObject var viewModel: ProductViewModel
+    
     var body: some View {
         NavigationView{
-            List{
-                ForEach(1..<5){ i in
-                    Text("Tolga")
+            
+            VStack(alignment: .center ) {
+                
+                Group {
+                    ForEach(viewModel.shoppingCartList){ product in
+                            ShoppingCartRow(product: product)
+                            
+                    }
+                    .navigationTitle("Sepetim")
+                    .listStyle(.inset)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem{
+                            ClearCartButton()
+                        }
+                    }
+                    Spacer()
                     
+                    
+                    Text("\(viewModel.calculateTotalPrice())")
+                        .padding(.bottom, 20)
+                        
                 }
-                .navigationTitle("Sepetim")
-                .listStyle(.inset)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ClearCartButton()
                 }
-            }
+            
+            
             
             
                 
@@ -25,5 +41,6 @@ struct ShoppingCart: View {
 struct ShoppingCart_Previews: PreviewProvider {
     static var previews: some View {
         ShoppingCart()
+            .environmentObject(ProductViewModel())
     }
 }
