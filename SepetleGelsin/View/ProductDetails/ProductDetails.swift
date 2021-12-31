@@ -7,45 +7,38 @@ struct ProductDetails: View {
     
     var body: some View {
         
-        ScrollView {
+        VStack{
             
-        
-           
-                
                 ProductImage(image: productDetailsItem.image)
-                .offset(y: -10)
-
-                Divider()
-                VStack(alignment: .leading) {
-                   
-                        HStack {
-                            Text(String(format:"%.2f",productDetailsItem.price) + "₺")
-                                .frame(width: 100, height: 20, alignment: .center)
-                                .font(.body)
+                
+                HStack {
+                    
+                    Text(String(format:"%.2f",productDetailsItem.price) + "₺")
+                    
+                        .frame(width: 100, height: 20,
+                               alignment: .center)
+                        .font(.body)
                                 
-                            Spacer()
+                    Spacer()
                          
-                            Text(String(format: "%.1f", productDetailsItem.rating.rate))
-                                .frame(width: 100, height: 20, alignment: .center)
-                        }
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                        Divider()
-                        Text(productDetailsItem.description)
-                   
+                    Text(String(format: "%.1f", productDetailsItem.rating.rate))
+                            .frame(width: 100, height: 20, alignment: .center)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        
                 }
+                Divider()
             
-//            .navigationBarTitleDisplayMode(.inline)
+                Text(productDetailsItem.description)
+                
+            
+            Spacer()
+            AddToCartButton(productID: productDetailsItem.id)
+                
+                
         }
         .padding()
-        .toolbar {
-            ToolbarItemGroup {
-                
-                
-                FavoriteButton(productDetailsItem: productDetailsItem)
-
-            }
-        }
+           
         
     }
 }
