@@ -15,6 +15,7 @@ struct ClearCartButton: View {
                   message: Text("Sepeti boşaltmak ister misiniz"),
                   primaryButton: .destructive(Text("Evet")){
                 self.viewModel.shoppingCartList.removeAll()
+                self.viewModel.productQuantityDict.removeAll()
             },
                   secondaryButton: .cancel(Text("İptal")) )
         }
