@@ -2,7 +2,6 @@ import SwiftUI
 
 struct ShoppingCartRow: View {
     @EnvironmentObject var viewModel: ProductViewModel
-    @State var quantity = 0
     var product: ProductModel
 
     var body: some View {
@@ -13,14 +12,22 @@ struct ShoppingCartRow: View {
                 .frame(width: 120, height: 120, alignment: .center)
                 .cornerRadius(10)
                 .shadow(color: .ourApplicationColor , radius: 3)
-                
-           Spacer()
+            
+            Spacer()
+            Text(String(format: "%.2f ₺",
+                        product.price * Double(viewModel.productQuantityDict[product.id] ?? 0) ))
+                .bold()
+                .frame(width: 100, height: 50, alignment: .center)
+            
+            
+            Spacer()
+            
             
             HStack{
                 
-                //Minus button
+                //Minus Button
                 Button {
-                    quantity = viewModel.productQuantityDict[product.id] ?? 0
+                    var quantity = viewModel.productQuantityDict[product.id] ?? 0
                     if quantity > 1 {
                         quantity-=1
                     }
@@ -28,6 +35,7 @@ struct ShoppingCartRow: View {
                         if let index = viewModel.shoppingCartList.firstIndex(where: {$0.id == product.id }) {
                             viewModel.shoppingCartList.remove(at: index)
                         }
+                        viewModel.productQuantityDict.removeValue(forKey: product.id)
                     }
                     viewModel.productQuantityDict[product.id] = quantity
                 } label: {
@@ -42,9 +50,9 @@ struct ShoppingCartRow: View {
                     
                 }
 
-                
-                //count
+                //Quantity Text
                 Text(String(viewModel.productQuantityDict[product.id] ?? 0))
+//                Text("1")
                     .bold()
                     .font(.callout)
                     .foregroundColor(.black)
@@ -53,9 +61,9 @@ struct ShoppingCartRow: View {
                     .cornerRadius(10)
                     .opacity(0.7)
                 
-                //plus button
+                //Plus Button
                 Button {
-                    quantity = viewModel.productQuantityDict[product.id] ?? 0
+                    var quantity = viewModel.productQuantityDict[product.id] ?? 0
                     quantity+=1
                     viewModel.productQuantityDict[product.id] = quantity
 
@@ -67,19 +75,9 @@ struct ShoppingCartRow: View {
                         .background(Color.ourApplicationColor)
                         .cornerRadius(10)
                         .opacity(0.8)
-                }
-
-                
-                
+                }   
             }
-            
-           
-
-            
-
-            
         }
-        
         .padding()
     }
 }
