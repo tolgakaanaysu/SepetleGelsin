@@ -49,6 +49,8 @@
 		827DD718277DF26600EAB5C6 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD717277DF26600EAB5C6 /* LoginCredentials.swift */; };
 		827DD71A277DF4BC00EAB5C6 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD719277DF4BC00EAB5C6 /* LoginService.swift */; };
 		827DD71C277DF68E00EAB5C6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD71B277DF68E00EAB5C6 /* LoginViewModel.swift */; };
+		827DD71E2780DC8700EAB5C6 /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD71D2780DC8700EAB5C6 /* ForgotPasswordService.swift */; };
+		827DD7202780DD9F00EAB5C6 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD71F2780DD9F00EAB5C6 /* ForgotPasswordViewModel.swift */; };
 		82D039782773491A006FBE9A /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D039772773491A006FBE9A /* RegistrationViewModel.swift */; };
 		82D0397A27734D8D006FBE9A /* SessionUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D0397927734D8D006FBE9A /* SessionUserDetails.swift */; };
 		82D0397C27734E1E006FBE9A /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D0397B27734E1E006FBE9A /* SessionService.swift */; };
@@ -103,6 +105,8 @@
 		827DD717277DF26600EAB5C6 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		827DD719277DF4BC00EAB5C6 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		827DD71B277DF68E00EAB5C6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		827DD71D2780DC8700EAB5C6 /* ForgotPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordService.swift; sourceTree = "<group>"; };
+		827DD71F2780DD9F00EAB5C6 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		82D039772773491A006FBE9A /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		82D0397927734D8D006FBE9A /* SessionUserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionUserDetails.swift; sourceTree = "<group>"; };
 		82D0397B27734E1E006FBE9A /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 				82015E6C27733B49002B9E08 /* RegistrationService.swift */,
 				82D0397B27734E1E006FBE9A /* SessionService.swift */,
 				827DD719277DF4BC00EAB5C6 /* LoginService.swift */,
+				827DD71D2780DC8700EAB5C6 /* ForgotPasswordService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				786E8FED273ADDB100094115 /* ProductViewModel.swift */,
 				82D039772773491A006FBE9A /* RegistrationViewModel.swift */,
 				827DD71B277DF68E00EAB5C6 /* LoginViewModel.swift */,
+				827DD71F2780DD9F00EAB5C6 /* ForgotPasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 				82015E6B27733AF3002B9E08 /* RegistrationDetails.swift in Sources */,
 				783FE3F0277F1CFA00F2DCA2 /* AddToCartButton.swift in Sources */,
 				78BAE9CE2765E167005F4D07 /* BackgroundColor.swift in Sources */,
+				827DD71E2780DC8700EAB5C6 /* ForgotPasswordService.swift in Sources */,
 				821EBAB8276E2A3D00855071 /* LogoutView.swift in Sources */,
 				785DE511274A9E820008A69C /* MenuList.swift in Sources */,
 				788D80A8276858740020C0A1 /* getScreen.swift in Sources */,
@@ -432,6 +439,7 @@
 				827DD71A277DF4BC00EAB5C6 /* LoginService.swift in Sources */,
 				827DD718277DF26600EAB5C6 /* LoginCredentials.swift in Sources */,
 				787388A72751458D006B6D28 /* DataService.swift in Sources */,
+				827DD7202780DD9F00EAB5C6 /* ForgotPasswordViewModel.swift in Sources */,
 				821EBABB276E2FDC00855071 /* ForgotPasswordView.swift in Sources */,
 				788D80AA2768BEA70020C0A1 /* FavoritesList.swift in Sources */,
 			);

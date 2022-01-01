@@ -19,10 +19,12 @@ protocol LoginViewModel {
     var service: LoginService { get }
     var state: LoginState { get }
     var credentials: LoginCredentials { get }
+    var hasError: Bool { get }
     init(service: LoginService)
 }
 
 final class LoginViewModelImp: ObservableObject, LoginViewModel {
+    @Published var hasError: Bool = false
     @Published var state: LoginState = .na
     @Published var credentials: LoginCredentials = LoginCredentials.new
     
@@ -32,6 +34,7 @@ final class LoginViewModelImp: ObservableObject, LoginViewModel {
     
     init(service: LoginService) {
         self.service = service
+        setupErrorSubscriptions()
     }
     func login() {
         service
@@ -46,5 +49,22 @@ final class LoginViewModelImp: ObservableObject, LoginViewModel {
                 self?.state = .successfull
             }
             .store(in: &subscriptions)
+    }
+}
+
+private extension LoginViewModelImp {
+    
+    func setupErrorSubscriptions() {
+        $state
+            .map { state -> Bool in
+                switch state {
+                case .successfull,
+                        .na:
+                    return false
+                case .failed:
+                    return true
+                }
+            }
+            .assign(to: &$hasError)
     }
 }

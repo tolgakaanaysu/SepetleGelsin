@@ -30,7 +30,7 @@ struct InputTextFieldView: View {
                             .foregroundColor(Color.gray.opacity(0.5))
                     }
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .stroke(Color.green.opacity(0.75))
+                        .stroke(Color.ourApplicationColor.opacity(0.75))
                 }
             )
     }

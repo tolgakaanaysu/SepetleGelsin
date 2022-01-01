@@ -41,13 +41,12 @@ private extension SessionServiceImpl {
         
         handler = Auth
             .auth()
-            .addStateDidChangeListener{ [weak self] res, user in guard let self = self else { return }
+            .addStateDidChangeListener{ [weak self] res, user in
+                guard let self = self else { return }
                 self.state = user == nil ? .loggedOut : .loggedIn
                 if let uid = user?.uid {
                     self.handleRefresh(with: uid)
                 }
-                
-                
             }
     }
     func handleRefresh(with uid: String) {

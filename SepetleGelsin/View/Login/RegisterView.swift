@@ -42,7 +42,14 @@ struct RegisterView: View {
             .padding(.horizontal, 15)
             .navigationTitle("Kayıt Ol")
             .applyClose()
-            .foregroundColor(Color.green)
+            .foregroundColor(Color.ourApplicationColor)
+            .alert(isPresented: $vm.hasError, content: {
+                if case .failed(let error) = vm.state {
+                    return Alert(title: Text("Hata"), message: Text(error.localizedDescription))
+                } else {
+                    return Alert(title: Text("Hata"), message: Text("Yanlış giden bir şeyler var!"))
+                }
+            })
         }
     }
 }

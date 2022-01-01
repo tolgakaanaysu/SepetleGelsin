@@ -30,7 +30,7 @@ struct LoginView: View {
                 })
                     .font(.system(size: 16, weight: .bold))
                     .sheet(isPresented: $showForgotPassword, content: {ForgotPasswordView()})
-                    .foregroundColor(Color.green)
+                    .foregroundColor(Color.ourApplicationColor)
             }
             VStack(spacing: 16) {
                 ButtonView(title: "Giriş Yap"){
@@ -38,8 +38,8 @@ struct LoginView: View {
                 }
                 ButtonView(title: "Kayıt Ol",
                            background: .clear,
-                           foreground: .green,
-                           border: .green){
+                           foreground: .ourApplicationColor,
+                           border: .ourApplicationColor){
                     showRegistration.toggle()
                 }
                            .sheet(isPresented: $showRegistration, content: {RegisterView()})
@@ -48,6 +48,19 @@ struct LoginView: View {
         }
         .padding(.horizontal, 15)
         .navigationTitle("Üye Girişi")
+        .alert(isPresented: $vm.hasError,
+               content: {
+            if case .failed(let error) = vm.state {
+                return Alert(
+                    title: Text("Hata"),
+                    message: Text(error.localizedDescription))
+            }
+            else {
+                return Alert(
+                title: Text("Hata"),
+                message: Text("Yanlış giden bir şeyler var!"))
+            }
+        })
     }
 }
 
