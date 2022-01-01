@@ -5,33 +5,32 @@ struct ShoppingCart: View {
     
     var body: some View {
         NavigationView{
-            
-            VStack(alignment: .center ) {
+            ScrollView{
                 
-                Group {
                     ForEach(viewModel.shoppingCartList){ product in
-                            ShoppingCartRow(product: product)
-                            
+                        Divider()
+                        ShoppingCartRow(product: product)
                     }
-                    .navigationTitle("Sepetim")
-                    .listStyle(.inset)
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem{
-                            ClearCartButton()
-                        }
-                    }
-                    Spacer()
-                    
-                    
-                    Text("\(viewModel.calculateTotalPrice())")
-                        .padding(.bottom, 20)
+            }
+            .padding(.top,20)
+            .navigationTitle("Sepetim")
+            .listStyle(.inset)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing ){
+                    Text(viewModel.calculateTotalPrice())
+                        
+                        .frame(width: 75, height: 35)
+                        .background(Color.secondary)
+                        .clipShape(Capsule())
+                        .opacity(0.7)
+                        .foregroundColor(.black)
                         
                 }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    ClearCartButton()
                 }
-            
-            
-            
+            }
             
                 
         }
