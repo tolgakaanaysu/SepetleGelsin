@@ -28,7 +28,7 @@ class ProductViewModel: ObservableObject {
             
         }
         
-        return "Total: \(totalPrice) ₺"
+        return String(format: "%.2f", totalPrice)
     }
 
     

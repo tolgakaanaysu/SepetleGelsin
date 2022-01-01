@@ -36,6 +36,9 @@ struct ProductDetails: View {
             AddToCartButton(product: productDetailsItem)
                 
                 
+                .toolbar {
+                    FavoriteButton(productDetailsItem: productDetailsItem)
+                }
         }
         .padding()
            
