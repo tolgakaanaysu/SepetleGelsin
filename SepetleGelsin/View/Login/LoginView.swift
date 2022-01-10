@@ -9,7 +9,9 @@ import SwiftUI
 
 struct LoginView: View {
     @State private var showRegistration = false
+    //Kayıt ol butonuna basılıp basılmadığını kontrol eder.
     @State private var showForgotPassword = false
+    //Şifremi unuttum butonuna basılıp basılmadığını kontrol eder.
     
     @StateObject private var vm = LoginViewModelImp(service: LoginServiceImpl())
     
@@ -23,6 +25,7 @@ struct LoginView: View {
             }
             HStack{
                 Spacer()
+                //Şifremi unuttum butonuna basınca true/false olduğunu kontrol eder ve buna göre şifremi unuttum ekranı açılır.
                 Button(action: {
                     showForgotPassword.toggle()
                 }, label: {
@@ -36,6 +39,9 @@ struct LoginView: View {
                 ButtonView(title: "Giriş Yap"){
                     vm.login()
                 }
+                
+                //Kayıt Ol butonuna basınca true/false olduğunu kontrol eder ve buna göre kayıt ekranı açılır.
+                
                 ButtonView(title: "Kayıt Ol",
                            background: .clear,
                            foreground: .ourApplicationColor,

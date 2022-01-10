@@ -7,6 +7,9 @@
 
 import Foundation
 
+
+// Oturumu açık kullanıcının bilgilerinin saklanacağı değişkenler.
+
 struct SessionUserDetails {
     let firstName : String
     let lastName: String

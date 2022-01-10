@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RegisterView: View {
+    
+    //vm değişkenine kayıt işlemleri tanımlandı.
     @StateObject private var vm = RegistrationViewModelImpl(service: RegistrationServiceImpl())
 
     var body: some View {
@@ -35,11 +37,14 @@ struct RegisterView: View {
                     
                     
                 }
+                
+                //Üye ol butonuna tıklanınca register fonksiyonu çalışır.
                 ButtonView(title: "Üye Ol") {
                     vm.register()
                 }
             }
             .padding(.horizontal, 15)
+            // Sayfanın sol üstüne Kayıt Ol başlığı verilmiş olur.
             .navigationTitle("Kayıt Ol")
             .applyClose()
             .foregroundColor(Color.ourApplicationColor)

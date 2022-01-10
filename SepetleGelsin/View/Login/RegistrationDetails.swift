@@ -8,6 +8,9 @@
 import Foundation
 
 struct RegistrationDetails {
+    
+    //Kayıt olurken kullanıcıdan alınacak değişkenler tanımlandı.
+    
     var email: String
     var password: String
     var firstName: String

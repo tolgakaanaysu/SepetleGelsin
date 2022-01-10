@@ -10,22 +10,33 @@ import Combine
 import FirebaseAuth
 import FirebaseDatabase
 
+//Oturumun açık veya kapalı olduğu durumların tanımlanması.
 enum SessionState {
     case loggedIn
     case loggedOut
 }
 
 protocol SessionService {
+    
+    //Oturum durumu
     var state: SessionState { get }
+    
+    //Kullanıcı detayları, kullanıcı giriş yapana kadar boş olacak.
     var userDetails: SessionUserDetails? { get }
+    
+    //Çıkış yapma fonksiyonu
     func logout()
 }
 
 final class SessionServiceImpl: ObservableObject, SessionService {
     
+    //Oturum durumu çıkış yapılmış olarak tanımlandı.
     @Published var state: SessionState = .loggedOut
+    
+    //Kullanıcı bilgileri eğer varsa değişkenlere eşitlendi.
     @Published var userDetails: SessionUserDetails?
     
+    //Kullanıcı durumunun değişkenliği firebase komutu ile kontrol edildi.
     private var handler: AuthStateDidChangeListenerHandle?
     
     init() {
@@ -39,6 +50,8 @@ final class SessionServiceImpl: ObservableObject, SessionService {
 private extension SessionServiceImpl {
     func setupFirabaseAuthHandler() {
         
+        
+        //Kullanıcının giriş veya çıkış yaptığı kontrol edildi.
         handler = Auth
             .auth()
             .addStateDidChangeListener{ [weak self] res, user in
@@ -51,6 +64,7 @@ private extension SessionServiceImpl {
     }
     func handleRefresh(with uid: String) {
         
+        //Kullanıcının adı ve soyadı gibi kullanıcıya özel bilgilerine kullanıcı ID'si ile erişip değişkenlere tanımlandı.
         Database
             .database()
             .reference()
@@ -64,6 +78,7 @@ private extension SessionServiceImpl {
                       let lastName = value[RegistrationKeys.lastName.rawValue] as? String else {
                           return
                       }
+                //Bu işlemlerin arkaplanda uygulamamızı kitlemeden çalışması için dispatchQueue kullanıldı.
                 DispatchQueue.main.async {
                     self.userDetails = SessionUserDetails(firstName: firstName, lastName: lastName)
                 }

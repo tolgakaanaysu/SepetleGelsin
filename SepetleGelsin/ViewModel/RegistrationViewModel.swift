@@ -8,12 +8,17 @@
 import Foundation
 import Combine
 
+
+//Kayıt sırasında oluşabilecek senaryoların tanımlanması.
+
 enum RegistrationState {
     
     case successfull
     case failed(error : Error)
     case na
 }
+
+//Kayıt için tanımlanan elemanların çağrılması
 
 protocol RegistrationViewModel {
     func register()
@@ -27,18 +32,31 @@ protocol RegistrationViewModel {
 final class RegistrationViewModelImpl: ObservableObject, RegistrationViewModel {
     
     @Published var hasError: Bool = false
+    
+    
+    // Kayıt durumu başlangıçta boş duruma getirildi
     @Published var state: RegistrationState = .na
     
+    
+    
     let service: RegistrationService
+    
+    // Kullanıcı bilgileri alındı
     var userDetails: RegistrationDetails = RegistrationDetails.new
     
     private var subscriptions = Set<AnyCancellable>()
+    
+    // Sunucu ile uygulamanın eşleştirilmesi
     init(service: RegistrationService) {
-        self.service=service
+        self.service = service
         setupErrorSubscriptions()
     }
+    
+    // Kayıt fonksiyonu
     func register() {
         
+        
+        // Kullanıcı kayıdı gerçekleştirilirken hata oluşursa break komutu ile işlem sonlandırılacak ve state değişkeni failed olarak değişecek.
         service
             .register(with: userDetails)
             .sink { [weak self] res in
@@ -48,6 +66,8 @@ final class RegistrationViewModelImpl: ObservableObject, RegistrationViewModel {
                     self?.state = .failed(error: error)
                 default: break
                 }
+            
+            // Hata oluşmazsa state değişkeni successfull olarak değişecek.
             } receiveValue: { [weak self] in
                 self?.state = .successfull
             }
