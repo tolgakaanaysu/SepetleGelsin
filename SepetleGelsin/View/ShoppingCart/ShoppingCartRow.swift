@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ShoppingCartRow: View {
     @EnvironmentObject var viewModel: ProductViewModel
+    @State var quantity = 1
     var product: ProductModel
 
     var body: some View {
@@ -15,7 +16,7 @@ struct ShoppingCartRow: View {
             
             Spacer()
             Text(String(format: "%.2f ₺",
-                        product.price * Double(viewModel.productQuantityDict[product.id] ?? 0) ))
+                        product.price * Double(quantity) ))
                 .bold()
                 .frame(width: 100, height: 50, alignment: .center)
             
@@ -27,15 +28,18 @@ struct ShoppingCartRow: View {
                 
                 //Minus Button
                 Button {
-                    var quantity = viewModel.productQuantityDict[product.id] ?? 0
+                    quantity = viewModel.productQuantityDict[product.id] ?? 0
                     if quantity > 1 {
                         quantity-=1
                     }
                     else {
+                        quantity = 0
                         if let index = viewModel.shoppingCartList.firstIndex(where: {$0.id == product.id }) {
                             viewModel.shoppingCartList.remove(at: index)
+                            
                         }
                         viewModel.productQuantityDict.removeValue(forKey: product.id)
+                        
                     }
                     viewModel.productQuantityDict[product.id] = quantity
                 } label: {
@@ -51,7 +55,7 @@ struct ShoppingCartRow: View {
                 }
 
                 //Quantity Text
-                Text(String(viewModel.productQuantityDict[product.id] ?? 0))
+                Text(String(quantity))
 //                Text("1")
                     .bold()
                     .font(.callout)
@@ -63,7 +67,7 @@ struct ShoppingCartRow: View {
                 
                 //Plus Button
                 Button {
-                    var quantity = viewModel.productQuantityDict[product.id] ?? 0
+                    quantity = viewModel.productQuantityDict[product.id] ?? 0
                     quantity+=1
                     viewModel.productQuantityDict[product.id] = quantity
 
