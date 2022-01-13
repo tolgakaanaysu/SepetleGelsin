@@ -21,10 +21,7 @@ struct ProductDetails: View {
                                 
                     Spacer()
                          
-                    Text(String(format: "%.1f", productDetailsItem.rating.rate))
-                            .frame(width: 100, height: 20, alignment: .center)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+                    
                         
                 }
                 Divider()
