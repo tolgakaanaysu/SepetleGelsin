@@ -40,13 +40,6 @@ struct ContentView: View {
                     Label("Favorilerim", systemImage: "heart")
                 }
                 .tag(Tab.favoriteList)
-                .badge(viewModel.favoriteList.count)
-                
-            
-            
-            
-            
-            
             
 //            MenuList()
 //                .tabItem{
