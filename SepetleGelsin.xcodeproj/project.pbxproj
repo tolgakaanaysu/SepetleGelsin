@@ -137,14 +137,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		782E708C276F077F008E281B /* Menu */ = {
+		782E708C276F077F008E281B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				785DE510274A9E820008A69C /* ProfileView.swift */,
 				78D42FD0279266E300DFBCC3 /* ProfileRow.swift */,
 				821EBAB7276E2A3D00855071 /* LogoutView.swift */,
 			);
-			path = Menu;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		78568C21277E0E4700494E53 /* ShoppingCart */ = {
@@ -249,7 +249,7 @@
 				78568C21277E0E4700494E53 /* ShoppingCart */,
 				822FE06727931824006B0820 /* Orders */,
 				786CF1D62745D63C00279DE3 /* FavoritesListView */,
-				782E708C276F077F008E281B /* Menu */,
+				782E708C276F077F008E281B /* Profile */,
 				7894FBC6273AF3CB0050C8CB /* ProductDetails */,
 				785DE50D274A8B710008A69C /* Utility */,
 			);
