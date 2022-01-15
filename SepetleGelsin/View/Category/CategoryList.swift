@@ -12,23 +12,31 @@ struct CategoryList: View {
     ]
     
     var body: some View {
-    
-        ScrollView {
-            Text(catogoryName)
-                .bold()
-                .font(.largeTitle)
-                .foregroundColor(Color.secondary)
-                
-            LazyVGrid(columns: layout) {
-                ForEach(productArray) {product in
-                    VStack {
-                        CategoryItem(product: product)
+        
+            
+            ScrollView {
+                Text(catogoryName)
+                    .bold()
+                    .font(.largeTitle)
+                    .foregroundColor(Color.secondary)
+                    
+                LazyVGrid(columns: layout) {
+                    ForEach(productArray) {product in
+                        NavigationLink {
+                            ProductDetails(productDetailsItem: product)
+                        } label: {
+                            CategoryItem(product: product)
+                        }
+                        
+                            
+                        
                     }
+                    
                 }
                 
             }
             
-        }
+            
         
     }
 }
