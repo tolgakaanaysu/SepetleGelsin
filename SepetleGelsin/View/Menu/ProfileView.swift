@@ -1,50 +1,63 @@
 
 import SwiftUI
+import Collections
 
 struct ProfileView: View {
     @EnvironmentObject var sessionService: SessionServiceImpl
-    var sectionNameArray = ["Adres Bilgilerim", "Geçmiş Siparişlerim", "Kart Bilgilerim"]
+    
+    
+    let dic: OrderedDictionary = ["Adresler":"house",
+                                  "Siparişler":"star",
+                                  "Kart Bilgileri":"creditcard"]
     
     var body: some View {
         NavigationView {
             
-            Form {
-                // 1. Section
-                Section {
-                    // Name Surname
-                    ProfileRow(systemImageName: "person", rowText: "Ad soyad")
-                    // E Mail
-                    ProfileRow(systemImageName: "envelope", rowText: "E posta")
-                    
-                }
-                .frame(width: getScreen().width,
-                        height: getScreen().height * 0.05,
-                        alignment: .leading)
-                
-                // 2.Section
-                Section {
-                    ForEach(sectionNameArray, id:\.self) { rowName in
-                        NavigationLink(rowName) {
-                            
-                        }
+            VStack {
+                Form {
+                    // 1. Section
+                    Section {
+                        // Name Surname
+                        ProfileRow(systemImageName: "person", rowText: "Ad soyad")
+                        // E Mail
+                        ProfileRow(systemImageName: "envelope", rowText: "E posta")
+                        
                     }
+                    .frame(width: getScreen().width,
+                            height: getScreen().height * 0.05,
+                            alignment: .leading)
                     
+                    // 2.Section
+                    Section {
+                        ForEach(dic.keys, id: \.self){ key in
+                            NavigationLink {
+
+                            }label: {
+                                ProfileRow(systemImageName: dic[key]! , rowText: key)
+                            }
+                        }
+
+                    }
+                    .frame(width: getScreen().width,
+                            height: getScreen().height * 0.05,
+                            alignment: .leading)
+                    
+                }//: Form
+                
+                ButtonView(title: "Çıkış Yap")
+                {
+                    sessionService.logout()
                 }
-                .frame(width: getScreen().width,
-                        height: getScreen().height * 0.05,
-                        alignment: .leading)
-               
+                .padding(.bottom, 30)
                 
-         
-               
-                
-                
-            }
+            }//: VStack
             
-        }
-        .navigationTitle("Profil")
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarHidden(true)
+            .navigationTitle("Profil")
+            .navigationBarTitleDisplayMode(.inline)
+            
+        }//: N.V
+        
+//        .navigationBarHidden(true)
     }
 }
 
