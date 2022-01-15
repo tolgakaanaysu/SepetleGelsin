@@ -8,7 +8,7 @@ struct ContentView: View {
         case searchView
         case cartPage
         case favoriteList
-        case menuList
+        case profilView
         case loginView
     }
     
@@ -16,7 +16,6 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selection) {
             CategoryHome()
-           
                 .tabItem {
                     Label("Anasayfa", systemImage: "house")
                 }
@@ -41,11 +40,11 @@ struct ContentView: View {
                 }
                 .tag(Tab.favoriteList)
             
-//            MenuList()
-//                .tabItem{
-//                    Label("Menü", systemImage: "list.bullet")
-//                }
-//                .tag(Tab.menuList)
+            ProfileView()
+                .tabItem{
+                    Label("Profil", systemImage: "person")
+                }
+                .tag(Tab.profilView)
             
             LoginView()
                 .tabItem {
