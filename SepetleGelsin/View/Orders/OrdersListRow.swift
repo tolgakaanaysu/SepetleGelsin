@@ -28,7 +28,6 @@ struct OrdersListRow: View {
             Text(product.title)
                 .frame(width: 80, height: 50, alignment: .center)
             Spacer()
-                //Quantity Text
             Text(String(quantity))
                     .bold()
                     .font(.callout)
