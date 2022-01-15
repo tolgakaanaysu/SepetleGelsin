@@ -53,6 +53,8 @@
 		822FE062279313FE006B0820 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 822FE061279313FE006B0820 /* FirebaseDatabase */; };
 		822FE064279313FE006B0820 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 822FE063279313FE006B0820 /* FirebaseFirestore */; };
 		822FE066279313FE006B0820 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 822FE065279313FE006B0820 /* FirebaseStorage */; };
+		822FE069279318AF006B0820 /* OrdersListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822FE068279318AF006B0820 /* OrdersListRow.swift */; };
+		822FE06B27931E47006B0820 /* OrdersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822FE06A27931E47006B0820 /* OrdersList.swift */; };
 		827DD718277DF26600EAB5C6 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD717277DF26600EAB5C6 /* LoginCredentials.swift */; };
 		827DD71A277DF4BC00EAB5C6 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD719277DF4BC00EAB5C6 /* LoginService.swift */; };
 		827DD71C277DF68E00EAB5C6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD71B277DF68E00EAB5C6 /* LoginViewModel.swift */; };
@@ -106,6 +108,8 @@
 		821EBAB3276E275D00855071 /* CloseModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseModifier.swift; sourceTree = "<group>"; };
 		821EBAB7276E2A3D00855071 /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
 		821EBABA276E2FDC00855071 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		822FE068279318AF006B0820 /* OrdersListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListRow.swift; sourceTree = "<group>"; };
+		822FE06A27931E47006B0820 /* OrdersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersList.swift; sourceTree = "<group>"; };
 		827DD717277DF26600EAB5C6 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		827DD719277DF4BC00EAB5C6 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		827DD71B277DF68E00EAB5C6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 				786E8FEF273ADFBB00094115 /* Category */,
 				787388AD27517B16006B6D28 /* Search */,
 				78568C21277E0E4700494E53 /* ShoppingCart */,
+				822FE06727931824006B0820 /* Orders */,
 				786CF1D62745D63C00279DE3 /* FavoritesListView */,
 				782E708C276F077F008E281B /* Menu */,
 				7894FBC6273AF3CB0050C8CB /* ProductDetails */,
@@ -323,6 +328,15 @@
 				821EBAB3276E275D00855071 /* CloseModifier.swift */,
 			);
 			path = Modifier;
+			sourceTree = "<group>";
+		};
+		822FE06727931824006B0820 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				822FE06A27931E47006B0820 /* OrdersList.swift */,
+				822FE068279318AF006B0820 /* OrdersListRow.swift */,
+			);
+			path = Orders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,8 +459,10 @@
 				82D0397A27734D8D006FBE9A /* SessionUserDetails.swift in Sources */,
 				78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */,
 				827DD71C277DF68E00EAB5C6 /* LoginViewModel.swift in Sources */,
+				822FE06B27931E47006B0820 /* OrdersList.swift in Sources */,
 				78717048274EC60900F93D3E /* RemoveButton.swift in Sources */,
 				821EBAAB276E13DF00855071 /* ButtonView.swift in Sources */,
+				822FE069279318AF006B0820 /* OrdersListRow.swift in Sources */,
 				827DD71A277DF4BC00EAB5C6 /* LoginService.swift in Sources */,
 				827DD718277DF26600EAB5C6 /* LoginCredentials.swift in Sources */,
 				787388A72751458D006B6D28 /* DataService.swift in Sources */,

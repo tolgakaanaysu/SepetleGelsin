@@ -21,10 +21,11 @@ struct SepetleGelsinApp: App {
     var body: some Scene {
         WindowGroup {
             
-            /*
+            
            ContentView()
                 .environmentObject(stateObject)
-            */
+            
+            /*
             NavigationView{
                 switch sessionservice.state {
                 case .loggedIn:
@@ -35,7 +36,7 @@ struct SepetleGelsinApp: App {
                 case .loggedOut:
                     LoginView()
                 }
-            }
+            }*/
         }
     }
 }
