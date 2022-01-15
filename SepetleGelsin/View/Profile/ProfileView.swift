@@ -6,9 +6,17 @@ struct ProfileView: View {
     @EnvironmentObject var sessionService: SessionServiceImpl
     
     
-    let dic: OrderedDictionary = ["Adresler":"house",
-                                  "Siparişler":"star",
-                                  "Kart Bilgileri":"creditcard"]
+    let dic: OrderedDictionary = ["Addresses":"house",
+                                  "PastOrders":"star",
+                                  "CreditCardInfo":"creditcard"]
+    
+   
+    
+    enum RowKeys: String {
+        case Addresses = "Addresses"
+        case PastOrders  = "PastOrders"
+        case CreditCardInfo = "CreditCardInfo"
+    }
     
     var body: some View {
         NavigationView {
@@ -31,6 +39,14 @@ struct ProfileView: View {
                     Section {
                         ForEach(dic.keys, id: \.self){ key in
                             NavigationLink {
+                                switch ProfileView.RowKeys(rawValue: key)! {
+                                case RowKeys.Addresses:
+                                    Addresses()
+                                case RowKeys.PastOrders:
+                                    PastOrders()
+                                case RowKeys.CreditCardInfo:
+                                    CreditCardInfo()
+                                }
 
                             }label: {
                                 ProfileRow(systemImageName: dic[key]! , rowText: key)
@@ -47,8 +63,11 @@ struct ProfileView: View {
                 ButtonView(title: "Çıkış Yap")
                 {
                     sessionService.logout()
+                        
                 }
+                
                 .padding(.bottom, 30)
+                
                 
             }//: VStack
             
