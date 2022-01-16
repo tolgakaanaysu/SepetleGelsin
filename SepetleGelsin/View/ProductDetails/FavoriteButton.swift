@@ -1,5 +1,5 @@
 import SwiftUI
-import Combine
+
 struct FavoriteButton: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var productDetailsItem: ProductModel
@@ -29,6 +29,8 @@ struct FavoriteButton: View {
             
         }){
             Image(systemName: "heart.fill")
+                .resizable()
+                .frame(width: 30, height: 30, alignment: .center)
                 .foregroundColor( isFavorite() ? Color.red: Color.gray)
                 
                 
