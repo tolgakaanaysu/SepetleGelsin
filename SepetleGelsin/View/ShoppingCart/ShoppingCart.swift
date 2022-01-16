@@ -18,12 +18,11 @@ struct ShoppingCart: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing ){
-                    Text(viewModel.calculateTotalPrice())
+                    Text(String("\(viewModel.calculateTotalPrice()) ₺"))
                         
-                        .frame(width: 75, height: 35)
-                        .background(Color.secondary)
+                        .frame(width: 100, height: 35)
+                        .background(Color.white)
                         .clipShape(Capsule())
-                        .opacity(0.7)
                         .foregroundColor(.black)
                         
                 }
