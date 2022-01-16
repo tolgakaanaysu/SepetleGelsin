@@ -3,21 +3,21 @@ import SwiftUI
 struct CategoryHome: View {
     
     @EnvironmentObject private var viewModel : ProductViewModel
+    
+    
+    init() {
+        UINavigationBar.appearance().backgroundColor = .navigationBarColor
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+
+    }
 
     var body: some View {
         
         NavigationView {
            
             List {
-                Image("logo.jpeg")
-                    .resizable()
-                    .frame(width: getScreen().width,
-                           height: getScreen().height * 0.25,
-                           alignment: .center)
-                    .scaledToFill()
-                    .listRowInsets(EdgeInsets())
-                    
-        
+                  
                 ForEach(viewModel.categories.keys.sorted(), id:\.self ) { key in
                     
                     CategoryRow(catogoryName: key, productArray: viewModel.categories[key]!)
@@ -28,8 +28,11 @@ struct CategoryHome: View {
             .listStyle(.inset)
             .navigationTitle("Anasayfa")
             .navigationBarTitleDisplayMode(.inline)
+           
             
         }//:NavigationView
+        
+        
         
     }
         
