@@ -28,3 +28,9 @@ extension Color {
         return Color.green
     }
 }
+
+extension UIColor {
+    public static var navigationBarColor: UIColor {
+        return UIColor(named: "navigation-bar-color") ?? UIColor.white
+    }
+}
