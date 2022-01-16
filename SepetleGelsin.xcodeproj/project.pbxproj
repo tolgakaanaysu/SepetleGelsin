@@ -58,6 +58,7 @@
 		822FE066279313FE006B0820 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 822FE065279313FE006B0820 /* FirebaseStorage */; };
 		822FE069279318AF006B0820 /* OrdersListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822FE068279318AF006B0820 /* OrdersListRow.swift */; };
 		822FE06B27931E47006B0820 /* OrdersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822FE06A27931E47006B0820 /* OrdersList.swift */; };
+		822FE07D2794642E006B0820 /* CreateOrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822FE07C2794642E006B0820 /* CreateOrderButton.swift */; };
 		827DD718277DF26600EAB5C6 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD717277DF26600EAB5C6 /* LoginCredentials.swift */; };
 		827DD71A277DF4BC00EAB5C6 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD719277DF4BC00EAB5C6 /* LoginService.swift */; };
 		827DD71C277DF68E00EAB5C6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DD71B277DF68E00EAB5C6 /* LoginViewModel.swift */; };
@@ -116,6 +117,7 @@
 		821EBABA276E2FDC00855071 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		822FE068279318AF006B0820 /* OrdersListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListRow.swift; sourceTree = "<group>"; };
 		822FE06A27931E47006B0820 /* OrdersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersList.swift; sourceTree = "<group>"; };
+		822FE07C2794642E006B0820 /* CreateOrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderButton.swift; sourceTree = "<group>"; };
 		827DD717277DF26600EAB5C6 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		827DD719277DF4BC00EAB5C6 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		827DD71B277DF68E00EAB5C6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				78568C22277E121A00494E53 /* ShoppingCart.swift */,
 				78568C24277E123300494E53 /* ClearCartButton.swift */,
 				78AB6809277E5FF00015E649 /* ShoppingCartRow.swift */,
+				822FE07C2794642E006B0820 /* CreateOrderButton.swift */,
 			);
 			path = ShoppingCart;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				82015E6D27733B49002B9E08 /* RegistrationService.swift in Sources */,
 				82D039782773491A006FBE9A /* RegistrationViewModel.swift in Sources */,
 				78AB680A277E5FF00015E649 /* ShoppingCartRow.swift in Sources */,
+				822FE07D2794642E006B0820 /* CreateOrderButton.swift in Sources */,
 				787388AF27517B48006B6D28 /* SearchView.swift in Sources */,
 				786E8FDB273AD28A00094115 /* ContentView.swift in Sources */,
 				787486CA273AF93C00C5C1C1 /* CategoryHome.swift in Sources */,

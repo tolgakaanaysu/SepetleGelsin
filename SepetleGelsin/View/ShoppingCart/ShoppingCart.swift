@@ -20,11 +20,14 @@ struct ShoppingCart: View {
                 ToolbarItem(placement: .navigationBarTrailing ){
                     Text(String("\(viewModel.calculateTotalPrice()) ₺"))
                         
-                        .frame(width: 100, height: 35)
+                        .frame(width: 75, height: 35)
                         .background(Color.white)
                         .clipShape(Capsule())
                         .foregroundColor(.black)
                         
+                }
+                ToolbarItem(placement: .navigationBarTrailing){
+                    CreateOrderButton()
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     ClearCartButton()

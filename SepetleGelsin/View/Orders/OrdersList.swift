@@ -28,7 +28,7 @@ struct OrdersList: View {
                     Text(viewModel.calculateTotalPrice())
                         
                         .frame(width: 75, height: 35)
-                        .background(Color.secondary)
+                        .background(Color.white)
                         .clipShape(Capsule())
                         .opacity(0.7)
                         .foregroundColor(.black)
