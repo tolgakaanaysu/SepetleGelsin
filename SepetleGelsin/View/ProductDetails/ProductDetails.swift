@@ -21,23 +21,27 @@ struct ProductDetails: View {
                                 
                     Spacer()
                          
-                    
+                    FavoriteButton(productDetailsItem: productDetailsItem)
                         
                 }
+                .padding()
+                .frame(width: getScreen().width, height: 75)
+            
                 Divider()
             
-                Text(productDetailsItem.description)
+            Text(productDetailsItem.description)
                 
             
             Spacer()
             AddToCartButton(product: productDetailsItem)
                 
                 
-                .toolbar {
-                    FavoriteButton(productDetailsItem: productDetailsItem)
-                }
+               
+                   
+                
         }
         .padding()
+        
            
         
     }
