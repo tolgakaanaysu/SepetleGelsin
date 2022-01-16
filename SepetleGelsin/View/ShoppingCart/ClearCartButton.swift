@@ -8,7 +8,7 @@ struct ClearCartButton: View {
         Button (action: {
             showingAlert.toggle()
         }){
-            Image(systemName: "trash")
+            Image(systemName: "trash.fill")
         }
         .alert(isPresented: $showingAlert) {
             Alert(title: Text("UYARI"),
