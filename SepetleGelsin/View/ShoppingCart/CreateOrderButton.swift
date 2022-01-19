@@ -22,8 +22,8 @@ struct CreateOrderButton: View {
             Image(systemName: "arrow.forward")
         }
         .alert(isPresented: $showingAlert) {
-            Alert(title: Text("UYARI"),
-                  message: Text("Sepeti boşaltmak ister misiniz"),
+            Alert(title: Text("Sipariş Oluştur"),
+                  message: Text("Alışverişinizi tamamlamak ister misiniz?"),
                   primaryButton: .destructive(Text("Hayır")),
                   secondaryButton: .cancel(Text("Evet")) {
                 let user = Auth.auth().currentUser
@@ -32,12 +32,17 @@ struct CreateOrderButton: View {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateStyle = .long
                 dateFormatter.timeStyle = .short
+                dateFormatter.locale = Locale(identifier: "tr_TR_POSIX")
 
                 let label = UILabel()
                 label.text = dateFormatter.string(from: Date())
                 for listItem in viewModel.shoppingCartList {
                     let docData: [String: Any] =
-                    [String(listItem.price) : [String(listItem.id) : viewModel.productQuantityDict[listItem.id] ?? 1]]
+                    [String(count):
+                        ["ID" : listItem.id,
+                        "Adet" : (viewModel.productQuantityDict[listItem.id] ?? 1),
+                        "Fiyat"  : listItem.price,
+                         "Tarih" : String(dateFormatter.string(from: Date()))]]
                     count = count + 1
                     db.collection(String(uid!)).document(String(dateFormatter.string(from: Date()))).setData(docData , merge: true) { err in
                     if let err = err {
