@@ -6,18 +6,22 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 
 
 struct OrdersList: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var body: some View {
+        
         NavigationView{
             ScrollView{
                 
-                    ForEach(viewModel.shoppingCartList){ product in
+                    /*ForEach(viewModel.shoppingCartList){ product in
                         Divider()
                         OrdersListRow(product: product)
-                    }
+                        
+                    }*/
             }
             .padding(.top,20)
             .navigationTitle("Siparişim")
@@ -37,7 +41,10 @@ struct OrdersList: View {
             }
         }
     }
+    
 }
+
+
 
 struct OrdersList_Previews: PreviewProvider {
     static var previews: some View {
@@ -45,3 +52,4 @@ struct OrdersList_Previews: PreviewProvider {
             .environmentObject(ProductViewModel())
     }
 }
+

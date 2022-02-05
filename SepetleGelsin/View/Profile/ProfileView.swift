@@ -43,7 +43,7 @@ struct ProfileView: View {
                                 case RowKeys.Addresses:
                                     Addresses()
                                 case RowKeys.PastOrders:
-                                    PastOrders()
+                                    Deneme()
                                 case RowKeys.CreditCardInfo:
                                     CreditCardInfo()
                                 }

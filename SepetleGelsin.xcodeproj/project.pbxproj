@@ -67,6 +67,9 @@
 		82D039782773491A006FBE9A /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D039772773491A006FBE9A /* RegistrationViewModel.swift */; };
 		82D0397A27734D8D006FBE9A /* SessionUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D0397927734D8D006FBE9A /* SessionUserDetails.swift */; };
 		82D0397C27734E1E006FBE9A /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D0397B27734E1E006FBE9A /* SessionService.swift */; };
+		82D8441F279845BE001D3757 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D8441E279845BE001D3757 /* OrdersViewModel.swift */; };
+		82D844212798466E001D3757 /* OrdersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D844202798466E001D3757 /* OrdersModel.swift */; };
+		82D8442327984DB8001D3757 /* Deneme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D8442227984DB8001D3757 /* Deneme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +129,9 @@
 		82D039772773491A006FBE9A /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		82D0397927734D8D006FBE9A /* SessionUserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionUserDetails.swift; sourceTree = "<group>"; };
 		82D0397B27734E1E006FBE9A /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		82D8441E279845BE001D3757 /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
+		82D844202798466E001D3757 /* OrdersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersModel.swift; sourceTree = "<group>"; };
+		82D8442227984DB8001D3757 /* Deneme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deneme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +241,7 @@
 			children = (
 				786E8FE9273AD64C00094115 /* ProductModel.swift */,
 				82D0397927734D8D006FBE9A /* SessionUserDetails.swift */,
+				82D844202798466E001D3757 /* OrdersModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +310,7 @@
 				82D039772773491A006FBE9A /* RegistrationViewModel.swift */,
 				827DD71B277DF68E00EAB5C6 /* LoginViewModel.swift */,
 				827DD71F2780DD9F00EAB5C6 /* ForgotPasswordViewModel.swift */,
+				82D8441E279845BE001D3757 /* OrdersViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -371,6 +379,7 @@
 			children = (
 				822FE06A27931E47006B0820 /* OrdersList.swift */,
 				822FE068279318AF006B0820 /* OrdersListRow.swift */,
+				82D8442227984DB8001D3757 /* Deneme.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -460,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F70B0A2793726500B2ECAC /* PastOrders.swift in Sources */,
+				82D8441F279845BE001D3757 /* OrdersViewModel.swift in Sources */,
 				82015E6D27733B49002B9E08 /* RegistrationService.swift in Sources */,
 				82D039782773491A006FBE9A /* RegistrationViewModel.swift in Sources */,
 				78AB680A277E5FF00015E649 /* ShoppingCartRow.swift in Sources */,
@@ -485,6 +495,7 @@
 				786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */,
 				82D0397C27734E1E006FBE9A /* SessionService.swift in Sources */,
 				821EBA9F276E02B700855071 /* InputTextFieldView.swift in Sources */,
+				82D8442327984DB8001D3757 /* Deneme.swift in Sources */,
 				821EBAB4276E275D00855071 /* CloseModifier.swift in Sources */,
 				78B88EE927400CDE00F29145 /* FavoriteButton.swift in Sources */,
 				786E8FEA273AD64C00094115 /* ProductModel.swift in Sources */,
@@ -502,6 +513,7 @@
 				822FE06B27931E47006B0820 /* OrdersList.swift in Sources */,
 				78717048274EC60900F93D3E /* RemoveButton.swift in Sources */,
 				821EBAAB276E13DF00855071 /* ButtonView.swift in Sources */,
+				82D844212798466E001D3757 /* OrdersModel.swift in Sources */,
 				822FE069279318AF006B0820 /* OrdersListRow.swift in Sources */,
 				827DD71A277DF4BC00EAB5C6 /* LoginService.swift in Sources */,
 				827DD718277DF26600EAB5C6 /* LoginCredentials.swift in Sources */,
