@@ -21,8 +21,9 @@ struct ShoppingCart: View {
                     Text(String("\(viewModel.calculateTotalPrice()) ₺"))
                         
                         .frame(width: 75, height: 35)
-                        .background(Color.white)
+                        .background(Color.secondary)
                         .clipShape(Capsule())
+                        .opacity(0.8)
                         .foregroundColor(.black)
                         
                 }

@@ -54,7 +54,7 @@ struct ContentView: View {
         }
 
         .accentColor(Color.ourApplicationColor)
-        .tint(Color.white)
+       
         
     }
     
