@@ -46,6 +46,7 @@
 		78F70B0E27937AD700B2ECAC /* Addresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F70B0D27937AD700B2ECAC /* Addresses.swift */; };
 		82015E6B27733AF3002B9E08 /* RegistrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82015E6A27733AF3002B9E08 /* RegistrationDetails.swift */; };
 		82015E6D27733B49002B9E08 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82015E6C27733B49002B9E08 /* RegistrationService.swift */; };
+		821830DD27B0452700B8AACB /* SuccessfulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821830DC27B0452700B8AACB /* SuccessfulView.swift */; };
 		821EBA9F276E02B700855071 /* InputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBA9E276E02B700855071 /* InputTextFieldView.swift */; };
 		821EBAA3276E09F100855071 /* PreviewLayoutComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBAA2276E09F100855071 /* PreviewLayoutComponentModifier.swift */; };
 		821EBAA5276E0B5500855071 /* InputPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EBAA4276E0B5500855071 /* InputPasswordView.swift */; };
@@ -113,6 +114,7 @@
 		78F70B0D27937AD700B2ECAC /* Addresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addresses.swift; sourceTree = "<group>"; };
 		82015E6A27733AF3002B9E08 /* RegistrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetails.swift; sourceTree = "<group>"; };
 		82015E6C27733B49002B9E08 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
+		821830DC27B0452700B8AACB /* SuccessfulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulView.swift; sourceTree = "<group>"; };
 		821EBA9E276E02B700855071 /* InputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldView.swift; sourceTree = "<group>"; };
 		821EBAA2276E09F100855071 /* PreviewLayoutComponentModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLayoutComponentModifier.swift; sourceTree = "<group>"; };
 		821EBAA4276E0B5500855071 /* InputPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasswordView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				782E708C276F077F008E281B /* Profile */,
 				7894FBC6273AF3CB0050C8CB /* ProductDetails */,
 				785DE50D274A8B710008A69C /* Utility */,
+				821830DC27B0452700B8AACB /* SuccessfulView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				7820B644275058CC00087E0D /* CategoryList.swift in Sources */,
 				82D0397A27734D8D006FBE9A /* SessionUserDetails.swift in Sources */,
 				78E8864427AFD147002857B8 /* PayWall.swift in Sources */,
+				821830DD27B0452700B8AACB /* SuccessfulView.swift in Sources */,
 				78E8864627AFD1C3002857B8 /* CreditCard.swift in Sources */,
 				78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */,
 				827DD71C277DF68E00EAB5C6 /* LoginViewModel.swift in Sources */,
