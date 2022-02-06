@@ -44,20 +44,22 @@ struct PayWall: View {
                  }
              }
              
-             TextField("Name", text: $name)
+             TextField("Kart Sahibi", text: $name)
                  .textFieldStyle(RoundedBorderTextFieldStyle())
                  .padding([.top,.leading,.trailing])
+             
+             TextField("Kart Numarası", text: $cardNumber)
+                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                 .padding([.leading,.trailing])
+                 .keyboardType(.decimalPad )
                  
              
-             TextField("Expiration", text: $expires)
+             TextField("Valid Date", text: $expires)
                  .textFieldStyle(RoundedBorderTextFieldStyle())
                  .padding([.leading,.trailing])
                  .keyboardType(.decimalPad )
              
-             TextField("CardNumber", text: $cardNumber)
-                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                 .padding([.leading,.trailing])
-                 .keyboardType(.decimalPad )
+             
              
              TextField("CVV", text: $cvv) { (editingChanged) in
                  withAnimation {
