@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct PayWall: View {
+    @EnvironmentObject var viewModel: ProductViewModel
+    @State private var showingAlert = false
     @State private var degrees: Double = 0
     @State private var flipped: Bool = false
     
@@ -16,7 +19,7 @@ struct PayWall: View {
     @State private var cvv: String = ""
     @State private var cardNumber = ""
     @State private var addres = ""
-    
+    var db = Firestore.firestore()
      var body: some View {
          VStack {
              CreditCard {
@@ -80,6 +83,65 @@ struct PayWall: View {
                  
              Spacer()
              
+             Button{
+                 if name != "" && expires != "" && cardNumber != "" && cvv != "" && addres != "" {
+                     showingAlert.toggle()
+                     
+                 }
+                 
+             } label: {
+                 Text("Satın Al")
+                     .font(.title2 )
+                     .bold()
+                     .foregroundColor(.white)
+                     .padding(.vertical,18)
+                     .frame(width: getScreen().width * 0.4,
+                             height: getScreen().height * 0.06,
+                             alignment: .center)
+                     .background(Color.ourApplicationColor)
+                     .cornerRadius(20)
+                     .shadow(color: Color.black.opacity(0.15),
+                                 radius: 5, x:10 , y: 5)
+                 }
+             .alert(isPresented: $showingAlert) {
+                 Alert(title: Text("Sipariş Oluştur"),
+                       message: Text("Alışverişinizi tamamlamak ister misiniz?"),
+                       primaryButton: .destructive(Text("Hayır")),
+                       secondaryButton: .cancel(Text("Evet")) {
+                     self.viewModel.shoppingCartList.removeAll()
+                     self.viewModel.productQuantityDict.removeAll()
+                     
+                     let user = Auth.auth().currentUser
+                     let uid = user?.uid
+                     var count = 0
+                     let dateFormatter = DateFormatter()
+                     dateFormatter.dateStyle = .long
+                     dateFormatter.timeStyle = .short
+                     dateFormatter.locale = Locale(identifier: "tr_TR_POSIX")
+
+                     let label = UILabel()
+                     label.text = dateFormatter.string(from: Date())
+                     for listItem in viewModel.shoppingCartList {
+                         let docData: [String: Any] =
+                         [String(count):
+                             ["ID" : listItem.id,
+                             "Adet" : (viewModel.productQuantityDict[listItem.id] ?? 1),
+                             "Fiyat"  : listItem.price,
+                              "Tarih" : String(dateFormatter.string(from: Date()))]]
+                         count = count + 1
+                         db.collection(String(uid!)).document(String(dateFormatter.string(from: Date()))).setData(docData , merge: true) { err in
+                         if let err = err {
+                             print("Error writing document: \(err)")
+                         } else {
+                             print("Document successfully written!")
+                         }
+                             
+                     }
+                     }
+                 })
+             }
+             
+             .padding(.bottom,50)
          }
          .padding(.top,50)
          

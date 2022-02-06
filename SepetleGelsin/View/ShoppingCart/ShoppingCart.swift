@@ -3,6 +3,7 @@ import SwiftUI
 struct ShoppingCart: View {
     @EnvironmentObject var viewModel: ProductViewModel
     
+    
     var body: some View {
         NavigationView{
             ScrollView{
@@ -21,14 +22,18 @@ struct ShoppingCart: View {
                     Text(String("\(viewModel.calculateTotalPrice()) ₺"))
                         
                         .frame(width: 75, height: 35)
-                        .background(Color.secondary)
                         .clipShape(Capsule())
                         .opacity(0.8)
                         .foregroundColor(.black)
                         
                 }
                 ToolbarItem(placement: .navigationBarTrailing){
-                    CreateOrderButton()
+                    NavigationLink {
+                        PayWall()
+                    } label: {
+                        Image(systemName: "creditcard")
+                    }
+
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     ClearCartButton()
