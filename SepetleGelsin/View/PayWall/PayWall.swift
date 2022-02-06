@@ -108,8 +108,7 @@ struct PayWall: View {
                        message: Text("Alışverişinizi tamamlamak ister misiniz?"),
                        primaryButton: .destructive(Text("Hayır")),
                        secondaryButton: .cancel(Text("Evet")) {
-                     self.viewModel.shoppingCartList.removeAll()
-                     self.viewModel.productQuantityDict.removeAll()
+                     
                      
                      let user = Auth.auth().currentUser
                      let uid = user?.uid
@@ -124,16 +123,17 @@ struct PayWall: View {
                      for listItem in viewModel.shoppingCartList {
                          let docData: [String: Any] =
                          [String(count):
-                             ["ID" : listItem.id,
-                             "Adet" : (viewModel.productQuantityDict[listItem.id] ?? 1),
-                             "Fiyat"  : listItem.price,
-                              "Tarih" : String(dateFormatter.string(from: Date()))]]
+                             [listItem.id,
+                             (viewModel.productQuantityDict[listItem.id] ?? 1),
+                             listItem.price]]
                          count = count + 1
                          db.collection(String(uid!)).document(String(dateFormatter.string(from: Date()))).setData(docData , merge: true) { err in
                          if let err = err {
                              print("Error writing document: \(err)")
                          } else {
                              print("Document successfully written!")
+                             self.viewModel.shoppingCartList.removeAll()
+                             self.viewModel.productQuantityDict.removeAll()
                          }
                              
                      }
