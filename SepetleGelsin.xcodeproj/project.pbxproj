@@ -37,6 +37,8 @@
 		78B8B07827945B8A0014D290 /* ProfileRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8B07727945B8A0014D290 /* ProfileRow.swift */; };
 		78B8B07A27945BCE0014D290 /* LogoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8B07927945BCE0014D290 /* LogoutView.swift */; };
 		78BAE9CE2765E167005F4D07 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BAE9CD2765E167005F4D07 /* BackgroundColor.swift */; };
+		78E8864427AFD147002857B8 /* PayWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8864327AFD147002857B8 /* PayWall.swift */; };
+		78E8864627AFD1C3002857B8 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8864527AFD1C3002857B8 /* CreditCard.swift */; };
 		78F70B052792ED6600B2ECAC /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 78F70B042792ED6600B2ECAC /* Collections */; };
 		78F70B072792ED6600B2ECAC /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 78F70B062792ED6600B2ECAC /* OrderedCollections */; };
 		78F70B0A2793726500B2ECAC /* PastOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F70B092793726500B2ECAC /* PastOrders.swift */; };
@@ -105,6 +107,8 @@
 		78B8B07727945B8A0014D290 /* ProfileRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRow.swift; sourceTree = "<group>"; };
 		78B8B07927945BCE0014D290 /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
 		78BAE9CD2765E167005F4D07 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
+		78E8864327AFD147002857B8 /* PayWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWall.swift; sourceTree = "<group>"; };
+		78E8864527AFD1C3002857B8 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		78F70B092793726500B2ECAC /* PastOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrders.swift; sourceTree = "<group>"; };
 		78F70B0B27937AA000B2ECAC /* CreditCardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInfo.swift; sourceTree = "<group>"; };
 		78F70B0D27937AD700B2ECAC /* Addresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addresses.swift; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 				787388AD27517B16006B6D28 /* Search */,
 				78568C21277E0E4700494E53 /* ShoppingCart */,
 				822FE06727931824006B0820 /* Orders */,
+				78E8864227AFD0DB002857B8 /* PayWall */,
 				786CF1D62745D63C00279DE3 /* FavoritesListView */,
 				782E708C276F077F008E281B /* Profile */,
 				7894FBC6273AF3CB0050C8CB /* ProductDetails */,
@@ -324,6 +329,15 @@
 				783FE3EF277F1CFA00F2DCA2 /* AddToCartButton.swift */,
 			);
 			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		78E8864227AFD0DB002857B8 /* PayWall */ = {
+			isa = PBXGroup;
+			children = (
+				78E8864327AFD147002857B8 /* PayWall.swift */,
+				78E8864527AFD1C3002857B8 /* CreditCard.swift */,
+			);
+			path = PayWall;
 			sourceTree = "<group>";
 		};
 		78F70B08279371EA00B2ECAC /* PastOrders */ = {
@@ -508,6 +522,8 @@
 				788D80A8276858740020C0A1 /* getScreen.swift in Sources */,
 				7820B644275058CC00087E0D /* CategoryList.swift in Sources */,
 				82D0397A27734D8D006FBE9A /* SessionUserDetails.swift in Sources */,
+				78E8864427AFD147002857B8 /* PayWall.swift in Sources */,
+				78E8864627AFD1C3002857B8 /* CreditCard.swift in Sources */,
 				78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */,
 				827DD71C277DF68E00EAB5C6 /* LoginViewModel.swift in Sources */,
 				822FE06B27931E47006B0820 /* OrdersList.swift in Sources */,
