@@ -67,7 +67,7 @@ struct ProfileView: View {
             
         }//: N.V
         
-//        .navigationBarHidden(true)
+       
     }
 }
 

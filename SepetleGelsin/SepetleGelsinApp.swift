@@ -32,10 +32,11 @@ struct SepetleGelsinApp: App {
                     ContentView()
                         .environmentObject(stateObject)
                         .environmentObject(sessionservice)
-                        
+                        .navigationBarHidden(true)
                     
                 case .loggedOut:
                     LoginView()
+                        
                 }
             }
         }
