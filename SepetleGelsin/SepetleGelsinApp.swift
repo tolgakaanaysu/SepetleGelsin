@@ -20,11 +20,11 @@ struct SepetleGelsinApp: App {
     
     var body: some Scene {
         WindowGroup {
-            
-            
-           ContentView()
-                .environmentObject(stateObject)
-            
+           
+        
+          ContentView()
+               .environmentObject(stateObject)
+          
             /*
             NavigationView{
                 switch sessionservice.state {
