@@ -123,9 +123,9 @@ struct PayWall: View {
                      for listItem in viewModel.shoppingCartList {
                          let docData: [String: Any] =
                          [String(count):
-                             [listItem.id,
-                             (viewModel.productQuantityDict[listItem.id] ?? 1),
-                             listItem.price]]
+                            ["ID" : listItem.id,
+                             "Adet" : (viewModel.productQuantityDict[listItem.id] ?? 1),
+                             "Fiyat" : listItem.price]]
                          count = count + 1
                          db.collection(String(uid!)).document(String(dateFormatter.string(from: Date()))).setData(docData , merge: true) { err in
                          if let err = err {
