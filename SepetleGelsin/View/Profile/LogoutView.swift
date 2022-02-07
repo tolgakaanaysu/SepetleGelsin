@@ -7,22 +7,27 @@
 import SwiftUI
 
 struct LogoutView: View {
-    
+    @State private var showOrders = false
     @EnvironmentObject var sessionService: SessionServiceImpl
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            VStack(alignment: .leading, spacing: 16) {
-                Text("Ad: \(sessionService.userDetails?.firstName ?? "N/A)")")
-                Text("Soyad: \(sessionService.userDetails?.lastName ?? "N/A)")")
+            HStack() {
+                Text("Hoşgeldiniz \(sessionService.userDetails?.firstName ?? "N/A)")")
+                Text((sessionService.userDetails?.lastName ?? "N/A)"))
             }
             .frame(height: UIScreen.main.bounds.size.height * 0.65)
+            ButtonView(title: "Siparişlerim")
+            {
+                showOrders.toggle()
+            }
+            .sheet(isPresented: $showOrders, content: {Deneme()})
             ButtonView(title: "Çıkış Yap")
             {
                 sessionService.logout()
             }
         }
         .padding(.horizontal, 16)
-        .navigationTitle("Kullanıcı Bilgileri")
+        .navigationTitle("Profil")
     }
 }
 
