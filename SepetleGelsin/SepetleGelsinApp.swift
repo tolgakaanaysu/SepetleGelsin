@@ -36,6 +36,7 @@ struct SepetleGelsinApp: App {
                     
                 case .loggedOut:
                     LoginView()
+                        .navigationBarHidden(true)
                         
                 }
             }
