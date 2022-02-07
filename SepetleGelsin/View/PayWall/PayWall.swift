@@ -19,6 +19,8 @@ struct PayWall: View {
     @State private var cvv: String = ""
     @State private var cardNumber = ""
     @State private var addres = ""
+    
+    @State var isSuccesful = false
     var db = Firestore.firestore()
      var body: some View {
          VStack {
@@ -86,7 +88,7 @@ struct PayWall: View {
              Button{
                  if name != "" && expires != "" && cardNumber != "" && cvv != "" && addres != "" {
                      showingAlert.toggle()
-                     
+           
                  }
                  
              } label: {
@@ -108,6 +110,14 @@ struct PayWall: View {
                        message: Text("Alışverişinizi tamamlamak ister misiniz?"),
                        primaryButton: .destructive(Text("Hayır")),
                        secondaryButton: .cancel(Text("Evet")) {
+                     
+                     isSuccesful.toggle()
+                     
+                     name = ""
+                     cvv = ""
+                     expires = ""
+                     addres = ""
+                     cardNumber = ""
                      
                      
                      let user = Auth.auth().currentUser
@@ -138,8 +148,15 @@ struct PayWall: View {
                              
                      }
                      }
-                 })
+                 }
+                 )
+                
              }
+             
+             NavigationLink("", isActive: $isSuccesful, destination: {
+                 SuccessfulView()
+             })
+             
              
              .padding(.bottom,50)
          }
