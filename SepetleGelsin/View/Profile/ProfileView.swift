@@ -23,17 +23,8 @@ struct ProfileView: View {
             
             VStack {
                 Form {
-                    // 1. Section
-                    Section {
-                        // Name Surname
-                        ProfileRow(systemImageName: "person", rowText: "Ad soyad")
-                        // E Mail
-                        ProfileRow(systemImageName: "envelope", rowText: "E posta")
-                        
-                    }
-                    .frame(width: getScreen().width,
-                            height: getScreen().height * 0.05,
-                            alignment: .leading)
+                    // Name Surname
+                    
                     
                     // 2.Section
                     Section {

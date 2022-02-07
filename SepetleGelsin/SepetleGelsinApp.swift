@@ -22,21 +22,22 @@ struct SepetleGelsinApp: App {
         WindowGroup {
            
         
-          ContentView()
+         /* ContentView()
                .environmentObject(stateObject)
           
-            /*
+            */
             NavigationView{
                 switch sessionservice.state {
                 case .loggedIn:
-                    LogoutView()
+                    ContentView()
+                        .environmentObject(stateObject)
                         .environmentObject(sessionservice)
                         
                     
                 case .loggedOut:
                     LoginView()
                 }
-            }*/
+            }
         }
     }
 }

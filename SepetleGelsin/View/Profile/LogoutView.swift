@@ -15,7 +15,7 @@ struct LogoutView: View {
                 Text("Hoşgeldiniz \(sessionService.userDetails?.firstName ?? "N/A)")")
                 Text((sessionService.userDetails?.lastName ?? "N/A)"))
             }
-            .frame(height: UIScreen.main.bounds.size.height * 0.65)
+            .frame(height: UIScreen.main.bounds.size.height * 0.60)
             ButtonView(title: "Siparişlerim")
             {
                 showOrders.toggle()

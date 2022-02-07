@@ -9,7 +9,4 @@ import Foundation
 
 struct getOrders: Identifiable {
     var id: String
-    var qty: String
-    var price: String
-    var date: String
 }

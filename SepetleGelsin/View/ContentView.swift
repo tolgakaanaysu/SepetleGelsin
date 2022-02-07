@@ -9,7 +9,7 @@ struct ContentView: View {
         case cartPage
         case favoriteList
         case profilView
-        case loginView
+        case logoutView
     }
     
     
@@ -40,17 +40,11 @@ struct ContentView: View {
                 }
                 .tag(Tab.favoriteList)
             
-            ProfileView()
-                .tabItem{
-                    Label("Profil", systemImage: "person")
-                }
-                .tag(Tab.profilView)
-            
-            LoginView()
+            LogoutView()
                 .tabItem {
                     Label("Hesap", systemImage: "person.crop.circle")
                 }
-                .tag(Tab.loginView)
+                .tag(Tab.logoutView)
         }
 
         .accentColor(Color.ourApplicationColor)

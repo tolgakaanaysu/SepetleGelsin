@@ -13,8 +13,7 @@ struct Deneme: View {
     @ObservedObject var model = OrdersViewModel()
     var body: some View {
         List (model.list) { item in
-            Text(item.date)
-            Text(item.qty)
+            Text(item.id)
         }
     }
     

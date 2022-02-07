@@ -16,10 +16,10 @@ class OrdersViewModel: ObservableObject {
         
         let db = Firestore.firestore()
         let user = Auth.auth().currentUser
-        let uid = user?.uid
-        let count = 0
+        let uid = (user?.uid)!
+        //let count = 0
         
-        db.collection("ElIgtIo2caMGIQ5UsRlXwvKYmp03").getDocuments { snapshot, err in
+        db.collection(uid).getDocuments { snapshot, err in
             
             if err == nil {
                 
@@ -28,10 +28,7 @@ class OrdersViewModel: ObservableObject {
                     DispatchQueue.main.async {
                         
                         self.list = snapshot.documents.map { d in
-                            return getOrders(id: d["ID"] as? String ?? "",
-                                             qty: d["Adet"] as? String ?? "",
-                                             price: d["Fiyat"] as? String ?? "",
-                                             date: d.documentID)
+                            return getOrders(id: d.documentID)
                         }
                     }
                 }
