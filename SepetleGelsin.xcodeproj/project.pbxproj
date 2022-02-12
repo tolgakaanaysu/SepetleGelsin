@@ -39,6 +39,7 @@
 		78E8864627AFD1C3002857B8 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8864527AFD1C3002857B8 /* CreditCard.swift */; };
 		78F70B052792ED6600B2ECAC /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 78F70B042792ED6600B2ECAC /* Collections */; };
 		78F70B072792ED6600B2ECAC /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 78F70B062792ED6600B2ECAC /* OrderedCollections */; };
+		78F8CBAE27B64BAF000AFB35 /* PastOrdersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8CBAD27B64BAF000AFB35 /* PastOrdersModel.swift */; };
 		82015E6B27733AF3002B9E08 /* RegistrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82015E6A27733AF3002B9E08 /* RegistrationDetails.swift */; };
 		82015E6D27733B49002B9E08 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82015E6C27733B49002B9E08 /* RegistrationService.swift */; };
 		821830DD27B0452700B8AACB /* SuccessfulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821830DC27B0452700B8AACB /* SuccessfulView.swift */; };
@@ -102,6 +103,7 @@
 		78BAE9CD2765E167005F4D07 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		78E8864327AFD147002857B8 /* PayWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWall.swift; sourceTree = "<group>"; };
 		78E8864527AFD1C3002857B8 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		78F8CBAD27B64BAF000AFB35 /* PastOrdersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrdersModel.swift; sourceTree = "<group>"; };
 		82015E6A27733AF3002B9E08 /* RegistrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetails.swift; sourceTree = "<group>"; };
 		82015E6C27733B49002B9E08 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		821830DC27B0452700B8AACB /* SuccessfulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulView.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				786E8FE9273AD64C00094115 /* ProductModel.swift */,
 				82D0397927734D8D006FBE9A /* SessionUserDetails.swift */,
 				82D844202798466E001D3757 /* OrdersModel.swift */,
+				78F8CBAD27B64BAF000AFB35 /* PastOrdersModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				78E8864627AFD1C3002857B8 /* CreditCard.swift in Sources */,
 				78210FDC274720F500CBCB88 /* FavoriteListRow.swift in Sources */,
 				827DD71C277DF68E00EAB5C6 /* LoginViewModel.swift in Sources */,
+				78F8CBAE27B64BAF000AFB35 /* PastOrdersModel.swift in Sources */,
 				822FE06B27931E47006B0820 /* OrdersList.swift in Sources */,
 				78717048274EC60900F93D3E /* RemoveButton.swift in Sources */,
 				821EBAAB276E13DF00855071 /* ButtonView.swift in Sources */,

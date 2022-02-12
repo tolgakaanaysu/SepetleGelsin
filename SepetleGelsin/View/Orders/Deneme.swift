@@ -12,14 +12,18 @@ struct Deneme: View {
     
     @ObservedObject var model = OrdersViewModel()
     var body: some View {
-        List (model.list) { item in
-            Text(item.id)
+        List (model.pastOrdersList) { item in
+            Text("Fiyat: \(item.price)")
+            Text("Tarih: \(item.date)")
+            Text("Ürün: \(item.productId)")
+               
         }
     }
-    
-    init () {
-        model.getData()
+    init(){
+        model.fetchData()
+        print(model)
     }
+    
 }
 
 struct Deneme_Previews: PreviewProvider {
