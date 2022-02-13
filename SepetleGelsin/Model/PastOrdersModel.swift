@@ -6,4 +6,6 @@ struct pastOrders:Identifiable {
     let quaintity: Int
     let price: Double
     let date: String
+    var name: String = ""
+    var imageName: String = ""
 }

@@ -5,12 +5,25 @@
 //  Created by Bedirhan Ulas on 15.01.2022.
 //
 
+
+
+
 import SwiftUI
 
 struct OrdersListRow: View {
     @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject var ordersViewModel: OrdersViewModel
     @State var quantity = 1
-    var product: ProductModel
+    var product: ProductModel {
+        for i in viewModel.productList {
+            if i.id == orderProduct.productId {
+                return i
+            }
+        }
+        return viewModel.productList.last!
+        
+    }
+    var orderProduct: pastOrders
 
     var body: some View {
         HStack {
@@ -25,10 +38,10 @@ struct OrdersListRow: View {
             Spacer()
             
             HStack{
-            Text(product.title)
+                Text(product.title)
                 .frame(width: 80, height: 50, alignment: .center)
             Spacer()
-            Text(String(quantity))
+                Text(String(orderProduct.quaintity))
                     .bold()
                     .font(.callout)
                     .foregroundColor(.black)
@@ -38,7 +51,7 @@ struct OrdersListRow: View {
                     .opacity(0.7)
             Spacer()
             Text(String(format: "%.2f ₺",
-            product.price * Double(quantity) ))
+                        product.price * Double(quantity) ))
                     .bold()
                     .frame(width: 80, height: 50, alignment: .center)
                 
@@ -48,8 +61,4 @@ struct OrdersListRow: View {
 }
 
 
-struct OrdersListRow_Previews: PreviewProvider {
-    static var previews: some View {
-        OrdersListRow(product: ProductViewModel().productList[5])
-    }
-}
+

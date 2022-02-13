@@ -12,34 +12,30 @@ import FirebaseFirestore
 
 struct OrdersList: View {
     @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject var ordersViewModel: OrdersViewModel
+    
+    
     var body: some View {
         
         NavigationView{
-            ScrollView{
-                
-                    /*ForEach(viewModel.shoppingCartList){ product in
-                        Divider()
-                        OrdersListRow(product: product)
-                        
-                    }*/
+            
+            List {
+                    ForEach(ordersViewModel.categorizeDate.keys.sorted(), id:\.self){ product in
+
+                        OrdersGroup(orderDate: product, orderArray: ordersViewModel.categorizeDate[product]!)
+                    }
             }
             .padding(.top,20)
             .navigationTitle("Siparişim")
             .listStyle(.inset)
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing ){
-                    Text(viewModel.calculateTotalPrice())
-                        
-                        .frame(width: 75, height: 35)
-                        .background(Color.white)
-                        .clipShape(Capsule())
-                        .opacity(0.7)
-                        .foregroundColor(.black)
-                        
-                }
-            }
+           
         }
+        .onAppear {
+            ordersViewModel.fetchData()
+    
+        }
+        
     }
     
 }
@@ -49,7 +45,7 @@ struct OrdersList: View {
 struct OrdersList_Previews: PreviewProvider {
     static var previews: some View {
         OrdersList()
-            .environmentObject(ProductViewModel())
+           
     }
 }
 

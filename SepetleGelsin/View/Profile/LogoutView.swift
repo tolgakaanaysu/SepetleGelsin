@@ -9,6 +9,9 @@ import SwiftUI
 struct LogoutView: View {
     @State private var showOrders = false
     @EnvironmentObject var sessionService: SessionServiceImpl
+    @ObservedObject var ordersViewModel =  OrdersViewModel()
+  
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack() {
@@ -20,7 +23,11 @@ struct LogoutView: View {
             {
                 showOrders.toggle()
             }
-            .sheet(isPresented: $showOrders, content: {Deneme()})
+            .sheet(isPresented: $showOrders,
+                   content: {
+                OrdersList()
+                    .environmentObject(OrdersViewModel())
+            })
             ButtonView(title: "Çıkış Yap")
             {
                 sessionService.logout()
@@ -28,6 +35,7 @@ struct LogoutView: View {
         }
         .padding(.horizontal, 16)
         .navigationTitle("Profil")
+        .navigationBarHidden(true)
     }
 }
 

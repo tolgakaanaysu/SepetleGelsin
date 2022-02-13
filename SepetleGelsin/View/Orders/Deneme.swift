@@ -21,7 +21,7 @@ struct Deneme: View {
     }
     init(){
         model.fetchData()
-        print(model)
+        
     }
     
 }
