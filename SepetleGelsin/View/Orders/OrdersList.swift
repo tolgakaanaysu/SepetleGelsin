@@ -20,7 +20,7 @@ struct OrdersList: View {
         NavigationView{
             
             List {
-                    ForEach(ordersViewModel.categorizeDate.keys.sorted(), id:\.self){ product in
+                ForEach(ordersViewModel.categorizeDate.keys.sorted().reversed(), id:\.self){ product in
 
                         OrdersGroup(orderDate: product, orderArray: ordersViewModel.categorizeDate[product]!)
                     }
