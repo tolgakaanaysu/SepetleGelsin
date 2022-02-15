@@ -13,7 +13,7 @@ import SwiftUI
 struct OrdersListRow: View {
     @EnvironmentObject var viewModel: ProductViewModel
     @EnvironmentObject var ordersViewModel: OrdersViewModel
-    @State var quantity = 1
+    
     var product: ProductModel {
         for i in viewModel.productList {
             if i.id == orderProduct.productId {
@@ -51,7 +51,7 @@ struct OrdersListRow: View {
                     .opacity(0.7)
             Spacer()
             Text(String(format: "%.2f ₺",
-                        product.price * Double(quantity) ))
+                        product.price * Double(orderProduct.quaintity)))
                     .bold()
                     .frame(width: 80, height: 50, alignment: .center)
                 
