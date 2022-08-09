@@ -1,6 +1,5 @@
 ## E-commerce mobile application
-### Tecnology
-
+### Technology
 - SwiftUI
 - Firebase
 - MVVM
