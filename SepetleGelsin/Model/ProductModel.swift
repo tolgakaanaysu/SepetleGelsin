@@ -21,17 +21,14 @@ struct ProductModel: Decodable,Identifiable {
         case clean = "Temizlik"
         case baseFood = "Temel Gıda"
         case fruitVegetable = "Meyve Sebze"
-        case adfsdga = "Atıştırmalıklar"
+        case fastFood = "Atıştırmalıklar"
         case breakfast = "Kahvaltılıklar"
-        case asfkla = "Ev Bakım"
+        case evBakim = "Ev Bakım"
         case baby = "Bebek"
         case pet = "Evcil Hayvan"
         case teknology = "Teknoloji"
     }
 
-   
-    
-  
     private enum CodingKeys: String, CodingKey {
         case id = "id"
         case title = "title"
@@ -39,6 +36,5 @@ struct ProductModel: Decodable,Identifiable {
         case description = "description"
         case category = "category"
         case imageName = "image"
-        
     }
 }

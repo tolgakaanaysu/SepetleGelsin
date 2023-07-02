@@ -1,17 +1,15 @@
 import SwiftUI
 
 struct ShoppingCart: View {
-    @EnvironmentObject var viewModel: ProductViewModel
-    
-    
+    @EnvironmentObject private var viewModel: ProductViewModel
+
     var body: some View {
         NavigationView{
             ScrollView{
-                
-                    ForEach(viewModel.shoppingCartList){ product in
-                        Divider()
-                        ShoppingCartRow(product: product)
-                    }
+                ForEach(viewModel.shoppingCartList){ product in
+                    Divider()
+                    ShoppingCartRow(product: product)
+                }
             }
             .padding(.top,20)
             .navigationTitle("Sepetim")
@@ -19,13 +17,13 @@ struct ShoppingCart: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing ){
-                    Text(String("\(viewModel.calculateTotalPrice()) ₺"))
-                        
+                    Text(viewModel.totalPrice + " ₺")
+                    
                         .frame(width: 75, height: 35)
                         .clipShape(Capsule())
                         .opacity(0.8)
                         .foregroundColor(.black)
-                        
+                    
                 }
                 ToolbarItem(placement: .navigationBarTrailing){
                     NavigationLink {
@@ -33,14 +31,12 @@ struct ShoppingCart: View {
                     } label: {
                         Image(systemName: "creditcard")
                     }
-
+                    
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     ClearCartButton()
                 }
             }
-            
-                
         }
     }
 }
