@@ -6,12 +6,9 @@
 //
 
 import SwiftUI
-import Firebase
-import FirebaseFirestore
-
 
 struct OrdersList: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: ProductViewModel
     @EnvironmentObject var ordersViewModel: OrdersViewModel
     
     

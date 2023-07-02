@@ -4,33 +4,18 @@ struct CategoryHome: View {
     
     @EnvironmentObject private var viewModel : ProductViewModel
     
-    
-   
-
     var body: some View {
         
         NavigationView {
-           
-            List {
-                  
-                ForEach(viewModel.categories.keys.sorted(), id:\.self ) { key in
-                    
-                    CategoryRow(catogoryName: key, productArray: viewModel.categories[key]!)
-            
-                }
-            
-            }//:List
-            .listStyle(.inset)
-            .navigationTitle("Anasayfa")
-            .navigationBarTitleDisplayMode(.inline)
-           
-            
-        }//:NavigationView
-        
-        
+            List(viewModel.categories.keys.sorted(), id:\.self ){ key in
+                CategoryRow(catogoryName: key, productArray: viewModel.categories[key]!)
+            }
+        }
+        .listStyle(.inset)
+        .navigationTitle("Anasayfa")
+        .navigationBarTitleDisplayMode(.inline)
         
     }
-        
 }
 
 struct CategoryHome_Previews: PreviewProvider {
@@ -38,6 +23,6 @@ struct CategoryHome_Previews: PreviewProvider {
         
         CategoryHome()
             .environmentObject(ProductViewModel())
-            
+        
     }
 }

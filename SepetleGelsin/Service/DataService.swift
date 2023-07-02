@@ -23,7 +23,5 @@ struct DataService {
         } catch {
             fatalError("Could not parse \(filename) as (T.self):\n\(error)")
         }
-    }
-
-    
+    }  
 }

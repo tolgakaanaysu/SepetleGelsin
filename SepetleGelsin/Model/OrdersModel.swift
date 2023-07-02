@@ -9,5 +9,4 @@ import Foundation
 
 struct getOrders: Identifiable {
     var id: String
-   
 }

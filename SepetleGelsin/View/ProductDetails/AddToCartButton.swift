@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddToCartButton: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: ProductViewModel
     
     @State var isContain = false
     var product: ProductModel

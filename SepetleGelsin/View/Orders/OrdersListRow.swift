@@ -11,7 +11,7 @@
 import SwiftUI
 
 struct OrdersListRow: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: ProductViewModel
     @EnvironmentObject var ordersViewModel: OrdersViewModel
     
     var product: ProductModel {

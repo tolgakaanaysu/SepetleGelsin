@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ShoppingCartRow: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: ProductViewModel
     @State var quantity = 1
     var product: ProductModel
 

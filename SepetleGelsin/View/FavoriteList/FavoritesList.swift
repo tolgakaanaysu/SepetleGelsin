@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct FavoritesList: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: ProductViewModel
     
    
     

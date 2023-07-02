@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct FavoriteButton: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: ProductViewModel
     var productDetailsItem: ProductModel
   
     //Check if product is favorite...
