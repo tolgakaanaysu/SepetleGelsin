@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OrdersGroup: View {
     var orderDate: String
-    var orderArray : [pastOrders]
+    var orderArray : [PastOrderModel]
     var body: some View {
         
         Section {

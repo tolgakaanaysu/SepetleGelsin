@@ -11,19 +11,19 @@
 import SwiftUI
 
 struct OrdersListRow: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: HomepageVM
     @EnvironmentObject var ordersViewModel: OrdersViewModel
     
     var product: ProductModel {
-        for i in viewModel.productList {
+        for i in viewModel.allProductList {
             if i.id == orderProduct.productId {
                 return i
             }
         }
-        return viewModel.productList.last!
+        return viewModel.allProductList.last!
         
     }
-    var orderProduct: pastOrders
+    var orderProduct: PastOrderModel
 
     var body: some View {
         HStack {

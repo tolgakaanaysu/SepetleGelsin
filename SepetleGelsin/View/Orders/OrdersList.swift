@@ -6,12 +6,9 @@
 //
 
 import SwiftUI
-import Firebase
-import FirebaseFirestore
-
 
 struct OrdersList: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: HomepageVM
     @EnvironmentObject var ordersViewModel: OrdersViewModel
     
     
@@ -31,11 +28,6 @@ struct OrdersList: View {
             .navigationBarTitleDisplayMode(.inline)
            
         }
-        .onAppear {
-            ordersViewModel.fetchData()
-    
-        }
-        
     }
     
 }

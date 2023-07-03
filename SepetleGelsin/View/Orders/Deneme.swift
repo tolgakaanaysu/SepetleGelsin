@@ -19,11 +19,6 @@ struct Deneme: View {
                
         }
     }
-    init(){
-        model.fetchData()
-        
-    }
-    
 }
 
 struct Deneme_Previews: PreviewProvider {

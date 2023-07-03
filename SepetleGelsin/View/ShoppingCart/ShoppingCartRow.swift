@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ShoppingCartRow: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: CartVM
     @State var quantity = 1
     var product: ProductModel
 
@@ -19,11 +19,9 @@ struct ShoppingCartRow: View {
                         product.price * Double(quantity) ))
                 .bold()
                 .frame(width: 100, height: 50, alignment: .center)
-            
-            
+                
             Spacer()
-            
-            
+
             HStack{
                 
                 //Minus Button
@@ -88,6 +86,6 @@ struct ShoppingCartRow: View {
 
 struct ShoppingCartRow_Previews: PreviewProvider {
     static var previews: some View {
-        ShoppingCartRow(product: ProductViewModel().productList[3])
+        ShoppingCartRow(product: HomepageVM().allProductList[3])
     }
 }
