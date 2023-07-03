@@ -5,23 +5,15 @@
 //  Created by Bedirhan Ulas on 19.01.2022.
 //
 
-
-
 import Foundation
 
 final class OrdersViewModel: ObservableObject {
     
-    @Published var pastOrdersList = [pastOrders]()
+    @Published var pastOrdersList = [PastOrderModel]()
     
-    var categorizeDate: [String: [pastOrders]] {
+    var categorizeDate: [String: [PastOrderModel]] {
         Dictionary(grouping: pastOrdersList,
                    by: {$0.date})
-    }
-}
-
-extension OrdersViewModel {
-    func fetchData() {
-        print(self.pastOrdersList)
     }
 }
 

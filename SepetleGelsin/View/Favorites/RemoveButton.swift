@@ -2,7 +2,7 @@ import SwiftUI
 
 struct RemoveButton: View {
     @State private var showingAlert = false
-    @EnvironmentObject private var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: FavoriteVM
     
     var body: some View {
         Button (action: {

@@ -20,6 +20,6 @@ struct ProductImage: View {
 }
 struct ProductImage_Previews: PreviewProvider {
     static var previews: some View {
-        ProductImage(image: ProductViewModel().productList[1].image )
+        ProductImage(image: HomepageVM().allProductList[1].image )
     }
 }

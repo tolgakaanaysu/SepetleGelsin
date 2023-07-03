@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ShoppingCart: View {
-    @EnvironmentObject private var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: HomepageVM
 
     var body: some View {
         NavigationView{
@@ -44,6 +44,6 @@ struct ShoppingCart: View {
 struct ShoppingCart_Previews: PreviewProvider {
     static var previews: some View {
         ShoppingCart()
-            .environmentObject(ProductViewModel())
+            .environmentObject(HomepageVM())
     }
 }

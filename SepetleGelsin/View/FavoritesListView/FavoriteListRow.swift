@@ -17,6 +17,6 @@ struct FavoriteListRow: View {
 
 struct FavoriteListRow_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteListRow(favoriteProducts: ProductViewModel().productList[1])
+        FavoriteListRow(favoriteProducts: HomepageVM().allProductList[1])
     }
 }
