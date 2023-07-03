@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CategoryItem: View {
+struct ProductItemView: View {
     var product:  ProductModel
     
     var body: some View {
@@ -9,19 +9,17 @@ struct CategoryItem: View {
             product.image
             .renderingMode(.original)
             .resizable()
-            .frame(width: getScreen().width * 0.25 , height: getScreen().width * 0.25)
+            .frame(width: getScreenBound().width * 0.25 , height: getScreenBound().width * 0.25)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .shadow(color: .ourApplicationColor , radius: 5)
             .padding(.leading, 5)
-            
-            
+
             //Product price text
             Text(String(format: "%.2f ₺", product.price))
                 .frame(width: 110, height: 20, alignment: .center)
                 .foregroundColor(.primary)
                 .font(.headline)
                 
-
             //Product Title text
             Text(product.title)
                 .frame(width: 110, height: 20, alignment: .center)
@@ -32,10 +30,9 @@ struct CategoryItem: View {
     }
 }
 
-
 struct CategoryItem_Preview: PreviewProvider {
     static var previews: some View {
-        CategoryItem(product: ProductViewModel().productList[3])
+        ProductItemView(product: HomepageVM().allProductList[3])
     
     }
 }

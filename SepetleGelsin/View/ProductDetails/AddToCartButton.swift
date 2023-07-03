@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddToCartButton: View {
-    @EnvironmentObject private var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: HomepageVM
     
     @State var isContain = false
     var product: ProductModel
@@ -44,8 +44,8 @@ struct AddToCartButton: View {
                 .bold()
                 .foregroundColor(.white)
                 .padding(.vertical,18)
-                .frame(width: getScreen().width * 0.4,
-                        height: getScreen().height * 0.06,
+                .frame(width: getScreenBound().width * 0.4,
+                        height: getScreenBound().height * 0.06,
                         alignment: .center)
                 .background(Color.ourApplicationColor)
                 .cornerRadius(20)
@@ -63,6 +63,6 @@ struct AddToCartButton: View {
 
 struct AddToCartButton_Previews: PreviewProvider {
     static var previews: some View {
-        AddToCartButton(product: ProductViewModel().productList[1])
+        AddToCartButton(product: HomepageVM().allProductList[1])
     }
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-struct pastOrders:Identifiable {
+struct PastOrderModel:Identifiable {
     var id: String = UUID().uuidString
     let productId: Int
     let quaintity: Int

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OrdersList: View {
-    @EnvironmentObject private var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: HomepageVM
     @EnvironmentObject var ordersViewModel: OrdersViewModel
     
     
@@ -28,11 +28,6 @@ struct OrdersList: View {
             .navigationBarTitleDisplayMode(.inline)
            
         }
-        .onAppear {
-            ordersViewModel.fetchData()
-    
-        }
-        
     }
     
 }

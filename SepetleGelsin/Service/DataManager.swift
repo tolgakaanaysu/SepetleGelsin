@@ -1,6 +1,10 @@
 import Foundation
 
-struct DataService {
+final class DataManager {
+    static let shared: DataManager = DataManager()
+    
+    private init() { }
+    
     func loadData <T: Decodable>(_ filename: String) -> T {
         let data: Data
         
@@ -9,11 +13,10 @@ struct DataService {
             fatalError("Could not find \(filename) in main bound")
         }
         
-        
         do {
             data = try Data (contentsOf: file)
         } catch {
-                fatalError("Could not load \(filename) from main bound")
+            fatalError("Could not load \(filename) from main bound")
         }
         
         do {
@@ -23,5 +26,5 @@ struct DataService {
         } catch {
             fatalError("Could not parse \(filename) as (T.self):\n\(error)")
         }
-    }  
+    }
 }

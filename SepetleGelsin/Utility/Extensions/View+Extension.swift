@@ -1,7 +1,7 @@
 import SwiftUI
 
 extension View {
-    func getScreen() -> CGRect{
+    func getScreenBound() -> CGRect{
         return UIScreen.main.bounds
     }
 }

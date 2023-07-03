@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PayWall: View {
-    @EnvironmentObject private var viewModel: ProductViewModel
+    @EnvironmentObject private var viewModel: HomepageVM
     @State private var showingAlert = false
     @State private var degrees: Double = 0
     @State private var flipped: Bool = false
@@ -95,8 +95,8 @@ struct PayWall: View {
                     .bold()
                     .foregroundColor(.white)
                     .padding(.vertical,18)
-                    .frame(width: getScreen().width * 0.4,
-                           height: getScreen().height * 0.06,
+                    .frame(width: getScreenBound().width * 0.4,
+                           height: getScreenBound().height * 0.06,
                            alignment: .center)
                     .background(Color.ourApplicationColor)
                     .cornerRadius(20)
