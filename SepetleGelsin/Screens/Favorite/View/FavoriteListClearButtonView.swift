@@ -1,29 +1,27 @@
 import SwiftUI
 
-struct RemoveButton: View {
-    @State private var showingAlert = false
+struct FavoriteListClearButtonView: View {
+    @State private var isShowAlert = false
     @EnvironmentObject private var viewModel: FavoriteVM
     
     var body: some View {
         Button (action: {
-            showingAlert.toggle()
+            isShowAlert = true
         }){
             Image(systemName: "trash.fill")
         }
-        .alert(isPresented: $showingAlert) {
+        .alert(isPresented: $isShowAlert) {
             Alert(title: Text("UYARI"),
                   message: Text("Tüm Favoriler Silinecek"),
                   primaryButton: .destructive(Text("SİL")){
-                self.viewModel.favoriteList.removeAll()
-            },
-                  secondaryButton: .cancel() )
+                viewModel.clearFavoriteList()
+            }, secondaryButton: .cancel())
         }
-
     }
 }
 
 struct RemoveButton_Previews: PreviewProvider {
     static var previews: some View {
-        RemoveButton()
+        FavoriteListClearButtonView()
     }
 }

@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-struct ProductModel: Decodable,Identifiable {
+struct ProductModel: Decodable,Identifiable, Equatable {
     
     let id: Int
     let title: String

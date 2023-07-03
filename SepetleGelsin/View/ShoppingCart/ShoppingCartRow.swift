@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ShoppingCartRow: View {
-    @EnvironmentObject private var viewModel: HomepageVM
+    @EnvironmentObject private var viewModel: CartVM
     @State var quantity = 1
     var product: ProductModel
 
@@ -19,11 +19,9 @@ struct ShoppingCartRow: View {
                         product.price * Double(quantity) ))
                 .bold()
                 .frame(width: 100, height: 50, alignment: .center)
-            
-            
+                
             Spacer()
-            
-            
+
             HStack{
                 
                 //Minus Button

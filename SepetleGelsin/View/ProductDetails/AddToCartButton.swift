@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddToCartButton: View {
-    @EnvironmentObject private var viewModel: HomepageVM
+    @EnvironmentObject private var cartVM: CartVM
     
     @State var isContain = false
     var product: ProductModel
@@ -19,24 +19,24 @@ struct AddToCartButton: View {
         // 3: check if product is in Cart
         
         Button{
-            var productQuantity = viewModel.productQuantityDict[product.id] ?? 0
+            var productQuantity = cartVM.productQuantityDict[product.id] ?? 0
             
-            if !viewModel.shoppingCartList.isEmpty {
-                viewModel.shoppingCartList.forEach { listItem in
+            if !cartVM.shoppingCartList.isEmpty {
+                cartVM.shoppingCartList.forEach { listItem in
                     if product.id == listItem.id  {
                         isContain = true
                     }
                      
                 }
                 if !isContain {
-                    viewModel.shoppingCartList.append(product)
+                    cartVM.shoppingCartList.append(product)
                 }
                 
             } else {
-                viewModel.shoppingCartList.append(product)
+                cartVM.shoppingCartList.append(product)
             }
             productQuantity+=1
-            viewModel.productQuantityDict[product.id] = productQuantity
+            cartVM.productQuantityDict[product.id] = productQuantity
             
         } label: {
             Text("Sepete Ekle")            

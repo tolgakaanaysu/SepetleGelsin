@@ -1,14 +1,21 @@
-//
-//  FavoriteVM.swift
-//  SepetleGelsin
-//
-//  Created by Tolga Kağan Aysu on 3.07.2023.
-//
-
 import Foundation
 
 final class FavoriteVM: ObservableObject {
     
     // MARK: - Properties
     @Published var favoriteList =  [ProductModel]()
+    var listIsEmpty: Bool { favoriteList.isEmpty }
+    
+    // MARK: - Functions
+    func addToFavoriteList(_ item: ProductModel) {
+        favoriteList.append(item)
+    }
+    
+    func removeToFavoriteList(_ item: ProductModel) {
+        favoriteList.remove(item: item)
+    }
+    
+    func clearFavoriteList() {
+        favoriteList.removeAll()
+    }
 }

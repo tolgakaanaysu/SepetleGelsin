@@ -4,6 +4,7 @@ import SwiftUI
 struct SepetleGelsinApp: App {
     @StateObject private var homapageVM = HomepageVM()
     @StateObject private var favoriteVM = FavoriteVM()
+    @StateObject private var cartVM = CartVM()
     
     var body: some Scene {
         WindowGroup {
@@ -11,6 +12,7 @@ struct SepetleGelsinApp: App {
                     TabBarView()
                         .environmentObject(homapageVM)
                         .environmentObject(favoriteVM)
+                        .environmentObject(cartVM)
                         .navigationBarHidden(true)
                         .navigationBarTitleDisplayMode(.inline)
             }
