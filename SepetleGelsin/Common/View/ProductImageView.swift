@@ -1,5 +1,6 @@
 import SwiftUI
-struct ProductImage: View {
+
+struct ProductImageView: View {
     var image: Image
     
     var body: some View {
@@ -18,8 +19,8 @@ struct ProductImage: View {
         
     }
 }
-struct ProductImage_Previews: PreviewProvider {
+struct ProductImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductImage(image: HomepageVM().allProductList[1].image )
+        ProductImageView(image: HomepageVM().allProductList[1].image )
     }
 }

@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct ShoppingCart: View {
-    @EnvironmentObject private var viewModel: HomepageVM
+struct ShoppingCartView: View {
+    @EnvironmentObject private var viewModel: CartVM
 
     var body: some View {
         NavigationView{
@@ -18,7 +18,6 @@ struct ShoppingCart: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing ){
                     Text(viewModel.totalPrice + " ₺")
-                    
                         .frame(width: 75, height: 35)
                         .clipShape(Capsule())
                         .opacity(0.8)
@@ -43,7 +42,7 @@ struct ShoppingCart: View {
 
 struct ShoppingCart_Previews: PreviewProvider {
     static var previews: some View {
-        ShoppingCart()
+        ShoppingCartView()
             .environmentObject(HomepageVM())
     }
 }

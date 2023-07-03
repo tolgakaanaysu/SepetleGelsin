@@ -21,7 +21,7 @@ struct CategoryRowView: View {
                 HStack(alignment: .top, spacing: 30) {
                     ForEach(productArray) { item in
                         NavigationLink {
-                            ProductDetails(productDetailsItem: item)
+                            ProductDetailsView(productDetailsItem: item)
                         } label: {
                             ProductItemView(product: item)
                         }

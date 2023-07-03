@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ClearCartButton: View {
     @State private var showingAlert = false
-    @EnvironmentObject private var viewModel: HomepageVM
+    @EnvironmentObject private var viewModel: CartVM
     
     var body: some View {
         Button (action: {

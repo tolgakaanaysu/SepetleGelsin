@@ -11,6 +11,7 @@ struct TabBarView: View {
     // MARK: - Properties
     @EnvironmentObject private var viewModel: HomepageVM
     @EnvironmentObject private var favoriteVM: FavoriteVM
+    @EnvironmentObject private var cartVM: CartVM
     @State private var selection: Tab = .homepage
     
     // MARK: - Body
@@ -28,14 +29,14 @@ struct TabBarView: View {
                 }
                 .tag(Tab.searchView)
             
-            ShoppingCart()
+            ShoppingCartView()
                 .tabItem {
                     Label("Sepet", systemImage: "cart")
                 }
                 .tag(Tab.cartPage)
-                .badge(viewModel.shoppingCartList.count)
+                .badge(cartVM.shoppingCartList.count)
             
-            FavoritesList()
+            FavoritesListView()
                 .tabItem {
                     Label("Favorilerim", systemImage: "heart")
                 }

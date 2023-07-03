@@ -8,7 +8,7 @@ struct SearchView: View {
         NavigationView {
             List(viewModel.allProductList){ element in
                 NavigationLink(element.title) {
-                    ProductDetails(productDetailsItem: element)
+                    ProductDetailsView(productDetailsItem: element)
                 }
             }
         }
