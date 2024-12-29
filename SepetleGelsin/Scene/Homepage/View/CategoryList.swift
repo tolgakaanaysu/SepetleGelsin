@@ -43,6 +43,6 @@ struct CategoryList: View {
 
 struct CategoryList_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryList(catogoryName: "Category Name", productArray: ProductViewModel().productList)
+        CategoryList(catogoryName: "Category Name", productArray: HomepageVM().productList)
     }
 }

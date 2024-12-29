@@ -48,7 +48,7 @@ struct ProductDetails: View {
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
-    static let product = ProductViewModel()
+    static let product = HomepageVM()
     static var previews: some View {
         ProductDetails(productDetailsItem: product.productList[1])
             .environmentObject(product)

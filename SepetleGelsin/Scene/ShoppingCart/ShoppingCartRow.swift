@@ -88,6 +88,6 @@ struct ShoppingCartRow: View {
 
 struct ShoppingCartRow_Previews: PreviewProvider {
     static var previews: some View {
-        ShoppingCartRow(product: ProductViewModel().productList[3])
+        ShoppingCartRow(product: HomepageVM().productList[3])
     }
 }

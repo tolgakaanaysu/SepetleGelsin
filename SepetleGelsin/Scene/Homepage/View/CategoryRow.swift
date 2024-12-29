@@ -37,7 +37,7 @@ struct CategoryRow: View {
 }
 
 struct CategoryRow_Provide: PreviewProvider {
-    static var product = ProductViewModel().productList
+    static var product = HomepageVM().productList
     static var previews: some View {
         CategoryRow(catogoryName: product[1].category.rawValue, productArray: Array(product.prefix(4)))
     }

@@ -63,6 +63,6 @@ struct AddToCartButton: View {
 
 struct AddToCartButton_Previews: PreviewProvider {
     static var previews: some View {
-        AddToCartButton(product: ProductViewModel().productList[1])
+        AddToCartButton(product: HomepageVM().productList[1])
     }
 }

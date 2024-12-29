@@ -35,7 +35,7 @@ struct CategoryItem: View {
 
 struct CategoryItem_Preview: PreviewProvider {
     static var previews: some View {
-        CategoryItem(product: ProductViewModel().productList[3])
+        CategoryItem(product: HomepageVM().productList[3])
     
     }
 }

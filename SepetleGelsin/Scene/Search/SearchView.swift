@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SearchView: View {
-    @EnvironmentObject var viewModel:  ProductViewModel
+    @EnvironmentObject var viewModel:  HomepageVM
     @State var searchText = ""
     
     var body: some View {
