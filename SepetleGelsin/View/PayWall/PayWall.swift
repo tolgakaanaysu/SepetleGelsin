@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 struct PayWall: View {
     @EnvironmentObject var viewModel: ProductViewModel
