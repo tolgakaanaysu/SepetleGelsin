@@ -1,47 +1,27 @@
 import SwiftUI
 
 struct ShoppingCartRow: View {
-    @EnvironmentObject var viewModel: ProductViewModel
-    @State var quantity = 1
+    @EnvironmentObject var viewModel: ShoppingCartVM
     var product: ProductModel
+    var quantity: Int
 
     var body: some View {
         HStack {
-            
             product.image
                 .resizable()
                 .frame(width: 120, height: 120, alignment: .center)
                 .cornerRadius(10)
                 .shadow(color: .ourApplicationColor , radius: 3)
-            
             Spacer()
             Text(String(format: "%.2f ₺",
                         product.price * Double(quantity) ))
                 .bold()
                 .frame(width: 100, height: 50, alignment: .center)
-            
-            
             Spacer()
-            
-            
             HStack{
-                
                 //Minus Button
                 Button {
-                    quantity = viewModel.productQuantityDict[product.id] ?? 0
-                    if quantity > 1 {
-                        quantity-=1
-                    }
-                    else {
-                        quantity = 0
-                        if let index = viewModel.shoppingCartList.firstIndex(where: {$0.id == product.id }) {
-                            viewModel.shoppingCartList.remove(at: index)
-                            
-                        }
-                        viewModel.productQuantityDict.removeValue(forKey: product.id)
-                        
-                    }
-                    viewModel.productQuantityDict[product.id] = quantity
+                    viewModel.decreaseQuantity(product)
                 } label: {
                     Image(systemName: "minus")
                         .font(.callout)
@@ -50,8 +30,6 @@ struct ShoppingCartRow: View {
                         .background(Color.ourApplicationColor)
                         .cornerRadius(10)
                         .opacity(0.8)
-                        
-                    
                 }
 
                 //Quantity Text
@@ -67,10 +45,7 @@ struct ShoppingCartRow: View {
                 
                 //Plus Button
                 Button {
-                    quantity = viewModel.productQuantityDict[product.id] ?? 0
-                    quantity+=1
-                    viewModel.productQuantityDict[product.id] = quantity
-
+                    viewModel.increaseQuantity(product)
                 } label: {
                     Image(systemName: "plus")
                         .font(.callout)
@@ -83,11 +58,5 @@ struct ShoppingCartRow: View {
             }
         }
         .padding()
-    }
-}
-
-struct ShoppingCartRow_Previews: PreviewProvider {
-    static var previews: some View {
-        ShoppingCartRow(product: HomepageVM().productList[3])
     }
 }

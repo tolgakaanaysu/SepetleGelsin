@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 struct ProductModel: Decodable,Identifiable {
-    
+
     let id: Int
     let title: String
     let price: Double
@@ -42,3 +42,6 @@ struct ProductModel: Decodable,Identifiable {
         
     }
 }
+
+extension ProductModel: Equatable { }
+extension ProductModel: Hashable { }

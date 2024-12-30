@@ -2,8 +2,7 @@ import SwiftUI
 
 struct TrashButtonView: View {
     @State private var showingAlert = false
-    @EnvironmentObject var viewModel: FavoriteListVM
-
+    var onAction: () -> Void
     var body: some View {
         Button (action: {
             showingAlert.toggle()
@@ -14,16 +13,17 @@ struct TrashButtonView: View {
             Alert(title: Text("UYARI"),
                   message: Text("Tüm Favoriler Silinecek"),
                   primaryButton: .destructive(Text("SİL")){
-                self.viewModel.favoriteList.removeAll()
+                onAction()
             },
                   secondaryButton: .cancel())
         }
-
     }
 }
 
 struct RemoveButton_Previews: PreviewProvider {
     static var previews: some View {
-        TrashButtonView()
+        TrashButtonView {
+            print("Trashed")
+        }
     }
 }

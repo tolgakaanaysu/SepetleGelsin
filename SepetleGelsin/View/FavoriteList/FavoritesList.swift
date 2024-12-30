@@ -3,10 +3,8 @@ import SwiftUI
 
 struct FavoritesList: View {
     @EnvironmentObject var viewModel: FavoriteListVM
-
     var body: some View {
         NavigationView {
-            
             List {
                 ForEach(viewModel.favoriteList) { item in
                     NavigationLink {
@@ -21,7 +19,9 @@ struct FavoritesList: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
-                    TrashButtonView()
+                    TrashButtonView {
+                        viewModel.favoriteList.removeAll()
+                    }
                 }
             }
         }
@@ -31,6 +31,6 @@ struct FavoritesList: View {
 struct FavoritesList_Previews: PreviewProvider {
     static var previews: some View {
         FavoritesList()
-            .environmentObject(ProductViewModel())
+            .environmentObject(ShoppingCartVM())
     }
 }

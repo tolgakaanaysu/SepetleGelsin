@@ -10,7 +10,7 @@ import FirebaseFirestore
 import FirebaseAuth
 
 struct PayWall: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject var viewModel: ShoppingCartVM
     @State private var showingAlert = false
     @State private var degrees: Double = 0
     @State private var flipped: Bool = false
@@ -131,20 +131,19 @@ struct PayWall: View {
 
                      let label = UILabel()
                      label.text = dateFormatter.string(from: Date())
-                     for listItem in viewModel.shoppingCartList {
+                     for (product, quantity) in viewModel.shoppingCartList {
                          let docData: [String: Any] =
                          [String(count):
-                            ["ID" : listItem.id,
-                             "Adet" : (viewModel.productQuantityDict[listItem.id] ?? 1),
-                             "Fiyat" : listItem.price]]
+                            ["ID" : product.id,
+                             "Adet" : quantity,
+                             "Fiyat" : product.price]]
                          count = count + 1
                          db.collection(String(uid!)).document(String(dateFormatter.string(from: Date()))).setData(docData , merge: true) { err in
                          if let err = err {
                              print("Error writing document: \(err)")
                          } else {
                              print("Document successfully written!")
-                             self.viewModel.shoppingCartList.removeAll()
-                             self.viewModel.productQuantityDict.removeAll()
+                             self.viewModel.clearCart()
                          }
                              
                      }

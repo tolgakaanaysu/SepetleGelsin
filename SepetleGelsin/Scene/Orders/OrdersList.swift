@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 
 struct OrdersList: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject var viewModel: ShoppingCartVM
     @EnvironmentObject var ordersViewModel: OrdersViewModel
     
     

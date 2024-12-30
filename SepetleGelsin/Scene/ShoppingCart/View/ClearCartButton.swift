@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ClearCartButton: View {
     @State private var showingAlert = false
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject var viewModel: ShoppingCartVM
     
     var body: some View {
         Button (action: {
@@ -14,12 +14,10 @@ struct ClearCartButton: View {
             Alert(title: Text("UYARI"),
                   message: Text("Sepeti boşaltmak ister misiniz"),
                   primaryButton: .destructive(Text("Evet")){
-                self.viewModel.shoppingCartList.removeAll()
-                self.viewModel.productQuantityDict.removeAll()
+                viewModel.clearCart()
             },
                   secondaryButton: .cancel(Text("İptal")) )
         }
-
     }
 }
 

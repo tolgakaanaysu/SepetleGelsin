@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct HomepageView: View {
-    
     @EnvironmentObject private var viewModel : HomepageVM
 
     var body: some View {
@@ -21,6 +20,6 @@ struct HomepageView: View {
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
         HomepageView()
-            .environmentObject(ProductViewModel())
+            .environmentObject(HomepageVM())
     }
 }

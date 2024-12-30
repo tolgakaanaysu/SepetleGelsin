@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var viewModel: ProductViewModel
+    @EnvironmentObject var viewModel: ShoppingCartVM
     @State private var selection: Tab = .homePage
     enum Tab {
         case homePage
@@ -11,8 +11,8 @@ struct ContentView: View {
         case profilView
         case logoutView
     }
-    
-    
+
+
     var body: some View {
         TabView(selection: $selection) {
             HomepageView()
@@ -20,43 +20,40 @@ struct ContentView: View {
                     Label("Anasayfa", systemImage: "house")
                 }
                 .tag(Tab.homePage)
-            
-           SearchView()
+
+            SearchView()
                 .tabItem {
                     Label("Ara", systemImage: "magnifyingglass")
                 }
                 .tag(Tab.searchView)
-            
+
             ShoppingCart()
                 .tabItem {
                     Label("Sepet", systemImage: "cart")
                 }
                 .tag(Tab.cartPage)
                 .badge(viewModel.shoppingCartList.count)
-            
+
             FavoritesList()
                 .tabItem {
                     Label("Favorilerim", systemImage: "heart")
                 }
                 .tag(Tab.favoriteList)
-            
+
             LogoutView()
                 .tabItem {
                     Label("Hesap", systemImage: "person.crop.circle")
                 }
                 .tag(Tab.logoutView)
         }
-
         .accentColor(Color.ourApplicationColor)
-       
-        
     }
-    
+
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ProductViewModel())
+            .environmentObject(ShoppingCartVM())
     }
 }
