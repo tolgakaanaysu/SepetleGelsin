@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CategoryHome: View {
+struct HomepageView: View {
     
     @EnvironmentObject private var viewModel : HomepageVM
 
@@ -8,7 +8,7 @@ struct CategoryHome: View {
         NavigationView {
             List {
                 ForEach(viewModel.categories.keys.sorted(), id:\.self ) { key in
-                    CategoryRow(catogoryName: key, productArray: viewModel.categories[key]!)
+                    CategoryRowView(catogoryName: key, productArray: viewModel.categories[key]!)
                 }
             }
             .listStyle(.inset)
@@ -20,7 +20,7 @@ struct CategoryHome: View {
 
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryHome()
+        HomepageView()
             .environmentObject(ProductViewModel())
     }
 }

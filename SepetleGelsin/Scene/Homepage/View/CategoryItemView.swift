@@ -1,28 +1,26 @@
 import SwiftUI
 
-struct CategoryItem: View {
-    var product:  ProductModel
-    
+struct CategoryItemView: View {
+    var product: ProductModel
+
     var body: some View {
-        //procuct image
+        // Procuct image
         VStack(alignment: .leading) {
             product.image
-            .renderingMode(.original)
-            .resizable()
-            .frame(width: getScreen().width * 0.25 , height: getScreen().width * 0.25)
-            .clipShape(RoundedRectangle(cornerRadius: 15))
-            .shadow(color: .ourApplicationColor , radius: 5)
-            .padding(.leading, 5)
-            
-            
-            //Product price text
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: getScreen().width * 0.25 , height: getScreen().width * 0.25)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .shadow(color: .ourApplicationColor , radius: 5)
+                .padding(.leading, 5)
+
+            // Product price text
             Text(String(format: "%.2f ₺", product.price))
                 .frame(width: 110, height: 20, alignment: .center)
                 .foregroundColor(.primary)
                 .font(.headline)
-                
 
-            //Product Title text
+            // Product Title text
             Text(product.title)
                 .frame(width: 110, height: 20, alignment: .center)
                 .foregroundColor(.secondary)
@@ -32,10 +30,8 @@ struct CategoryItem: View {
     }
 }
 
-
 struct CategoryItem_Preview: PreviewProvider {
     static var previews: some View {
-        CategoryItem(product: HomepageVM().productList[3])
-    
+        CategoryItemView(product: HomepageVM().productList[3])
     }
 }
