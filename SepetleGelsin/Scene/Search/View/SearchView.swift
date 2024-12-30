@@ -1,34 +1,26 @@
 import SwiftUI
 
 struct SearchView: View {
-    @EnvironmentObject var viewModel:  HomepageVM
-    @State var searchText = ""
-    
+    @StateObject var viewModel = SearchViewModel()
+    @EnvironmentObject var homepageVM: HomepageVM
+
     var body: some View {
         NavigationView {
-          
             List {
-                ForEach(filtredProduct){ element in
+                ForEach(viewModel.filteredProducts){ element in
                     NavigationLink(element.title) {
                         ProductDetails(productDetailsItem: element)
                     }
                 }
-                    
-            
             }
             .padding(.top)
             .listStyle(.inset)
             .navigationTitle("Arama")
-            .searchable(text: $searchText)
+            .searchable(text: $viewModel.searchText)
             .navigationBarTitleDisplayMode(.inline)
-            
-            }            
-    }
-}
-
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
-            .environmentObject(HomepageVM())
+            .onAppear() {
+                viewModel.bind(productList: homepageVM.$productList)
+            }
+        }
     }
 }

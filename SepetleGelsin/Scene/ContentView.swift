@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var viewModel: ShoppingCartVM
+    @EnvironmentObject private var viewModel: ShoppingCartVM
+
     @State private var selection: Tab = .homePage
+
     enum Tab {
         case homePage
         case searchView
@@ -20,7 +22,6 @@ struct ContentView: View {
                     Label("Anasayfa", systemImage: "house")
                 }
                 .tag(Tab.homePage)
-
             SearchView()
                 .tabItem {
                     Label("Ara", systemImage: "magnifyingglass")
@@ -49,11 +50,4 @@ struct ContentView: View {
         .accentColor(Color.ourApplicationColor)
     }
 
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environmentObject(ShoppingCartVM())
-    }
 }

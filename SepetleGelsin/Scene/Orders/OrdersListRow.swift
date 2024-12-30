@@ -5,9 +5,6 @@
 //  Created by Bedirhan Ulas on 15.01.2022.
 //
 
-
-
-
 import SwiftUI
 
 struct OrdersListRow: View {

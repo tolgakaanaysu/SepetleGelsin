@@ -13,32 +13,32 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct SepetleGelsinApp: App {
-    @StateObject private var stateObject = ShoppingCartVM()
+    @StateObject private var shoppingCartVM = ShoppingCartVM()
     @StateObject private var favoriteListVM = FavoriteListVM()
-    @StateObject private var sessionservice = SessionServiceImpl()
     @StateObject private var homepageVM = HomepageVM()
+    @StateObject private var sessionservice = SessionServiceImpl()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup {
-          ContentView()
-//            NavigationView {
-//                switch sessionservice.state {
-//                case .loggedIn:
-//                    ContentView()
-//                        .navigationBarHidden(true)
-//                        .navigationBarTitleDisplayMode(.inline)
-//                case .loggedOut:
-//                    LoginView()
-//                        .navigationBarHidden(true)
-//                        .navigationBarTitleDisplayMode(.inline)
-//                        
-//                }
-//            }
-            .environmentObject(favoriteListVM)
-            .environmentObject(stateObject)
-            .environmentObject(sessionservice)
-            .environmentObject(homepageVM)
+            ContentView()
+            //            NavigationView {
+            //                switch sessionservice.state {
+            //                case .loggedIn:
+            //                    ContentView()
+            //                        .navigationBarHidden(true)
+            //                        .navigationBarTitleDisplayMode(.inline)
+            //                case .loggedOut:
+            //                    LoginView()
+            //                        .navigationBarHidden(true)
+            //                        .navigationBarTitleDisplayMode(.inline)
+            //
+            //                }
+            //            }
+                .environmentObject(shoppingCartVM)
+                .environmentObject(favoriteListVM)
+                .environmentObject(homepageVM)
+                .environmentObject(sessionservice)
         }
     }
 }

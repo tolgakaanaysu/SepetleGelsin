@@ -8,7 +8,7 @@
 import Foundation
 
 final class HomepageVM: ObservableObject {
-    @Published var productList: [ProductModel] = DataService().loadData("data.json")
+    @Published private(set) var productList: [ProductModel] = DataService().loadData("data.json")
 
     var categories: [String: [ProductModel]] {
         Dictionary(
