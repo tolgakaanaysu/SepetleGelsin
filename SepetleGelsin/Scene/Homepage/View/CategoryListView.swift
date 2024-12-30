@@ -28,9 +28,3 @@ struct CategoryListView: View {
         }
     }
 }
-
-struct CategoryList_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoryListView(catogoryName: "Category Name", productArray: HomepageVM().productList)
-    }
-}

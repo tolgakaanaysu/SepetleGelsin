@@ -32,10 +32,3 @@ struct CategoryRowView: View {
         }
     }
 }
-
-struct CategoryRow_Provide: PreviewProvider {
-    static var product = HomepageVM().productList
-    static var previews: some View {
-        CategoryRowView(catogoryName: product[1].category.rawValue, productArray: Array(product.prefix(4)))
-    }
-}
