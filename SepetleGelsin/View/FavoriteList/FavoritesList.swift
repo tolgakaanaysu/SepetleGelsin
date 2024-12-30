@@ -2,10 +2,8 @@
 import SwiftUI
 
 struct FavoritesList: View {
-    @EnvironmentObject var viewModel: ProductViewModel
-    
-   
-    
+    @EnvironmentObject var viewModel: FavoriteListVM
+
     var body: some View {
         NavigationView {
             
@@ -14,7 +12,7 @@ struct FavoritesList: View {
                     NavigationLink {
                         ProductDetails(productDetailsItem: item)
                     } label: {
-                       FavoriteListRow(favoriteProducts: item )
+                       FavoriteItemRowView(favoriteProducts: item )
                     }
                 }
             }
@@ -23,7 +21,7 @@ struct FavoritesList: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
-                    RemoveButton()
+                    TrashButtonView()
                 }
             }
         }

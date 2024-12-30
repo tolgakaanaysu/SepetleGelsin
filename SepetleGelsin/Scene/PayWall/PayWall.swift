@@ -155,7 +155,7 @@ struct PayWall: View {
              }
              
              NavigationLink("", isActive: $isSuccesful, destination: {
-                 SuccessfulView()
+                 OrderingSuccessfulView()
              })
              
              

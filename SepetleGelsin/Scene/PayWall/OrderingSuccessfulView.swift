@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SuccessfulView: View {
+struct OrderingSuccessfulView: View {
     var body: some View {
         VStack{
         Image(systemName: "cart.circle.fill")
@@ -23,6 +23,6 @@ struct SuccessfulView: View {
 
 struct SuccessfulView_Previews: PreviewProvider {
     static var previews: some View {
-        SuccessfulView()
+        OrderingSuccessfulView()
     }
 }

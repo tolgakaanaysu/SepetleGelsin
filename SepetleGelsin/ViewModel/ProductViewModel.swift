@@ -2,9 +2,6 @@ import Foundation
 
 class ProductViewModel: ObservableObject {
 
-    //Liked Products...
-    @Published var favoriteList =  [ProductModel]()
-
     //Shopping Cart List...
     @Published var shoppingCartList = [ProductModel]()
 

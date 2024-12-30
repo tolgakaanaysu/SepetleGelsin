@@ -1,9 +1,9 @@
 import SwiftUI
 
-struct RemoveButton: View {
+struct TrashButtonView: View {
     @State private var showingAlert = false
-    @EnvironmentObject var viewModel: ProductViewModel
-    
+    @EnvironmentObject var viewModel: FavoriteListVM
+
     var body: some View {
         Button (action: {
             showingAlert.toggle()
@@ -16,7 +16,7 @@ struct RemoveButton: View {
                   primaryButton: .destructive(Text("SİL")){
                 self.viewModel.favoriteList.removeAll()
             },
-                  secondaryButton: .cancel() )
+                  secondaryButton: .cancel())
         }
 
     }
@@ -24,6 +24,6 @@ struct RemoveButton: View {
 
 struct RemoveButton_Previews: PreviewProvider {
     static var previews: some View {
-        RemoveButton()
+        TrashButtonView()
     }
 }
