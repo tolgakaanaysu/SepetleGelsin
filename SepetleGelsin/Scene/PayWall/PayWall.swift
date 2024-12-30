@@ -98,8 +98,8 @@ struct PayWall: View {
                      .bold()
                      .foregroundColor(.white)
                      .padding(.vertical,18)
-                     .frame(width: getScreen().width * 0.4,
-                             height: getScreen().height * 0.06,
+                     .frame(width: screenBounds.width * 0.4,
+                             height: screenBounds.height * 0.06,
                              alignment: .center)
                      .background(Color.ourApplicationColor)
                      .cornerRadius(20)

@@ -10,16 +10,9 @@ struct HomepageView: View {
                     CategoryRowView(catogoryName: key, productArray: viewModel.categories[key]!)
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
             .listStyle(.inset)
             .navigationTitle("Anasayfa")
-            .navigationBarTitleDisplayMode(.inline)
         }
-    }
-}
-
-struct CategoryHome_Previews: PreviewProvider {
-    static var previews: some View {
-        HomepageView()
-            .environmentObject(HomepageVM())
     }
 }
