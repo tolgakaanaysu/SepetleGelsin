@@ -37,7 +37,11 @@ struct ContentView: View {
 
             FavoritesList()
                 .tabItem {
-                    Label("Favorilerim", systemImage: "heart")
+                    Image(systemName: "heart.fill")
+                        .renderingMode(.template)
+                        .foregroundColor(.red)
+                        .accentColor(.red)
+                    Text("Favorilerim")
                 }
                 .tag(Tab.favoriteList)
 
@@ -47,7 +51,32 @@ struct ContentView: View {
                 }
                 .tag(Tab.logoutView)
         }
-        .accentColor(Color.ourApplicationColor)
+        .accentColor(.applicationColor)
+
     }
 
+}
+
+struct PreviewWrapper<Content: View>: View {
+    let content: Content
+
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
+
+    var body: some View {
+        content
+            .environmentObject(ShoppingCartVM())
+            .environmentObject(HomepageVM())
+            .environmentObject(FavoriteListVM())
+            .environmentObject(SessionServiceImpl())
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        PreviewWrapper {
+            ContentView()
+        }
+    }
 }

@@ -29,7 +29,7 @@ struct OrdersListRow: View {
                 .resizable()
                 .frame(width: 120, height: 120, alignment: .center)
                 .cornerRadius(10)
-                .shadow(color: .ourApplicationColor , radius: 3)
+                .shadow(color: .applicationColor , radius: 3)
                 .padding()
             
             Spacer()

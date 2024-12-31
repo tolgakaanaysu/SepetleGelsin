@@ -1,23 +1,21 @@
 
 import SwiftUI
 
-struct CreditCard<Content>: View where Content: View {
-    
+struct CreditCardView<Content>: View where Content: View {
     var content: () -> Content
-    
+
     var body: some View {
         content()
     }
 }
 
-
-struct CreditCardFront: View {
-    
+struct CreditCardFrontView: View {
     let name: String
     let cardNumber: String
     let expires: String
 
-    
+    var companyType: CreditCardCompanyType { .init(cardNumber: cardNumber) }
+
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -26,16 +24,13 @@ struct CreditCardFront: View {
                     .foregroundColor(Color.white)
             
                 Spacer()
-                
-                Text("VISA")
+                Text(companyType.rawValue)
                     .foregroundColor(Color.white)
-                    .font(.system(size: 24))
+                    .font(.system(size: 20))
                     .fontWeight(.bold)
             
             }
-            
             Spacer()
-            
             Text(cardNumber)
                 .foregroundColor(Color.white)
                 .font(.system(size: 32))
@@ -71,24 +66,26 @@ struct CreditCardFront: View {
                 }
                 
             }
-            
-            
-            
-        }.frame(width: 300, height: 200)
+        }
+        .frame(width: 300, height: 200)
         .padding()
-        .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.5481430292, green: 0, blue: 0.4720868468, alpha: 1)), Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: companyType.gradientColors),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
         .cornerRadius(10)
     }
 }
 
-
-struct CreditCardBack: View {
+struct CreditCardBackView: View {
     
     let cvv:String
     
     var body: some View {
         VStack {
-           
             Rectangle()
                 .frame(maxWidth: .infinity, maxHeight: 20)
                 .padding([.top])

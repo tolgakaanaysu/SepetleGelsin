@@ -1,5 +1,5 @@
 {
-  "originHash" : "a1569f9895aa2be8e24832f98525d5da4eb90b5d158a82691c15b47eb72a13d7",
+  "originHash" : "571aa9e523ad95ee6f21d1466dab0d6e207def6c33be8519a49936d23330b14b",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -116,6 +116,15 @@
       "state" : {
         "revision" : "ebc7251dd5b37f627c93698e4374084d98409633",
         "version" : "1.28.2"
+      }
+    },
+    {
+      "identity" : "utility",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tolgakaanaysu/Utility.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a8888558025d2ad9d90526dec4a6863c87f39793"
       }
     }
   ],

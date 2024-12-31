@@ -33,7 +33,7 @@ struct LoginView: View {
                 })
                     .font(.system(size: 16, weight: .bold))
                     .sheet(isPresented: $showForgotPassword, content: {ForgotPasswordView()})
-                    .foregroundColor(Color.ourApplicationColor)
+                    .foregroundColor(Color.applicationColor)
             }
             VStack(spacing: 16) {
                 ButtonView(title: "Giriş Yap"){
@@ -44,8 +44,8 @@ struct LoginView: View {
                 
                 ButtonView(title: "Kayıt Ol",
                            background: .clear,
-                           foreground: .ourApplicationColor,
-                           border: .ourApplicationColor){
+                           foreground: .applicationColor,
+                           border: .applicationColor){
                     showRegistration.toggle()
                 }
                            .sheet(isPresented: $showRegistration, content: {RegisterView()})

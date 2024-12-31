@@ -11,12 +11,12 @@ struct OrderingSuccessfulView: View {
     var body: some View {
         VStack{
         Image(systemName: "cart.circle.fill")
-            .foregroundColor(Color.ourApplicationColor)
+            .foregroundColor(Color.applicationColor)
             .font(.system(size: 175))
             
             Text("Siparişiniz Başarıyla Oluşturuldu!")
                 .font(.system(size: 25, weight: .medium))
-                .foregroundColor(Color.ourApplicationColor)
+                .foregroundColor(Color.applicationColor)
         }
     }
 }

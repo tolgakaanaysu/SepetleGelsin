@@ -47,7 +47,7 @@ struct RegisterView: View {
             // Sayfanın sol üstüne Kayıt Ol başlığı verilmiş olur.
             .navigationTitle("Kayıt Ol")
             .applyClose()
-            .foregroundColor(Color.ourApplicationColor)
+            .foregroundColor(Color.applicationColor)
             .alert(isPresented: $vm.hasError, content: {
                 if case .failed(let error) = vm.state {
                     return Alert(title: Text("Hata"), message: Text(error.localizedDescription))

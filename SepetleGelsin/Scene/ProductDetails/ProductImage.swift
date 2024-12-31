@@ -12,7 +12,7 @@ struct ProductImage: View {
             .frame(width: UIScreen.main.bounds.width * 0.5,
                    height: UIScreen.main.bounds.width * 0.5)
             
-            .shadow(color: .ourApplicationColor , radius: 5)
+            .shadow(color: .applicationColor , radius: 5)
             .padding()
         
         

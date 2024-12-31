@@ -31,9 +31,9 @@
 		78B88EE727400C5F00F29145 /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B88EE627400C5F00F29145 /* ProductImage.swift */; };
 		78B88EE927400CDE00F29145 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B88EE827400CDE00F29145 /* FavoriteButton.swift */; };
 		78B8B07A27945BCE0014D290 /* LogoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8B07927945BCE0014D290 /* LogoutView.swift */; };
-		78BAE9CE2765E167005F4D07 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BAE9CD2765E167005F4D07 /* BackgroundColor.swift */; };
+		78BAE9CE2765E167005F4D07 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BAE9CD2765E167005F4D07 /* Color+Extension.swift */; };
 		78E8864427AFD147002857B8 /* PayWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8864327AFD147002857B8 /* PayWall.swift */; };
-		78E8864627AFD1C3002857B8 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8864527AFD1C3002857B8 /* CreditCard.swift */; };
+		78E8864627AFD1C3002857B8 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8864527AFD1C3002857B8 /* CreditCardView.swift */; };
 		78F8CBAE27B64BAF000AFB35 /* PastOrdersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8CBAD27B64BAF000AFB35 /* PastOrdersModel.swift */; };
 		78F8CBB027B7F353000AFB35 /* OrdersGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8CBAF27B7F353000AFB35 /* OrdersGroup.swift */; };
 		7D0BDD0D2D220B980086C228 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7D0BDD0C2D220B980086C228 /* FirebaseAuth */; };
@@ -44,6 +44,9 @@
 		7D0BDD242D221BE20086C228 /* FavoriteListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BDD232D221BE20086C228 /* FavoriteListVM.swift */; };
 		7D0BDD282D223BC40086C228 /* ShoppingCartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BDD272D223BC40086C228 /* ShoppingCartVM.swift */; };
 		7DC48B662D22C44B00B61993 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC48B652D22C44B00B61993 /* SearchVM.swift */; };
+		7DC48B692D234A6D00B61993 /* Utility in Frameworks */ = {isa = PBXBuildFile; productRef = 7DC48B682D234A6D00B61993 /* Utility */; };
+		7DC48B6C2D2363C900B61993 /* CreditCardCompanyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC48B6B2D2363C900B61993 /* CreditCardCompanyType.swift */; };
+		7DC48B6F2D236B2100B61993 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC48B6E2D236B2100B61993 /* TextField+Extension.swift */; };
 		82015E6B27733AF3002B9E08 /* RegistrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82015E6A27733AF3002B9E08 /* RegistrationDetails.swift */; };
 		82015E6D27733B49002B9E08 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82015E6C27733B49002B9E08 /* RegistrationService.swift */; };
 		821830DD27B0452700B8AACB /* OrderingSuccessfulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821830DC27B0452700B8AACB /* OrderingSuccessfulView.swift */; };
@@ -97,9 +100,9 @@
 		78B88EE627400C5F00F29145 /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
 		78B88EE827400CDE00F29145 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		78B8B07927945BCE0014D290 /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
-		78BAE9CD2765E167005F4D07 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
+		78BAE9CD2765E167005F4D07 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		78E8864327AFD147002857B8 /* PayWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWall.swift; sourceTree = "<group>"; };
-		78E8864527AFD1C3002857B8 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		78E8864527AFD1C3002857B8 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 		78F8CBAD27B64BAF000AFB35 /* PastOrdersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrdersModel.swift; sourceTree = "<group>"; };
 		78F8CBAF27B7F353000AFB35 /* OrdersGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersGroup.swift; sourceTree = "<group>"; };
 		7D0BDD122D220E150086C228 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 		7D0BDD232D221BE20086C228 /* FavoriteListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListVM.swift; sourceTree = "<group>"; };
 		7D0BDD272D223BC40086C228 /* ShoppingCartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartVM.swift; sourceTree = "<group>"; };
 		7DC48B652D22C44B00B61993 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
+		7DC48B6B2D2363C900B61993 /* CreditCardCompanyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardCompanyType.swift; sourceTree = "<group>"; };
+		7DC48B6E2D236B2100B61993 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 		82015E6A27733AF3002B9E08 /* RegistrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetails.swift; sourceTree = "<group>"; };
 		82015E6C27733B49002B9E08 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		821830DC27B0452700B8AACB /* OrderingSuccessfulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingSuccessfulView.swift; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 				7D0BDD0F2D220BCB0086C228 /* FirebaseDatabase in Frameworks */,
 				7D0BDD0D2D220B980086C228 /* FirebaseAuth in Frameworks */,
 				7D0BDD112D220C080086C228 /* FirebaseFirestore in Frameworks */,
+				7DC48B692D234A6D00B61993 /* Utility in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +173,8 @@
 		785DE50D274A8B710008A69C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				78BAE9CD2765E167005F4D07 /* BackgroundColor.swift */,
+				7DC48B6D2D236B0A00B61993 /* Extension */,
+				78BAE9CD2765E167005F4D07 /* Color+Extension.swift */,
 				788D80A7276858740020C0A1 /* View+Extension.swift */,
 			);
 			path = Utility;
@@ -288,9 +295,10 @@
 		78E8864227AFD0DB002857B8 /* PayWall */ = {
 			isa = PBXGroup;
 			children = (
+				7DC48B6A2D2363B900B61993 /* Enum */,
 				821830DC27B0452700B8AACB /* OrderingSuccessfulView.swift */,
 				78E8864327AFD147002857B8 /* PayWall.swift */,
-				78E8864527AFD1C3002857B8 /* CreditCard.swift */,
+				78E8864527AFD1C3002857B8 /* CreditCardView.swift */,
 			);
 			path = PayWall;
 			sourceTree = "<group>";
@@ -410,6 +418,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		7DC48B6A2D2363B900B61993 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				7DC48B6B2D2363C900B61993 /* CreditCardCompanyType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		7DC48B6D2D236B0A00B61993 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7DC48B6E2D236B2100B61993 /* TextField+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		821EBAAE276E258200855071 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +489,7 @@
 				7D0BDD0C2D220B980086C228 /* FirebaseAuth */,
 				7D0BDD0E2D220BCB0086C228 /* FirebaseDatabase */,
 				7D0BDD102D220C080086C228 /* FirebaseFirestore */,
+				7DC48B682D234A6D00B61993 /* Utility */,
 			);
 			productName = SepetleGelsin;
 			productReference = 786E8FD5273AD28A00094115 /* SepetleGelsin.app */;
@@ -496,6 +521,7 @@
 			mainGroup = 786E8FCC273AD28A00094115;
 			packageReferences = (
 				7D0BDD0B2D220B980086C228 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				7DC48B672D234A6D00B61993 /* XCRemoteSwiftPackageReference "Utility" */,
 			);
 			productRefGroup = 786E8FD6273AD28A00094115 /* Products */;
 			projectDirPath = "";
@@ -553,18 +579,19 @@
 				82D8442327984DB8001D3757 /* Deneme.swift in Sources */,
 				821EBAB4276E275D00855071 /* CloseModifier.swift in Sources */,
 				78B88EE927400CDE00F29145 /* FavoriteButton.swift in Sources */,
+				7DC48B6C2D2363C900B61993 /* CreditCardCompanyType.swift in Sources */,
 				786E8FEA273AD64C00094115 /* ProductModel.swift in Sources */,
 				82015E6B27733AF3002B9E08 /* RegistrationDetails.swift in Sources */,
 				7DC48B662D22C44B00B61993 /* SearchVM.swift in Sources */,
 				783FE3F0277F1CFA00F2DCA2 /* AddToCartButton.swift in Sources */,
-				78BAE9CE2765E167005F4D07 /* BackgroundColor.swift in Sources */,
+				78BAE9CE2765E167005F4D07 /* Color+Extension.swift in Sources */,
 				827DD71E2780DC8700EAB5C6 /* ForgotPasswordService.swift in Sources */,
 				788D80A8276858740020C0A1 /* View+Extension.swift in Sources */,
 				7820B644275058CC00087E0D /* CategoryListView.swift in Sources */,
 				82D0397A27734D8D006FBE9A /* SessionUserDetails.swift in Sources */,
 				78E8864427AFD147002857B8 /* PayWall.swift in Sources */,
 				821830DD27B0452700B8AACB /* OrderingSuccessfulView.swift in Sources */,
-				78E8864627AFD1C3002857B8 /* CreditCard.swift in Sources */,
+				78E8864627AFD1C3002857B8 /* CreditCardView.swift in Sources */,
 				78210FDC274720F500CBCB88 /* FavoriteItemRowView.swift in Sources */,
 				827DD71C277DF68E00EAB5C6 /* LoginViewModel.swift in Sources */,
 				78F8CBAE27B64BAF000AFB35 /* PastOrdersModel.swift in Sources */,
@@ -577,6 +604,7 @@
 				827DD718277DF26600EAB5C6 /* LoginCredentials.swift in Sources */,
 				787388A72751458D006B6D28 /* DataService.swift in Sources */,
 				827DD7202780DD9F00EAB5C6 /* ForgotPasswordViewModel.swift in Sources */,
+				7DC48B6F2D236B2100B61993 /* TextField+Extension.swift in Sources */,
 				821EBABB276E2FDC00855071 /* ForgotPasswordView.swift in Sources */,
 				788D80AA2768BEA70020C0A1 /* FavoritesList.swift in Sources */,
 			);
@@ -793,6 +821,14 @@
 				version = 11.6.0;
 			};
 		};
+		7DC48B672D234A6D00B61993 /* XCRemoteSwiftPackageReference "Utility" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tolgakaanaysu/Utility.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -810,6 +846,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D0BDD0B2D220B980086C228 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		7DC48B682D234A6D00B61993 /* Utility */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DC48B672D234A6D00B61993 /* XCRemoteSwiftPackageReference "Utility" */;
+			productName = Utility;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

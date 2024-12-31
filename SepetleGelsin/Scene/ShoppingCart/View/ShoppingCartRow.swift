@@ -11,7 +11,7 @@ struct ShoppingCartRow: View {
                 .resizable()
                 .frame(width: 120, height: 120, alignment: .center)
                 .cornerRadius(10)
-                .shadow(color: .ourApplicationColor , radius: 3)
+                .shadow(color: .applicationColor , radius: 3)
             Spacer()
             Text(String(format: "%.2f ₺",
                         product.price * Double(quantity) ))
@@ -27,7 +27,7 @@ struct ShoppingCartRow: View {
                         .font(.callout)
                         .foregroundColor(.white)
                         .frame(width: 30, height: 30)
-                        .background(Color.ourApplicationColor)
+                        .background(Color.applicationColor)
                         .cornerRadius(10)
                         .opacity(0.8)
                 }
@@ -51,7 +51,7 @@ struct ShoppingCartRow: View {
                         .font(.callout)
                         .foregroundColor(.white)
                         .frame(width: 30, height: 30)
-                        .background(Color.ourApplicationColor)
+                        .background(Color.applicationColor)
                         .cornerRadius(10)
                         .opacity(0.8)
                 }   

@@ -25,7 +25,7 @@ struct AddToCartButton: View {
                 .frame(width: screenBounds.width * 0.4,
                         height: screenBounds.height * 0.06,
                         alignment: .center)
-                .background(Color.ourApplicationColor)
+                .background(Color.applicationColor)
                 .cornerRadius(20)
                 .shadow(color: Color.black.opacity(0.15),
                             radius: 5, x:10 , y: 5)
