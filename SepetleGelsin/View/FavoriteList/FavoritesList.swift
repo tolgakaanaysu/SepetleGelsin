@@ -8,7 +8,7 @@ struct FavoritesList: View {
             List {
                 ForEach(viewModel.favoriteList) { item in
                     NavigationLink {
-                        ProductDetails(productDetailsItem: item)
+                        ProductDetailView(productDetailsItem: item)
                     } label: {
                        FavoriteItemRowView(favoriteProducts: item )
                     }

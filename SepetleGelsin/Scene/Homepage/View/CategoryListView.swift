@@ -19,7 +19,7 @@ struct CategoryListView: View {
             LazyVGrid(columns: layout) {
                 ForEach(productArray) {product in
                     NavigationLink {
-                        ProductDetails(productDetailsItem: product)
+                        ProductDetailView(productDetailsItem: product)
                     } label: {
                         CategoryItemView(product: product)
                     }

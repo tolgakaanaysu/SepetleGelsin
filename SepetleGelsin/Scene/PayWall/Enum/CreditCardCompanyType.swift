@@ -16,7 +16,6 @@ enum CreditCardCompanyType: String {
     case jcb = "JCB"
     case unionPay = "UnionPay"
 
-    // Gradient Colors for the company
     var gradientColors: [Color] {
         switch self {
         case .visa:
@@ -58,7 +57,7 @@ enum CreditCardCompanyType: String {
         case .none:
             return [
                 Color.green,
-                Color(red: 64/255, green: 224/255, blue: 208/255)  // Turkuaz (#40E0D0)
+                Color(red: 64/255, green: 224/255, blue: 208/255)  // #40E0D0
             ]
         }
     }
@@ -69,7 +68,6 @@ enum CreditCardCompanyType: String {
             self = .none
             return
         }
-
         let prefix = cardNumber.prefix(4)
         switch prefix {
         case _ where cardNumber.hasPrefix("4"):

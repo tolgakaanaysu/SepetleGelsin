@@ -9,7 +9,7 @@ struct SearchView: View {
             List {
                 ForEach(viewModel.filteredProducts){ element in
                     NavigationLink(element.title) {
-                        ProductDetails(productDetailsItem: element)
+                        ProductDetailView(productDetailsItem: element)
                     }
                 }
             }

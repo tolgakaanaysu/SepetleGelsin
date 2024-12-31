@@ -1,25 +1,23 @@
 import SwiftUI
-struct ProductImage: View {
+
+struct ProductImageView: View {
     var image: Image
-    
+
     var body: some View {
-       
-          image
-            
+        image
             .resizable()
             .clipShape(RoundedRectangle(cornerRadius: 15))
-            
-            .frame(width: UIScreen.main.bounds.width * 0.5,
-                   height: UIScreen.main.bounds.width * 0.5)
-            
+            .frame(width: screenBounds.width * 0.5,
+                   height: screenBounds.width * 0.5)
             .shadow(color: .applicationColor , radius: 5)
             .padding()
-        
-        
     }
 }
+
+#if DEBUG
 struct ProductImage_Previews: PreviewProvider {
     static var previews: some View {
-        ProductImage(image: HomepageVM().productList[1].image )
+        ProductImageView(image: HomepageVM().productList[1].image )
     }
 }
+#endif

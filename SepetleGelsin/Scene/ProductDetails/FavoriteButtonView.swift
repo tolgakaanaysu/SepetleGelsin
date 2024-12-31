@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FavoriteButton: View {
+struct FavoriteButtonView: View {
     var isFavorite: Bool
     var onAction: () -> Void
 
@@ -16,4 +16,10 @@ struct FavoriteButton: View {
     }
 }
 
-
+#if DEBUG
+#Preview {
+    FavoriteButtonView(isFavorite: false) {
+        print("Favorite Button Clicked")
+    }
+}
+#endif
