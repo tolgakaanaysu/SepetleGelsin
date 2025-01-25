@@ -26,7 +26,7 @@ struct ShoppingCart: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing){
                         NavigationLink {
-                            PayWall()
+                            PaymentView()
                         } label: {
                             Image(systemName: "creditcard")
                         }

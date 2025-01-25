@@ -32,7 +32,7 @@
 		78B88EE927400CDE00F29145 /* FavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B88EE827400CDE00F29145 /* FavoriteButtonView.swift */; };
 		78B8B07A27945BCE0014D290 /* LogoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B8B07927945BCE0014D290 /* LogoutView.swift */; };
 		78BAE9CE2765E167005F4D07 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BAE9CD2765E167005F4D07 /* Color+Extension.swift */; };
-		78E8864427AFD147002857B8 /* PayWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8864327AFD147002857B8 /* PayWall.swift */; };
+		78E8864427AFD147002857B8 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8864327AFD147002857B8 /* PaymentView.swift */; };
 		78E8864627AFD1C3002857B8 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8864527AFD1C3002857B8 /* CreditCardView.swift */; };
 		78F8CBAE27B64BAF000AFB35 /* PastOrdersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8CBAD27B64BAF000AFB35 /* PastOrdersModel.swift */; };
 		78F8CBB027B7F353000AFB35 /* OrdersGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8CBAF27B7F353000AFB35 /* OrdersGroup.swift */; };
@@ -102,7 +102,7 @@
 		78B88EE827400CDE00F29145 /* FavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonView.swift; sourceTree = "<group>"; };
 		78B8B07927945BCE0014D290 /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
 		78BAE9CD2765E167005F4D07 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		78E8864327AFD147002857B8 /* PayWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWall.swift; sourceTree = "<group>"; };
+		78E8864327AFD147002857B8 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		78E8864527AFD1C3002857B8 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 		78F8CBAD27B64BAF000AFB35 /* PastOrdersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrdersModel.swift; sourceTree = "<group>"; };
 		78F8CBAF27B7F353000AFB35 /* OrdersGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersGroup.swift; sourceTree = "<group>"; };
@@ -294,14 +294,14 @@
 			path = ProductDetails;
 			sourceTree = "<group>";
 		};
-		78E8864227AFD0DB002857B8 /* PayWall */ = {
+		78E8864227AFD0DB002857B8 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
 				7DC48B6A2D2363B900B61993 /* Enum */,
 				7DC48B702D243B0C00B61993 /* View */,
 				7DC48B712D243B1000B61993 /* ViewModel */,
 			);
-			path = PayWall;
+			path = Payment;
 			sourceTree = "<group>";
 		};
 		7D0BDD142D2210230086C228 /* Info */ = {
@@ -330,7 +330,7 @@
 				7D0BDD182D2211340086C228 /* Homepage */,
 				821EBAAE276E258200855071 /* Login */,
 				822FE06727931824006B0820 /* Orders */,
-				78E8864227AFD0DB002857B8 /* PayWall */,
+				78E8864227AFD0DB002857B8 /* Payment */,
 				7894FBC6273AF3CB0050C8CB /* ProductDetails */,
 				782E708C276F077F008E281B /* Profile */,
 				787388AD27517B16006B6D28 /* Search */,
@@ -438,7 +438,7 @@
 		7DC48B702D243B0C00B61993 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				78E8864327AFD147002857B8 /* PayWall.swift */,
+				78E8864327AFD147002857B8 /* PaymentView.swift */,
 				821830DC27B0452700B8AACB /* OrderingSuccessfulView.swift */,
 				78E8864527AFD1C3002857B8 /* CreditCardView.swift */,
 			);
@@ -609,7 +609,7 @@
 				788D80A8276858740020C0A1 /* View+Extension.swift in Sources */,
 				7820B644275058CC00087E0D /* CategoryListView.swift in Sources */,
 				82D0397A27734D8D006FBE9A /* SessionUserDetails.swift in Sources */,
-				78E8864427AFD147002857B8 /* PayWall.swift in Sources */,
+				78E8864427AFD147002857B8 /* PaymentView.swift in Sources */,
 				821830DD27B0452700B8AACB /* OrderingSuccessfulView.swift in Sources */,
 				78E8864627AFD1C3002857B8 /* CreditCardView.swift in Sources */,
 				78210FDC274720F500CBCB88 /* FavoriteItemRowView.swift in Sources */,

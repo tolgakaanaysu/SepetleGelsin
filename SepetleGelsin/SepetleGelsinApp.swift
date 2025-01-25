@@ -17,7 +17,7 @@ struct SepetleGelsinApp: App {
     @StateObject private var favoriteListVM = FavoriteListVM()
     @StateObject private var homepageVM = HomepageVM()
     @StateObject private var sessionservice = SessionServiceImpl()
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var delegate
 
     var body: some Scene {
         WindowGroup {

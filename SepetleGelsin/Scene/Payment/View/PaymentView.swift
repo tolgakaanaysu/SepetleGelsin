@@ -7,14 +7,11 @@
 
 import SwiftUI
 
-struct PayWall: View {
-    @StateObject var paymentVM = PaymentVM()
-
-    @EnvironmentObject var viewModel: ShoppingCartVM
-
+struct PaymentView: View {
+    @EnvironmentObject var shoppingCartVM: ShoppingCartVM
+    @StateObject var viewModel = PaymentVM()
     @State private var showingAlert = false
-    @State private var degrees: Double = 0
-    @State private var flipped: Bool = false
+    @State private var flipped = false
     @State private var name: String = ""
     @State private var expires: String = ""
     @State private var cvv: String = ""
@@ -24,7 +21,7 @@ struct PayWall: View {
 
     var body: some View {
         VStack {
-            creditCardImageView
+            creditCardView
             creditCardNameView
             creditCardNumberView
             expiresView
@@ -41,32 +38,16 @@ struct PayWall: View {
 
 // MARK: - View
 
-private extension PayWall {
-    var creditCardImageView: some View {
-        CreditCardView {
-            VStack {
-                Group {
-                    if flipped {
-                        CreditCardBackView(cvv: cvv)
-                    } else {
-                        CreditCardFrontView(
-                            name: name,
-                            cardNumber: cardNumber,
-                            expires: expires
-                        )
-                    }
-                }
-            }.rotation3DEffect(
-                .degrees(degrees),
-                axis: (x: 0.0, y: 1.0, z: 0.0)
-            )
-        }
-        .onTapGesture {
-            withAnimation {
-                degrees += 180
-                flipped.toggle()
-            }
-        }
+private extension PaymentView {
+
+    var creditCardView: some View {
+        CreditCardView(
+            flipped: $flipped,
+            name: $name,
+            expires: $expires,
+            cvv: $cvv,
+            cardNumber: $cardNumber
+        )
     }
 
     var creditCardNameView: some View {
@@ -91,7 +72,6 @@ private extension PayWall {
     var cvvView: some View {
         TextField("CVV", text: $cvv) { (editingChanged) in
             withAnimation {
-                degrees += 180
                 flipped.toggle()
             }
         } onCommit: {}
@@ -126,23 +106,26 @@ private extension PayWall {
                         radius: 5, x:10 , y: 5)
         }
         .alert(isPresented: $showingAlert) {
-            Alert(
-                title: Text("Sipariş Oluştur"),
-                message: Text("Alışverişinizi tamamlamak ister misiniz?"),
-                primaryButton: .destructive(Text("Hayır")),
-                secondaryButton: .cancel(Text("Evet")) {
-                    ()
-                    paymentVM.buy(list: viewModel.shoppingCartList) { info in
-                        switch info {
-                        case .success:
-                            resetTextField()
-                            shouldNavigate = true
-                        case .failure(_):
-                            shouldNavigate = false
-                        }
-                    }
-                })
+            paymentAlert
         }
+    }
+
+    var paymentAlert: Alert {
+        Alert(
+            title: Text("Sipariş Oluştur"),
+            message: Text("Alışverişinizi tamamlamak ister misiniz?"),
+            primaryButton: .destructive(Text("Hayır")),
+            secondaryButton: .cancel(Text("Evet")) {
+                viewModel.buy(list: shoppingCartVM.shoppingCartList) { info in
+                    switch info {
+                    case .success:
+                        resetTextField()
+                        shouldNavigate = true
+                    case .failure:
+                        shouldNavigate = false
+                    }
+                }
+            })
     }
 
     var navigationLink: some View {
@@ -155,7 +138,7 @@ private extension PayWall {
 
 // MARK: - ViewModifier
 
-private extension PayWall {
+private extension PaymentView {
     struct TextFieldModifier: ViewModifier {
         func body(content: Content) -> some View {
             content
@@ -165,7 +148,7 @@ private extension PayWall {
     }
 }
 
-private extension PayWall {
+private extension PaymentView {
     func resetTextField() {
         name = ""
         cvv = ""
@@ -178,7 +161,7 @@ private extension PayWall {
 #if DEBUG
 struct PayWall_Previews: PreviewProvider {
     static var previews: some View {
-        PayWall()
+        PaymentView()
     }
 }
 #endif
