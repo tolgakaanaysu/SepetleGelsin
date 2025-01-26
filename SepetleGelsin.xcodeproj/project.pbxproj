@@ -10,7 +10,7 @@
 		7820B644275058CC00087E0D /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820B643275058CC00087E0D /* CategoryListView.swift */; };
 		78210FDC274720F500CBCB88 /* FavoriteItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78210FDB274720F500CBCB88 /* FavoriteItemRowView.swift */; };
 		783FE3F0277F1CFA00F2DCA2 /* AddToCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783FE3EF277F1CFA00F2DCA2 /* AddToCartButton.swift */; };
-		78568C23277E121A00494E53 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78568C22277E121A00494E53 /* ShoppingCart.swift */; };
+		78568C23277E121A00494E53 /* ShoppingCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78568C22277E121A00494E53 /* ShoppingCartView.swift */; };
 		78568C25277E123300494E53 /* ClearCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78568C24277E123300494E53 /* ClearCartButton.swift */; };
 		786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */; };
 		786E8FDB273AD28A00094115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E8FDA273AD28A00094115 /* ContentView.swift */; };
@@ -43,6 +43,7 @@
 		7D0BDD202D2216570086C228 /* HomepageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BDD1F2D2216570086C228 /* HomepageVM.swift */; };
 		7D0BDD242D221BE20086C228 /* FavoriteListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BDD232D221BE20086C228 /* FavoriteListVM.swift */; };
 		7D0BDD282D223BC40086C228 /* ShoppingCartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BDD272D223BC40086C228 /* ShoppingCartVM.swift */; };
+		7D8A3C012D45650F000FEF51 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A3C002D45650F000FEF51 /* EmptyView.swift */; };
 		7DC48B662D22C44B00B61993 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC48B652D22C44B00B61993 /* SearchVM.swift */; };
 		7DC48B692D234A6D00B61993 /* Utility in Frameworks */ = {isa = PBXBuildFile; productRef = 7DC48B682D234A6D00B61993 /* Utility */; };
 		7DC48B6C2D2363C900B61993 /* CreditCardCompanyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC48B6B2D2363C900B61993 /* CreditCardCompanyType.swift */; };
@@ -78,7 +79,7 @@
 		7820B643275058CC00087E0D /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		78210FDB274720F500CBCB88 /* FavoriteItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteItemRowView.swift; path = ../FavoriteItemRowView.swift; sourceTree = "<group>"; };
 		783FE3EF277F1CFA00F2DCA2 /* AddToCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartButton.swift; sourceTree = "<group>"; };
-		78568C22277E121A00494E53 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		78568C22277E121A00494E53 /* ShoppingCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartView.swift; sourceTree = "<group>"; };
 		78568C24277E123300494E53 /* ClearCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCartButton.swift; sourceTree = "<group>"; };
 		786E8FD5273AD28A00094115 /* SepetleGelsin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepetleGelsin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786E8FD8273AD28A00094115 /* SepetleGelsinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetleGelsinApp.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		7D0BDD1F2D2216570086C228 /* HomepageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageVM.swift; sourceTree = "<group>"; };
 		7D0BDD232D221BE20086C228 /* FavoriteListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListVM.swift; sourceTree = "<group>"; };
 		7D0BDD272D223BC40086C228 /* ShoppingCartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartVM.swift; sourceTree = "<group>"; };
+		7D8A3C002D45650F000FEF51 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		7DC48B652D22C44B00B61993 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
 		7DC48B6B2D2363C900B61993 /* CreditCardCompanyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardCompanyType.swift; sourceTree = "<group>"; };
 		7DC48B6E2D236B2100B61993 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 		7D0BDD162D2210E40086C228 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7D8A3BFF2D4564FB000FEF51 /* View */,
 				785DE50D274A8B710008A69C /* Utility */,
 				821EBAB2276E272D00855071 /* Modifier */,
 			);
@@ -389,7 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				78568C24277E123300494E53 /* ClearCartButton.swift */,
-				78568C22277E121A00494E53 /* ShoppingCart.swift */,
+				78568C22277E121A00494E53 /* ShoppingCartView.swift */,
 				78AB6809277E5FF00015E649 /* ShoppingCartRow.swift */,
 			);
 			path = View;
@@ -401,6 +404,14 @@
 				7D0BDD272D223BC40086C228 /* ShoppingCartVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7D8A3BFF2D4564FB000FEF51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D8A3C002D45650F000FEF51 /* EmptyView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7DC48B632D22C40F00B61993 /* View */ = {
@@ -584,6 +595,7 @@
 				7894FBC8273AF4030050C8CB /* ProductDetailView.swift in Sources */,
 				786E8FF4273AE00500094115 /* CategoryRowView.swift in Sources */,
 				821EBAA5276E0B5500855071 /* InputPasswordView.swift in Sources */,
+				7D8A3C012D45650F000FEF51 /* EmptyView.swift in Sources */,
 				786E8FF7273AE02700094115 /* CategoryItemView.swift in Sources */,
 				821EBAB1276E25BC00855071 /* RegisterView.swift in Sources */,
 				78B88EE727400C5F00F29145 /* ProductImageView.swift in Sources */,
@@ -591,7 +603,7 @@
 				821EBAA3276E09F100855071 /* PreviewLayoutComponentModifier.swift in Sources */,
 				78568C25277E123300494E53 /* ClearCartButton.swift in Sources */,
 				78B8B07A27945BCE0014D290 /* LogoutView.swift in Sources */,
-				78568C23277E121A00494E53 /* ShoppingCart.swift in Sources */,
+				78568C23277E121A00494E53 /* ShoppingCartView.swift in Sources */,
 				786E8FD9273AD28A00094115 /* SepetleGelsinApp.swift in Sources */,
 				82D0397C27734E1E006FBE9A /* SessionService.swift in Sources */,
 				821EBA9F276E02B700855071 /* InputTextFieldView.swift in Sources */,
@@ -766,6 +778,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -796,6 +809,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

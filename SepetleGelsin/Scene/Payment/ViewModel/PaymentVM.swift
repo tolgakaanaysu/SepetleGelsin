@@ -17,7 +17,11 @@ final class PaymentVM: ObservableObject {
         completion: @escaping ProcessCompletionBlock<Any>
     ) {
         let user = Auth.auth().currentUser
-        let uid = user?.uid
+        guard let uid = user?.uid else {
+            // FIXME: refactor
+            completion(.success(nil))
+            return
+        }
         var count = 0
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
@@ -33,7 +37,7 @@ final class PaymentVM: ObservableObject {
                  "Adet" : quantity,
                  "Fiyat" : product.price]]
             count = count + 1
-            db.collection(String(uid!)).document(String(dateFormatter.string(from: Date()))).setData(docData , merge: true) { err in
+            db.collection(String(uid)).document(String(dateFormatter.string(from: Date()))).setData(docData , merge: true) { err in
                 if let err = err {
                     print("Error writing document: \(err)")
                     completion(.failure(err))

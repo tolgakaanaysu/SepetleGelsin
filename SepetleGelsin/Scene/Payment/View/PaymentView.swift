@@ -17,7 +17,7 @@ struct PaymentView: View {
     @State private var cvv: String = ""
     @State private var cardNumber = ""
     @State private var addres = ""
-    @State private var shouldNavigate = false
+    @State private var shouldNavigateSuccessView = false
 
     var body: some View {
         VStack {
@@ -30,9 +30,11 @@ struct PaymentView: View {
             addressTextFieldView
             Spacer()
             buyButtonView
-            navigationLink
         }
         .padding(.top,50)
+        .fullScreenCover(isPresented: $shouldNavigateSuccessView) {
+            OrderingSuccessfulView()
+        }
     }
 }
 
@@ -120,20 +122,14 @@ private extension PaymentView {
                     switch info {
                     case .success:
                         resetTextField()
-                        shouldNavigate = true
+                        shouldNavigateSuccessView = true
                     case .failure:
-                        shouldNavigate = false
+                    // TODO: - error handle
+                        break
                     }
                 }
             })
     }
-
-    var navigationLink: some View {
-        NavigationLink("", isActive: $shouldNavigate, destination: {
-            OrderingSuccessfulView()
-        })
-    }
-
 }
 
 // MARK: - ViewModifier
