@@ -28,7 +28,7 @@ struct ContentView: View {
                 }
                 .tag(Tab.searchView)
 
-            ShoppingCart()
+            ShoppingCartView()
                 .tabItem {
                     Label("Sepet", systemImage: "cart")
                 }

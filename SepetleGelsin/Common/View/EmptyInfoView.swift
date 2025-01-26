@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmptyView: View {
+struct EmptyInfoView: View {
     var imageName: String
     var message: String
 
@@ -20,7 +20,7 @@ struct EmptyView: View {
     }
 }
 
-private extension EmptyView {
+private extension EmptyInfoView {
 
     var imageFrame: CGFloat {
         screenBounds.width * 0.3
